@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("QuanLyThuVienCSharp")]
+[assembly: AssemblyTitle("QuanLyThuVien_CSharp")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("QuanLyThuVienCSharp")]
+[assembly: AssemblyProduct("QuanLyThuVien_CSharp")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("3fc0ccec-234d-437f-9ac6-84936da11e3e")]
+[assembly: Guid("beef0a0e-44f3-4c76-8c1b-55277897c452")]
 
 // Version information for an assembly consists of the following four values:
 //
