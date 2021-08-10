@@ -8,9 +8,9 @@ GO
 IF EXISTS (
     SELECT [name]
         FROM sys.databases
-        WHERE [name] = N'QuanLyThuVien'
+        WHERE [name] = N'QuanLyThuVienCSharp'
 )
-DROP DATABASE QuanLyThuVien
+DROP DATABASE QuanLyThuVienCSharp
 GO
 
 -- Create a new database called 'QuanLyThuVienCSharp'
@@ -46,12 +46,12 @@ CREATE TABLE [dbo].[SACH]
 (
     [MaSach] INT IDENTITY(1,1) NOT NULL PRIMARY KEY, -- Primary Key column
     [AnhSach] IMAGE NULL,
-    [TenSach] NVARCHAR(50) NOT NULL,
+    [TenSach] NVARCHAR(50) NULL,
     [SoTon] INT NULL,
     [TacGia] NVARCHAR(50) NULL,
     [NhaXuatBan] NVARCHAR(50) NULL,
     [NamXuatBan] DATE NULL,
-    [GiaMuon] MONEY NOT NULL,
+    [GiaMuon] MONEY NULL,
     [MaDanhMuc] INT NOT NULL
     -- Specify more columns here
 );
@@ -70,7 +70,7 @@ GO
 CREATE TABLE [dbo].[DANHMUC]
 (
     [MaDanhMuc] INT IDENTITY(1,1) NOT NULL PRIMARY KEY, -- Primary Key column
-    [TenDanhMuc] NVARCHAR(50) NOT NULL
+    [TenDanhMuc] NVARCHAR(50) NULL
     -- Specify more columns here
 );
 GO
@@ -87,13 +87,13 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[CTPHIEUMUON]
 (
-    [ID] INT NOT NULL PRIMARY KEY, -- Primary Key column
+    [ID] INT IDENTITY(1,1) NOT NULL PRIMARY KEY, -- Primary Key column
     [MaSach] INT NOT NULL,
     [SoPhieuMuon] INT NOT NULL,
-    [SoLuongMuon] INT NOT NULL,
-    [TinhTrang] BIT NOT NULL,
-    [NgayMuon] DATE NOT NULL,
-    [NgayTra] DATE NOT NULL
+    [SoLuongMuon] INT NULL,
+    [TinhTrang] BIT NULL,  --0 là đã trả, 1 là chưa trả
+    [NgayMuon] DATE NULL,
+    [NgayTra] DATE NULL
     -- Specify more columns here
 );
 GO
@@ -112,11 +112,11 @@ CREATE TABLE [dbo].[TAIKHOAN]
 (
     [IDTaiKhoan] INT IDENTITY(1,1) NOT NULL PRIMARY KEY, -- Primary Key column
     [AnhDaiDien] IMAGE NULL,
-    [TenDangNhap] CHAR(20) NOT NULL,
+    [TenDangNhap] NCHAR(20) NOT NULL,
     [MatKhau] CHAR(20) NOT NULL,
     [TenNguoiDung] NVARCHAR(50) NULL,
-    [LoaiTaiKhoan] INT NOT NULL,  --0 là admin   1 là user
-    [TinhTrang] BIT NOT NULL
+    [LoaiTaiKhoan] INT NULL,  --0 là admin   1 là user
+    [TinhTrang] BIT NULL
     -- Specify more columns here
 );
 GO
@@ -134,8 +134,8 @@ GO
 CREATE TABLE [dbo].[PHIEUMUON]
 (
     [SoPhieuMuon] INT IDENTITY(1,1) NOT NULL PRIMARY KEY, -- Primary Key column
-    [TenDangNhap] CHAR(50) NOT NULL,
-    [MaSinhVien] CHAR(10) NOT NULL
+    [TenDangNhap] NCHAR(50) NOT NULL,
+    [MaSinhVien] CHAR(10) NULL
     -- Specify more columns here
 );
 GO
@@ -169,4 +169,92 @@ ALTER TABLE [dbo].[CTPHIEUMUON] CHECK CONSTRAINT [FK_CTPHIEUMUON_SACH]
 GO
 
 
+-- Insert rows into table 'DANHMUC' in schema '[dbo]'
+INSERT INTO [dbo].[DANHMUC]
+( -- Columns to insert data into
+ [TenDanhMuc]
+)
+VALUES
+( -- First row: values for the columns in the list above
+ N'Truyện cổ tích'
+),
+( -- Second row: values for the columns in the list above
+ N'Truyện ngắn'
+),
+( -- Third row: values for the columns in the list above
+ N'Truyện ngụ ngôn'
+),
+( -- Fourth row: values for the columns in the list above
+ N'Tiểu thuyết'
+)
+-- Add more rows here
+GO
 
+-- Insert rows into table 'SACH' in schema '[dbo]'
+INSERT INTO [dbo].[SACH]
+( -- Columns to insert data into
+ [AnhSach], [TenSach], [SoTon], [TacGia], [NhaXuatBan], [NamXuatBan], [GiaMuon], [MaDanhMuc]
+)
+VALUES
+( -- First row: values for the columns in the list above
+ 'C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\Image\Book Image\Rua&Soc_TruyenNN.jpg', N'Rùa và Sóc', 30, N'Nguyễn Văn Tùng', N'Nhà xuất bản thế giới', '2016-08-16', 16500, 3
+),
+( -- Second row: values for the columns in the list above
+ 'C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\Image\Book Image\tam-cam.gif', N'Tấm Cám', 30, N'Đồng tác giả', N'Nhà xuất bản văn học', '2018-09-26', 18000, 1
+)
+-- Add more rows here
+GO
+
+-- Insert rows into table 'TAIKHOAN' in schema '[dbo]'
+INSERT INTO [dbo].[TAIKHOAN]
+( -- Columns to insert data into
+ [AnhDaiDien], [TenDangNhap], [MatKhau], [TenNguoiDung], [LoaiTaiKhoan], [TinhTrang]
+)
+VALUES
+( -- First row: values for the columns in the list above
+ 'C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\Image\Avatar\Male.jpg', 'hola', '123456', N'La Văn Hòa', 1, 1
+),
+( -- Second row: values for the columns in the list above
+ 'C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\Image\Avatar\Admin.jpg', 'admin01', 'admin', N'Hà Thanh Hoàng', 0, 1
+),
+( -- Third row: values for the columns in the list above
+ 'C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\Image\Avatar\Female.jfif', 'thuhuyen', '123456', N'Nguyễn Thu Huyền', 1, 1
+),
+( -- Fourth row: values for the columns in the list above
+ 'C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\Image\Avatar\Male.jpg', 'dihoa', '123456', N'Nguyễn Đức Hòa', 1, 1
+)
+-- Add more rows here
+GO
+
+-- Insert rows into table 'PHIEUMUON' in schema '[dbo]'
+INSERT INTO [dbo].[PHIEUMUON]
+( -- Columns to insert data into
+ [TenDangNhap], [MaSinhVien]
+)
+VALUES
+( -- First row: values for the columns in the list above
+ 'hola', '2018601498'
+),
+( -- Second row: values for the columns in the list above
+ 'thuhuyen', '2018601682'
+)
+-- Add more rows here
+GO
+
+-- Insert rows into table 'CTPHIEUMUON' in schema '[dbo]'
+INSERT INTO [dbo].[CTPHIEUMUON]
+( -- Columns to insert data into
+ [MaSach], [SoPhieuMuon], [SoLuongMuon], [TinhTrang], [NgayMuon], [NgayTra]
+)
+VALUES
+( -- First row: values for the columns in the list above
+ 1, 1, 1, 0, '2021-06-10', '2021-06-24'
+),
+( -- Second row: values for the columns in the list above
+ 1, 2, 2, 1, '2021-08-09', '2021-08-23'
+),
+( -- Third row: values for the columns in the list above
+ 2, 2, 1, 1, '2021-08-09', '2021-08-16'
+)
+-- Add more rows here
+GO
