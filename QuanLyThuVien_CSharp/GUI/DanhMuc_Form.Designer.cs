@@ -34,7 +34,7 @@ namespace QuanLyThuVien_CSharp
             this.btnBoQua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnQuayLai = new System.Windows.Forms.Button();
             this.lblTenDanhMuc = new System.Windows.Forms.Label();
             this.txtTenDanhMuc = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhMuc)).BeginInit();
@@ -59,6 +59,7 @@ namespace QuanLyThuVien_CSharp
             this.btnThem.TabIndex = 1;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnBoQua
             // 
@@ -90,15 +91,15 @@ namespace QuanLyThuVien_CSharp
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnQuayLai
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(589, 490);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(147, 44);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuayLai.Location = new System.Drawing.Point(589, 490);
+            this.btnQuayLai.Name = "btnQuayLai";
+            this.btnQuayLai.Size = new System.Drawing.Size(147, 44);
+            this.btnQuayLai.TabIndex = 5;
+            this.btnQuayLai.Text = "Quay lại";
+            this.btnQuayLai.UseVisualStyleBackColor = true;
             // 
             // lblTenDanhMuc
             // 
@@ -117,6 +118,7 @@ namespace QuanLyThuVien_CSharp
             this.txtTenDanhMuc.Name = "txtTenDanhMuc";
             this.txtTenDanhMuc.Size = new System.Drawing.Size(259, 27);
             this.txtTenDanhMuc.TabIndex = 7;
+            this.txtTenDanhMuc.TextChanged += new System.EventHandler(this.txtTenDanhMuc_TextChanged);
             // 
             // DanhMuc_Form
             // 
@@ -125,7 +127,7 @@ namespace QuanLyThuVien_CSharp
             this.ClientSize = new System.Drawing.Size(748, 546);
             this.Controls.Add(this.txtTenDanhMuc);
             this.Controls.Add(this.lblTenDanhMuc);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnQuayLai);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnBoQua);
@@ -134,6 +136,7 @@ namespace QuanLyThuVien_CSharp
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "DanhMuc_Form";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.DanhMuc_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhMuc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -147,7 +150,7 @@ namespace QuanLyThuVien_CSharp
         private System.Windows.Forms.Button btnBoQua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnQuayLai;
         private System.Windows.Forms.Label lblTenDanhMuc;
         private System.Windows.Forms.TextBox txtTenDanhMuc;
     }

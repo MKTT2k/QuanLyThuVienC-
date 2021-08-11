@@ -112,7 +112,7 @@ CREATE TABLE [dbo].[TAIKHOAN]
 (
     [IDTaiKhoan] INT IDENTITY(1,1) NOT NULL PRIMARY KEY, -- Primary Key column
     [AnhDaiDien] IMAGE NULL,
-    [TenDangNhap] NCHAR(20) NOT NULL,
+    [TenDangNhap] VARCHAR(20) NOT NULL,
     [MatKhau] CHAR(20) NOT NULL,
     [TenNguoiDung] NVARCHAR(50) NULL,
     [LoaiTaiKhoan] INT NULL,  --0 là admin   1 là user
@@ -134,7 +134,7 @@ GO
 CREATE TABLE [dbo].[PHIEUMUON]
 (
     [SoPhieuMuon] INT IDENTITY(1,1) NOT NULL PRIMARY KEY, -- Primary Key column
-    [TenDangNhap] NCHAR(50) NOT NULL,
+    [TenDangNhap] VARCHAR(50) NOT NULL,
     [MaSinhVien] CHAR(10) NULL
     -- Specify more columns here
 );
@@ -258,3 +258,15 @@ VALUES
 )
 -- Add more rows here
 GO
+
+
+-- Select rows from a Table or View '[DANHMUC]' in schema '[dbo]'
+SELECT * FROM [dbo].[DANHMUC]
+-- Select rows from a Table or View '[SACH]' in schema '[dbo]'
+SELECT * FROM [dbo].[SACH]
+-- Select rows from a Table or View '[TAIKHOAN]' in schema '[dbo]'
+SELECT * FROM [dbo].[TAIKHOAN]
+-- Select rows from a Table or View '[PHIEUMUON]' in schema '[dbo]'
+SELECT * FROM [dbo].[PHIEUMUON]
+-- Select rows from a Table or View '[CTPHIEUMUON]' in schema '[dbo]'
+SELECT * FROM [dbo].[CTPHIEUMUON]

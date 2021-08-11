@@ -16,5 +16,30 @@ namespace QuanLyThuVien_CSharp
         {
             InitializeComponent();
         }
+
+        public void LoadData()
+        {
+            txtTenDanhMuc.Clear();
+            txtTenDanhMuc.Focus();
+            btnThem.Enabled = false;
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
+            btnBoQua.Enabled = false;
+        }
+
+        private void DanhMuc_Form_Load(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void txtTenDanhMuc_TextChanged(object sender, EventArgs e)
+        {
+            btnThem.Enabled = true;
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            LoadData();
+        }
     }
 }
