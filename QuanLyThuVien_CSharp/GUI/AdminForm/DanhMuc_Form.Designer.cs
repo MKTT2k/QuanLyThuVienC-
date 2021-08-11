@@ -29,6 +29,7 @@ namespace QuanLyThuVien_CSharp
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvDanhMuc = new System.Windows.Forms.DataGridView();
             this.txtTenDanhMuc = new System.Windows.Forms.TextBox();
             this.lblTenDanhMuc = new System.Windows.Forms.Label();
@@ -57,6 +58,15 @@ namespace QuanLyThuVien_CSharp
             this.dgvDanhMuc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaDanhMuc,
             this.TenDanhMuc});
+            this.dgvDanhMuc.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDanhMuc.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDanhMuc.Location = new System.Drawing.Point(13, 13);
             this.dgvDanhMuc.MultiSelect = false;
             this.dgvDanhMuc.Name = "dgvDanhMuc";
@@ -85,7 +95,7 @@ namespace QuanLyThuVien_CSharp
             this.lblTenDanhMuc.Location = new System.Drawing.Point(434, 86);
             this.lblTenDanhMuc.Name = "lblTenDanhMuc";
             this.lblTenDanhMuc.Size = new System.Drawing.Size(115, 20);
-            this.lblTenDanhMuc.TabIndex = 2;
+            this.lblTenDanhMuc.TabIndex = 0;
             this.lblTenDanhMuc.Text = "Tên danh mục";
             // 
             // btnQuayLai
@@ -96,7 +106,7 @@ namespace QuanLyThuVien_CSharp
             this.btnQuayLai.Location = new System.Drawing.Point(634, 496);
             this.btnQuayLai.Name = "btnQuayLai";
             this.btnQuayLai.Size = new System.Drawing.Size(173, 54);
-            this.btnQuayLai.TabIndex = 7;
+            this.btnQuayLai.TabIndex = 6;
             this.btnQuayLai.Text = "Quay lại";
             this.btnQuayLai.UseVisualStyleBackColor = true;
             this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
@@ -109,7 +119,7 @@ namespace QuanLyThuVien_CSharp
             this.btnBoQua.Location = new System.Drawing.Point(634, 243);
             this.btnBoQua.Name = "btnBoQua";
             this.btnBoQua.Size = new System.Drawing.Size(160, 54);
-            this.btnBoQua.TabIndex = 6;
+            this.btnBoQua.TabIndex = 5;
             this.btnBoQua.Text = "Bỏ qua";
             this.btnBoQua.UseVisualStyleBackColor = true;
             this.btnBoQua.Click += new System.EventHandler(this.btnBoQua_Click);
@@ -123,7 +133,7 @@ namespace QuanLyThuVien_CSharp
             this.btnSua.Location = new System.Drawing.Point(634, 172);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(160, 54);
-            this.btnSua.TabIndex = 5;
+            this.btnSua.TabIndex = 3;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -151,7 +161,7 @@ namespace QuanLyThuVien_CSharp
             this.btnThem.Location = new System.Drawing.Point(443, 172);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(160, 54);
-            this.btnThem.TabIndex = 3;
+            this.btnThem.TabIndex = 2;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -166,7 +176,7 @@ namespace QuanLyThuVien_CSharp
             this.MaDanhMuc.Name = "MaDanhMuc";
             this.MaDanhMuc.ReadOnly = true;
             this.MaDanhMuc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.MaDanhMuc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.MaDanhMuc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // TenDanhMuc
             // 
@@ -177,6 +187,7 @@ namespace QuanLyThuVien_CSharp
             this.TenDanhMuc.MinimumWidth = 6;
             this.TenDanhMuc.Name = "TenDanhMuc";
             this.TenDanhMuc.ReadOnly = true;
+            this.TenDanhMuc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.TenDanhMuc.Width = 190;
             // 
             // DanhMuc_Form
@@ -193,7 +204,9 @@ namespace QuanLyThuVien_CSharp
             this.Controls.Add(this.lblTenDanhMuc);
             this.Controls.Add(this.txtTenDanhMuc);
             this.Controls.Add(this.dgvDanhMuc);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "DanhMuc_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhMuc)).EndInit();
             this.ResumeLayout(false);

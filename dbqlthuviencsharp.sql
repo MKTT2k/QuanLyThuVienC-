@@ -47,10 +47,11 @@ CREATE TABLE [dbo].[SACH]
     [MaSach] INT IDENTITY(1,1) NOT NULL PRIMARY KEY, -- Primary Key column
     [AnhSach] IMAGE NULL,
     [TenSach] NVARCHAR(50) NULL,
-    [SoTon] INT NULL,
+    [SoLuong] INT NULL,
     [TacGia] NVARCHAR(50) NULL,
     [NhaXuatBan] NVARCHAR(50) NULL,
     [NamXuatBan] DATE NULL,
+    [LanXuatBan] INT NULL,
     [GiaMuon] MONEY NULL,
     [MaDanhMuc] INT NOT NULL
     -- Specify more columns here
@@ -90,7 +91,6 @@ CREATE TABLE [dbo].[CTPHIEUMUON]
     [ID] INT IDENTITY(1,1) NOT NULL PRIMARY KEY, -- Primary Key column
     [MaSach] INT NOT NULL,
     [SoPhieuMuon] INT NOT NULL,
-    [SoLuongMuon] INT NULL,
     [TinhTrang] BIT NULL,  --0 là đã trả, 1 là chưa trả
     [NgayMuon] DATE NULL,
     [NgayTra] DATE NULL
@@ -193,14 +193,14 @@ GO
 -- Insert rows into table 'SACH' in schema '[dbo]'
 INSERT INTO [dbo].[SACH]
 ( -- Columns to insert data into
- [AnhSach], [TenSach], [SoTon], [TacGia], [NhaXuatBan], [NamXuatBan], [GiaMuon], [MaDanhMuc]
+ [AnhSach], [TenSach], [SoLuong], [TacGia], [NhaXuatBan], [NamXuatBan], [LanXuatBan], [GiaMuon], [MaDanhMuc]
 )
 VALUES
 ( -- First row: values for the columns in the list above
- 'C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\Image\Book Image\Rua&Soc_TruyenNN.jpg', N'Rùa và Sóc', 30, N'Nguyễn Văn Tùng', N'Nhà xuất bản thế giới', '2016-08-16', 16500, 3
+ 'C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\Image\Book Image\Rua&Soc_TruyenNN.jpg', N'Rùa và Sóc', 30, N'Nguyễn Văn Tùng', N'Nhà xuất bản thế giới', '2016-08-16', 3, 16500, 3
 ),
 ( -- Second row: values for the columns in the list above
- 'C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\Image\Book Image\tam-cam.gif', N'Tấm Cám', 30, N'Đồng tác giả', N'Nhà xuất bản văn học', '2018-09-26', 18000, 1
+ 'C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\Image\Book Image\tam-cam.gif', N'Tấm Cám', 30, N'Đồng tác giả', N'Nhà xuất bản văn học', '2018-09-26', 2, 18000, 1
 )
 -- Add more rows here
 GO
@@ -244,17 +244,17 @@ GO
 -- Insert rows into table 'CTPHIEUMUON' in schema '[dbo]'
 INSERT INTO [dbo].[CTPHIEUMUON]
 ( -- Columns to insert data into
- [MaSach], [SoPhieuMuon], [SoLuongMuon], [TinhTrang], [NgayMuon], [NgayTra]
+ [MaSach], [SoPhieuMuon], [TinhTrang], [NgayMuon], [NgayTra]
 )
 VALUES
 ( -- First row: values for the columns in the list above
- 1, 1, 1, 0, '2021-06-10', '2021-06-24'
+ 1, 1, 0, '2021-06-10', '2021-06-24'
 ),
 ( -- Second row: values for the columns in the list above
- 1, 2, 2, 1, '2021-08-09', '2021-08-23'
+ 1, 2, 1, '2021-08-09', '2021-08-23'
 ),
 ( -- Third row: values for the columns in the list above
- 2, 2, 1, 1, '2021-08-09', '2021-08-16'
+ 2, 2, 1, '2021-08-09', '2021-08-16'
 )
 -- Add more rows here
 GO
@@ -270,3 +270,4 @@ SELECT * FROM [dbo].[TAIKHOAN]
 SELECT * FROM [dbo].[PHIEUMUON]
 -- Select rows from a Table or View '[CTPHIEUMUON]' in schema '[dbo]'
 SELECT * FROM [dbo].[CTPHIEUMUON]
+

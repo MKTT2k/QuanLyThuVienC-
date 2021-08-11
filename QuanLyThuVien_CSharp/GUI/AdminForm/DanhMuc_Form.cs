@@ -17,13 +17,14 @@ namespace QuanLyThuVien_CSharp
         int index = -1;
         public DanhMuc_Form()
         {
+            
             InitializeComponent();
             LoadData();
         }
 
         public void LoadData()
         {
-            dgvDanhMuc.DataSource = dataContext.DANHMUCs.Select(p => p);
+            dgvDanhMuc.DataSource = dataContext.DANHMUCs.Select(p => p).OrderBy(p=>p.MaDanhMuc);
 
             txtTenDanhMuc.Clear();
             ActiveControl = txtTenDanhMuc;
@@ -35,7 +36,7 @@ namespace QuanLyThuVien_CSharp
 
         private void btnQuayLai_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Dispose();
         }
 
         private void btnBoQua_Click(object sender, EventArgs e)
