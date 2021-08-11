@@ -1,0 +1,10 @@
+C:\Users\Administrator\Desktop\New folder\QLThuVienCSharp\QLThuVienCSharp\bin\Debug\QLThuVienCSharp.exe.config
+C:\Users\Administrator\Desktop\New folder\QLThuVienCSharp\QLThuVienCSharp\bin\Debug\QLThuVienCSharp.exe
+C:\Users\Administrator\Desktop\New folder\QLThuVienCSharp\QLThuVienCSharp\bin\Debug\QLThuVienCSharp.pdb
+C:\Users\Administrator\Desktop\New folder\QLThuVienCSharp\QLThuVienCSharp\obj\Debug\QLThuVienCSharp.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\New folder\QLThuVienCSharp\QLThuVienCSharp\obj\Debug\QLThuVienCSharp.GUI.ManagerForm.XemSach.fXemSach.resources
+C:\Users\Administrator\Desktop\New folder\QLThuVienCSharp\QLThuVienCSharp\obj\Debug\QLThuVienCSharp.Properties.Resources.resources
+C:\Users\Administrator\Desktop\New folder\QLThuVienCSharp\QLThuVienCSharp\obj\Debug\QLThuVienCSharp.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\New folder\QLThuVienCSharp\QLThuVienCSharp\obj\Debug\QLThuVienCSharp.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\New folder\QLThuVienCSharp\QLThuVienCSharp\obj\Debug\QLThuVienCSharp.exe
+C:\Users\Administrator\Desktop\New folder\QLThuVienCSharp\QLThuVienCSharp\obj\Debug\QLThuVienCSharp.pdb
