@@ -1,5 +1,5 @@
 ﻿
-namespace QuanLyThuVien_CSharp.GUI
+namespace QuanLyThuVien_CSharp
 {
     partial class DanhMuc_Form
     {
@@ -31,107 +31,109 @@ namespace QuanLyThuVien_CSharp.GUI
         {
             this.dgvDanhMuc = new System.Windows.Forms.DataGridView();
             this.btnThem = new System.Windows.Forms.Button();
+            this.btnBoQua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
-            this.txtTenDanhMuc = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.lblTenDanhMuc = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txtTenDanhMuc = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhMuc)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvDanhMuc
             // 
-            this.dgvDanhMuc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.dgvDanhMuc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDanhMuc.Location = new System.Drawing.Point(13, 13);
+            this.dgvDanhMuc.Location = new System.Drawing.Point(12, 12);
             this.dgvDanhMuc.Name = "dgvDanhMuc";
             this.dgvDanhMuc.RowHeadersWidth = 51;
             this.dgvDanhMuc.RowTemplate.Height = 24;
-            this.dgvDanhMuc.Size = new System.Drawing.Size(399, 466);
+            this.dgvDanhMuc.Size = new System.Drawing.Size(412, 522);
             this.dgvDanhMuc.TabIndex = 0;
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(450, 159);
+            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Location = new System.Drawing.Point(475, 179);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(111, 38);
+            this.btnThem.Size = new System.Drawing.Size(101, 44);
             this.btnThem.TabIndex = 1;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             // 
+            // btnBoQua
+            // 
+            this.btnBoQua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBoQua.Location = new System.Drawing.Point(597, 242);
+            this.btnBoQua.Name = "btnBoQua";
+            this.btnBoQua.Size = new System.Drawing.Size(101, 44);
+            this.btnBoQua.TabIndex = 4;
+            this.btnBoQua.Text = "Bỏ qua";
+            this.btnBoQua.UseVisualStyleBackColor = true;
+            // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(596, 159);
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Location = new System.Drawing.Point(475, 242);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(111, 38);
-            this.btnXoa.TabIndex = 2;
+            this.btnXoa.Size = new System.Drawing.Size(101, 44);
+            this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(450, 219);
+            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Location = new System.Drawing.Point(597, 179);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(111, 38);
-            this.btnSua.TabIndex = 3;
+            this.btnSua.Size = new System.Drawing.Size(101, 44);
+            this.btnSua.TabIndex = 2;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             // 
-            // txtTenDanhMuc
+            // button5
             // 
-            this.txtTenDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenDanhMuc.Location = new System.Drawing.Point(450, 100);
-            this.txtTenDanhMuc.Name = "txtTenDanhMuc";
-            this.txtTenDanhMuc.Size = new System.Drawing.Size(257, 27);
-            this.txtTenDanhMuc.TabIndex = 4;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(589, 490);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(147, 44);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // lblTenDanhMuc
             // 
             this.lblTenDanhMuc.AutoSize = true;
             this.lblTenDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenDanhMuc.Location = new System.Drawing.Point(450, 77);
+            this.lblTenDanhMuc.Location = new System.Drawing.Point(459, 104);
             this.lblTenDanhMuc.Name = "lblTenDanhMuc";
             this.lblTenDanhMuc.Size = new System.Drawing.Size(115, 20);
-            this.lblTenDanhMuc.TabIndex = 5;
+            this.lblTenDanhMuc.TabIndex = 6;
             this.lblTenDanhMuc.Text = "Tên danh mục";
             // 
-            // button1
+            // txtTenDanhMuc
             // 
-            this.button1.Location = new System.Drawing.Point(596, 219);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 38);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Bỏ qua";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(612, 441);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 38);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Quay lại";
-            this.button2.UseVisualStyleBackColor = true;
+            this.txtTenDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenDanhMuc.Location = new System.Drawing.Point(463, 127);
+            this.txtTenDanhMuc.Name = "txtTenDanhMuc";
+            this.txtTenDanhMuc.Size = new System.Drawing.Size(259, 27);
+            this.txtTenDanhMuc.TabIndex = 7;
             // 
             // DanhMuc_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Honeydew;
-            this.ClientSize = new System.Drawing.Size(735, 491);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.lblTenDanhMuc);
+            this.ClientSize = new System.Drawing.Size(748, 546);
             this.Controls.Add(this.txtTenDanhMuc);
+            this.Controls.Add(this.lblTenDanhMuc);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btnBoQua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dgvDanhMuc);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "DanhMuc_Form";
-            this.Text = "DanhMuc_Form";
-            this.Load += new System.EventHandler(this.DanhMuc_Form_Load);
+            this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhMuc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -142,11 +144,12 @@ namespace QuanLyThuVien_CSharp.GUI
 
         private System.Windows.Forms.DataGridView dgvDanhMuc;
         private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnBoQua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.TextBox txtTenDanhMuc;
+        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label lblTenDanhMuc;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtTenDanhMuc;
     }
 }
+

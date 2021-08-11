@@ -15,12 +15,12 @@ namespace QuanLyThuVien_CSharp.DAL
         {
             return new SqlConnection(@"Data Source=desktop-gcdrl3v\sqlexpress;Initial Catalog=QuanLyThuVienCSharp;Integrated Security=True");
         }
-        public DataTable GetTable (String sql)
+        public DataTable GetTable(string sql)
         {
             try
             {
-                SqlConnection conn = GetConnection();
-                SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
+                SqlConnection con = GetConnection();
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, con);
                 DataTable table = new DataTable();
                 adapter.Fill(table);
                 return table;
@@ -36,6 +36,7 @@ namespace QuanLyThuVien_CSharp.DAL
                 return null;
             }
         }
+
         public void ExecuteNonQuery(String sql)
         {
             try
@@ -45,11 +46,12 @@ namespace QuanLyThuVien_CSharp.DAL
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch (Exception x)
             {
-                MessageBox.Show("Lỗi " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(x.Message);
             }
         }
+
         public void ExecuteNonQueryWithImage(String sql, byte[] img)
         {
             try
@@ -60,9 +62,9 @@ namespace QuanLyThuVien_CSharp.DAL
                 cmd.Parameters.Add(new SqlParameter("@image", img));
                 cmd.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch (Exception x)
             {
-                MessageBox.Show("Lỗi " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(x.Message);
             }
         }
     }
