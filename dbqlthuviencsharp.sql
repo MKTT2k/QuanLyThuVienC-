@@ -1,4 +1,4 @@
--- Drop the database 'QuanLyThuVien'
+-- Drop the database 'QuanLyThuVienCSharp'
 -- Connect to the 'master' database to run this snippet
 USE master
 GO
