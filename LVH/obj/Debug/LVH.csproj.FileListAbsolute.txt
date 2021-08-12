@@ -12,3 +12,17 @@ C:\Users\ADMIN\source\repos\LVH\LVH\obj\Debug\LVH.GUI.fThemTaiKhoan.resources
 C:\Users\ADMIN\source\repos\LVH\LVH\obj\Debug\LVH.GUI.fQuanLyTaiKhoan.resources
 C:\Users\ADMIN\source\repos\LVH\LVH\obj\Debug\LVH.GUI.fTrangChu.resources
 C:\Users\ADMIN\source\repos\LVH\LVH\obj\Debug\LVH.GUI.fSuaTaiKhoan.resources
+C:\Users\ADMIN\OneDrive\Documents\GitHub\QuanLyThuVienC-\LVH\bin\Debug\LVH.exe.config
+C:\Users\ADMIN\OneDrive\Documents\GitHub\QuanLyThuVienC-\LVH\bin\Debug\LVH.exe
+C:\Users\ADMIN\OneDrive\Documents\GitHub\QuanLyThuVienC-\LVH\bin\Debug\LVH.pdb
+C:\Users\ADMIN\OneDrive\Documents\GitHub\QuanLyThuVienC-\LVH\obj\Debug\LVH.csproj.AssemblyReference.cache
+C:\Users\ADMIN\OneDrive\Documents\GitHub\QuanLyThuVienC-\LVH\obj\Debug\LVH.GUI.fSuaTaiKhoan.resources
+C:\Users\ADMIN\OneDrive\Documents\GitHub\QuanLyThuVienC-\LVH\obj\Debug\LVH.GUI.fThemTaiKhoan.resources
+C:\Users\ADMIN\OneDrive\Documents\GitHub\QuanLyThuVienC-\LVH\obj\Debug\LVH.FormDangNhap.resources
+C:\Users\ADMIN\OneDrive\Documents\GitHub\QuanLyThuVienC-\LVH\obj\Debug\LVH.GUI.fQuanLyTaiKhoan.resources
+C:\Users\ADMIN\OneDrive\Documents\GitHub\QuanLyThuVienC-\LVH\obj\Debug\LVH.GUI.fTrangChu.resources
+C:\Users\ADMIN\OneDrive\Documents\GitHub\QuanLyThuVienC-\LVH\obj\Debug\LVH.Properties.Resources.resources
+C:\Users\ADMIN\OneDrive\Documents\GitHub\QuanLyThuVienC-\LVH\obj\Debug\LVH.csproj.GenerateResource.cache
+C:\Users\ADMIN\OneDrive\Documents\GitHub\QuanLyThuVienC-\LVH\obj\Debug\LVH.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\OneDrive\Documents\GitHub\QuanLyThuVienC-\LVH\obj\Debug\LVH.exe
+C:\Users\ADMIN\OneDrive\Documents\GitHub\QuanLyThuVienC-\LVH\obj\Debug\LVH.pdb

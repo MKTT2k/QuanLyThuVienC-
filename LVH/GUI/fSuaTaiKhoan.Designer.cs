@@ -44,6 +44,7 @@ namespace LVH.GUI
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_image)).BeginInit();
@@ -64,6 +65,7 @@ namespace LVH.GUI
             // 
             // txtUserName
             // 
+            this.txtUserName.Enabled = false;
             this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserName.Location = new System.Drawing.Point(315, 140);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
@@ -125,6 +127,7 @@ namespace LVH.GUI
             this.btnCancel.TabIndex = 36;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnEdit
             // 
@@ -134,6 +137,7 @@ namespace LVH.GUI
             this.btnEdit.TabIndex = 37;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // label1
             // 
@@ -173,6 +177,7 @@ namespace LVH.GUI
             this.btnChooseImg.TabIndex = 15;
             this.btnChooseImg.Text = "Chọn ảnh";
             this.btnChooseImg.UseVisualStyleBackColor = true;
+            this.btnChooseImg.Click += new System.EventHandler(this.btnChooseImg_Click);
             // 
             // panel2
             // 
@@ -204,11 +209,15 @@ namespace LVH.GUI
             this.txtName.Size = new System.Drawing.Size(333, 30);
             this.txtName.TabIndex = 30;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // fSuaTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 454);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.panel3);
@@ -219,6 +228,7 @@ namespace LVH.GUI
             this.Controls.Add(this.panel2);
             this.Name = "fSuaTaiKhoan";
             this.Text = "fSuaTaiKhoan";
+            this.Load += new System.EventHandler(this.fSuaTaiKhoan_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -247,5 +257,6 @@ namespace LVH.GUI
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

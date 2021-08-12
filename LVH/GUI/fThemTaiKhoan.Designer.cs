@@ -45,10 +45,12 @@ namespace LVH.GUI
             this.label5 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_image)).BeginInit();
             this.pnl_Image.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -98,6 +100,7 @@ namespace LVH.GUI
             // 
             // pnl_Image
             // 
+            this.pnl_Image.Controls.Add(this.pictureBox1);
             this.pnl_Image.Controls.Add(this.lbl_image);
             this.pnl_Image.Controls.Add(this.btnChooseImg);
             this.pnl_Image.Location = new System.Drawing.Point(27, 71);
@@ -210,6 +213,15 @@ namespace LVH.GUI
             this.btnCancel.TabIndex = 43;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(204, 185);
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
             // 
             // fThemTaiKhoan
             // 
@@ -232,6 +244,7 @@ namespace LVH.GUI
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,5 +268,6 @@ namespace LVH.GUI
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Linq;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -15,19 +16,16 @@ namespace LVH.GUI
 {
     public partial class fThemTaiKhoan : Form
     {
+
+        QLThuVienCSharpDataContext dataContext = new QLThuVienCSharpDataContext();
         fQuanLyTaiKhoan QLTaiKhoan;
         bool coAnh = false;
         public fThemTaiKhoan(fQuanLyTaiKhoan f)
         {
             InitializeComponent();
-            QLTaiKhoan = f;
-            prepare();
-        }
-
-        public void prepare()
-        {
-            rd_KichHoat.Checked = true;
             openFileDialog1.FileName = null;
+            rdbEnabled.Checked = true;
+            QLTaiKhoan = f;
         }
 
         private void btnChonAnh_Click(object sender, EventArgs e)
@@ -49,44 +47,32 @@ namespace LVH.GUI
                     MessageBox.Show(x.Message);
                 }
             }
-
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             try
-            {
-                if (txtUserName.Text.Equals(""))
-                {
-                    txtUserName.Focus();
-                    throw new Exception("Tên đăng nhập không được bỏ trống");
-                }
-                if (txt_TenNguoiDung.Text.Equals(""))
-                {
-                    txt_TenNguoiDung.Focus();
-                    throw new Exception("Tên người dùng không được bỏ trống");
-                }
-                if (!coAnh)
-                {
-                    throw new Exception("Chưa có ảnh đại diện");
-                }
-                else
-                {
-                    new BUS_TaiKhoan().ThemTaiKhoan(new ConvertImage().ConvertImageToBytes(lbl_image.Image),
-                        txt_TenTaiKhoan.Text,
-                        "123",
-                        txt_TenNguoiDung.Text,
-                        1,
-                        rd_KichHoat.Checked ? true : false);
-                    QLTaiKhoan.prepare();
-                    MessageBox.Show("Thêm tài khoản thành công!");
-                    this.Dispose();
-                }
+            {               
+                TAIKHOAN themTaiKhoan = new TAIKHOAN();
+                themTaiKhoan.AnhDaiDien = new BUS.ConvertImage().ConvertImageToBytes(lbl_image.Image);
+                themTaiKhoan.MatKhau = "123";
+                themTaiKhoan.TenDangNhap = txtUserName.Text;
+                themTaiKhoan.TenNguoiDung = txtName.Text;
+                themTaiKhoan.LoaiTaiKhoan = 1;
+                themTaiKhoan.TinhTrang = rdbEnabled.Checked ? true : false;
+
+                dataContext.TAIKHOANs.InsertOnSubmit(themTaiKhoan);
+                dataContext.SubmitChanges();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message, "Có lỗi xảy ra");
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

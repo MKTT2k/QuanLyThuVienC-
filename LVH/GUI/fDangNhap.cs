@@ -13,17 +13,29 @@ namespace LVH
 {
     public partial class FormDangNhap : Form
     {
+        
+        QLThuVienCSharpDataContext dataContext = new QLThuVienCSharpDataContext();
         public FormDangNhap()
         {
+
             InitializeComponent();
         }
 
 
         private void btnDangNhap_Click(object sender, EventArgs e)
-        {
-            fTrangChu f = new fTrangChu();
-            this.Hide();
-            f.ShowDialog();
+        {            
+            if((dataContext.TAIKHOANs.Select(p => p).Where(p => p.TenDangNhap == txtTenDangNhap.Text && p.MatKhau == txtMatKhau.Text)) == null)
+            {
+                MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác", "Lỗi đăng nhập");
+            }
+            else
+            {
+                fTrangChu f = new fTrangChu();
+                this.Hide();
+                f.ShowDialog();
+            }
+
+            
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
