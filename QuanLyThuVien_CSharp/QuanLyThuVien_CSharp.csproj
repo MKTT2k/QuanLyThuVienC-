@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\ConvertImages.cs" />
     <Compile Include="BLL\DanhMuc_BLL.cs" />
     <Compile Include="DAL\DataConnection.cs" />
     <Compile Include="DTO\DanhMuc_DTO.cs" />
@@ -124,6 +125,27 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modify-book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print-all.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

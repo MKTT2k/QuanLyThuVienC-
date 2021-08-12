@@ -197,10 +197,10 @@ INSERT INTO [dbo].[SACH]
 )
 VALUES
 ( -- First row: values for the columns in the list above
- 'C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\Image\Book Image\Rua&Soc_TruyenNN.jpg', N'Rùa và Sóc', 30, N'Nguyễn Văn Tùng', N'Nhà xuất bản thế giới', '2016-08-16', 3, 16500, 3
+ '0x433A5C55736572735C41444D494E5C446F63756D656E74735C4769744875625C5175616E4C795468755669656E5F4353686172705C496D6167655C426F6F6B20496D6167655C52756126536F635F54727579656E4E4E2E6A7067', N'Rùa và Sóc', 30, N'Nguyễn Văn Tùng', N'Nhà xuất bản thế giới', '2016-08-16', 3, 16500, 3
 ),
 ( -- Second row: values for the columns in the list above
- 'C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\Image\Book Image\tam-cam.gif', N'Tấm Cám', 30, N'Đồng tác giả', N'Nhà xuất bản văn học', '2018-09-26', 2, 18000, 1
+ '0x433A5C55736572735C41444D494E5C446F63756D656E74735C4769744875625C5175616E4C795468755669656E5F4353686172705C496D6167655C426F6F6B20496D6167655C74616D2D63616D2E676966', N'Tấm Cám', 30, N'Đồng tác giả', N'Nhà xuất bản văn học', '2018-09-26', 2, 18000, 1
 )
 -- Add more rows here
 GO

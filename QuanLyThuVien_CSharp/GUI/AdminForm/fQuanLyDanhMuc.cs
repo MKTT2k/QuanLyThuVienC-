@@ -17,7 +17,6 @@ namespace QuanLyThuVien_CSharp
         int index = -1;
         public fQuanLyDanhMuc()
         {
-            
             InitializeComponent();
             LoadData();
         }
@@ -76,7 +75,7 @@ namespace QuanLyThuVien_CSharp
         {
             try
             {
-                if (MessageBox.Show("Bạn có chắc chắn muốn xoá danh mục này không ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+                if (MessageBox.Show("Bạn có chắc chắn muốn xoá danh mục này không?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
                 {
                     var xoa = dataContext.DANHMUCs.Where(p => p.MaDanhMuc == Int32.Parse(dgvDanhMuc.Rows[index].Cells[0].Value.ToString())); 
                               
@@ -148,6 +147,12 @@ namespace QuanLyThuVien_CSharp
             {
                 MessageBox.Show("Lỗi "+ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void txtTenDanhMuc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }
