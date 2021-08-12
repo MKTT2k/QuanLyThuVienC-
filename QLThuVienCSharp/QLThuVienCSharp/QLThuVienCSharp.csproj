@@ -52,6 +52,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ManagerForm\QlMuonTra\fEditMuonTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ManagerForm\QlMuonTra\fEditMuonTra.Designer.cs">
+      <DependentUpon>fEditMuonTra.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ManagerForm\QlMuonTra\fQLDocGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\ManagerForm\QlMuonTra\fEditMuonTra.resx">
+      <DependentUpon>fEditMuonTra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ManagerForm\QlMuonTra\fQLDocGia.resx">
       <DependentUpon>fQLDocGia.cs</DependentUpon>
     </EmbeddedResource>
