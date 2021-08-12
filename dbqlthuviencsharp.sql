@@ -212,16 +212,17 @@ INSERT INTO [dbo].[TAIKHOAN]
 )
 VALUES
 ( -- First row: values for the columns in the list above
- 'C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\Image\Avatar\Male.jpg', 'hola', '123456', N'La Văn Hòa', 1, 1
+ '..\Avatar\Male.jpg', 'hola', '123456', N'La Văn Hòa', 1, 1
 ),
 ( -- Second row: values for the columns in the list above
- 'C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\Image\Avatar\Admin.jpg', 'admin01', 'admin', N'Hà Thanh Hoàng', 0, 1
+ '..\Avatar\Admin.jpg', 'admin01', 'admin', N'Hà Thanh Hoàng', 0, 1
 ),
 ( -- Third row: values for the columns in the list above
- 'C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\Image\Avatar\Female.jfif', 'thuhuyen', '123456', N'Nguyễn Thu Huyền', 1, 1
+ '..\Avatar\Female.jfif', 'thuhuyen', '123456', N'Nguyễn Thu Huyền', 1, 1
 ),
 ( -- Fourth row: values for the columns in the list above
- 'C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\Image\Avatar\Male.jpg', 'dihoa', '123456', N'Nguyễn Đức Hòa', 1, 1
+ --'C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\Image\Avatar\Male.jpg', 'dihoa', '123456', N'Nguyễn Đức Hòa', 1, 1
+ '..\Avatar\Male.jpg', 'dihoa', '123456', N'Nguyễn Đức Hòa', 1, 1
 )
 -- Add more rows here
 GO
