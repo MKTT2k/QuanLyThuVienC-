@@ -16,7 +16,7 @@ namespace QLThuVienCSharp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GUI.ManagerForm.XemSach.fXemSach());
+            Application.Run(new GUI.ManagerForm.QLMuonTra.fQLPhieuMuonTra());
         }
     }
 }

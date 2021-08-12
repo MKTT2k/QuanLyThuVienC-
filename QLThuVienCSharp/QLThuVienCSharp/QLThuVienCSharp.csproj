@@ -33,8 +33,39 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FastMember">
+      <HintPath>..\packages\FastMember.1.5.0\lib\net461\FastMember.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,40 +77,60 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="DTO\DocGia.cs" />
+    <Compile Include="DTO\SachDTO.cs" />
+    <Compile Include="GUI\ManagerForm\QLDocGia\BillView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="GUI\ManagerForm\QLDocGia\BillView.Designer.cs">
+      <DependentUpon>BillView.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ManagerForm\QlMuonTra\fEditMuonTra.cs">
+    <Compile Include="GUI\ManagerForm\QLMuonTra\fAddPhieuMuonTra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ManagerForm\QlMuonTra\fEditMuonTra.Designer.cs">
-      <DependentUpon>fEditMuonTra.cs</DependentUpon>
+    <Compile Include="GUI\ManagerForm\QLMuonTra\fAddPhieuMuonTra.Designer.cs">
+      <DependentUpon>fAddPhieuMuonTra.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ManagerForm\QlMuonTra\fQLDocGia.cs">
+    <Compile Include="GUI\ManagerForm\QLDocGia\fQLDocGia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ManagerForm\QlMuonTra\fQLDocGia.Designer.cs">
+    <Compile Include="GUI\ManagerForm\QLDocGia\fQLDocGia.Designer.cs">
       <DependentUpon>fQLDocGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ManagerForm\XemSach\fXemSach.cs">
+    <Compile Include="GUI\ManagerForm\QLMuonTra\fEditPhieuMuonTra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ManagerForm\XemSach\fXemSach.Designer.cs">
-      <DependentUpon>fXemSach.cs</DependentUpon>
+    <Compile Include="GUI\ManagerForm\QLMuonTra\fEditPhieuMuonTra.Designer.cs">
+      <DependentUpon>fEditPhieuMuonTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ManagerForm\QLMuonTra\fQLPhieuMuonTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ManagerForm\QLMuonTra\fQLPhieuMuonTra.Designer.cs">
+      <DependentUpon>fQLPhieuMuonTra.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUI\ManagerForm\QlMuonTra\fEditMuonTra.resx">
-      <DependentUpon>fEditMuonTra.cs</DependentUpon>
+    <Compile Include="QLThuVienCSharp.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLThuVienCSharp.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="GUI\ManagerForm\QLDocGia\BillView.resx">
+      <DependentUpon>BillView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ManagerForm\QlMuonTra\fQLDocGia.resx">
+    <EmbeddedResource Include="GUI\ManagerForm\QLDocGia\fQLDocGia.resx">
       <DependentUpon>fQLDocGia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ManagerForm\XemSach\fXemSach.resx">
-      <DependentUpon>fXemSach.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\ManagerForm\QLMuonTra\fAddPhieuMuonTra.resx">
+      <DependentUpon>fAddPhieuMuonTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ManagerForm\QLMuonTra\fEditPhieuMuonTra.resx">
+      <DependentUpon>fEditPhieuMuonTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ManagerForm\QLMuonTra\fQLPhieuMuonTra.resx">
+      <DependentUpon>fQLPhieuMuonTra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -90,6 +141,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -99,6 +151,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QLThuVienCSharp.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>QLThuVienCSharp.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLThuVienCSharp.dbml.layout">
+      <DependentUpon>QLThuVienCSharp.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -108,7 +168,28 @@
     <Folder Include="DAO\" />
     <Folder Include="GUI\AdminForm\" />
     <Folder Include="GUI\MainForm\" />
-    <Folder Include="GUI\ManagerForm\QLDocGia\" />
+    <Folder Include="GUI\ManagerForm\XemSach\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
