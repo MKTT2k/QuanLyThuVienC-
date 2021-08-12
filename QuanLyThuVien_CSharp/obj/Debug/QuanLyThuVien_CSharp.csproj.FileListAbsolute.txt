@@ -2,9 +2,10 @@ C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\bin\De
 C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\bin\Debug\QuanLyThuVien_CSharp.exe
 C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\bin\Debug\QuanLyThuVien_CSharp.pdb
 C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.csproj.AssemblyReference.cache
-C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.DanhMuc_Form.resources
 C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.Properties.Resources.resources
 C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.csproj.GenerateResource.cache
 C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.csproj.CoreCompileInputs.cache
 C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.exe
 C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.pdb
+C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.GUI.AdminForm.fQuanLySach.resources
+C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.fQuanLyDanhMuc.resources

@@ -16,7 +16,7 @@ namespace QuanLyThuVien_CSharp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DanhMuc_Form());
+            Application.Run(new fQuanLyDanhMuc());
         }
     }
 }

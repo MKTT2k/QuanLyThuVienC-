@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace QuanLyThuVien_CSharp
 {
-    public partial class DanhMuc_Form : Form
+    public partial class fQuanLyDanhMuc : Form
     {
         QuanLyThuVien_CSharpDataContext dataContext = new QuanLyThuVien_CSharpDataContext();
         int index = -1;
-        public DanhMuc_Form()
+        public fQuanLyDanhMuc()
         {
             
             InitializeComponent();
@@ -105,6 +105,7 @@ namespace QuanLyThuVien_CSharp
                     return;
                 }
                 var danhMuc = dataContext.DANHMUCs.Where(p => p.TenDanhMuc == txtTenDanhMuc.Text);
+
                 if (danhMuc.Count() > 0)
                 {
                     MessageBox.Show("Tên danh mục đã trùng trong hệ thống", "Duplicate", MessageBoxButtons.OK, MessageBoxIcon.Warning);

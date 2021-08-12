@@ -1,7 +1,7 @@
 ﻿
 namespace QuanLyThuVien_CSharp
 {
-    partial class DanhMuc_Form
+    partial class fQuanLyDanhMuc
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,10 @@ namespace QuanLyThuVien_CSharp
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvDanhMuc = new System.Windows.Forms.DataGridView();
+            this.MaDanhMuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDanhMuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTenDanhMuc = new System.Windows.Forms.TextBox();
             this.lblTenDanhMuc = new System.Windows.Forms.Label();
             this.btnQuayLai = new System.Windows.Forms.Button();
@@ -38,8 +40,6 @@ namespace QuanLyThuVien_CSharp
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.MaDanhMuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDanhMuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhMuc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,14 +59,14 @@ namespace QuanLyThuVien_CSharp
             this.MaDanhMuc,
             this.TenDanhMuc});
             this.dgvDanhMuc.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDanhMuc.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDanhMuc.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDanhMuc.Location = new System.Drawing.Point(13, 13);
             this.dgvDanhMuc.MultiSelect = false;
             this.dgvDanhMuc.Name = "dgvDanhMuc";
@@ -78,6 +78,31 @@ namespace QuanLyThuVien_CSharp
             this.dgvDanhMuc.Size = new System.Drawing.Size(391, 537);
             this.dgvDanhMuc.TabIndex = 0;
             this.dgvDanhMuc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhMuc_CellClick);
+            // 
+            // MaDanhMuc
+            // 
+            this.MaDanhMuc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.MaDanhMuc.DataPropertyName = "MaDanhMuc";
+            this.MaDanhMuc.Frozen = true;
+            this.MaDanhMuc.HeaderText = "Mã danh mục";
+            this.MaDanhMuc.MinimumWidth = 6;
+            this.MaDanhMuc.Name = "MaDanhMuc";
+            this.MaDanhMuc.ReadOnly = true;
+            this.MaDanhMuc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.MaDanhMuc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.MaDanhMuc.Width = 125;
+            // 
+            // TenDanhMuc
+            // 
+            this.TenDanhMuc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.TenDanhMuc.DataPropertyName = "TenDanhMuc";
+            this.TenDanhMuc.Frozen = true;
+            this.TenDanhMuc.HeaderText = "Tên danh mục";
+            this.TenDanhMuc.MinimumWidth = 6;
+            this.TenDanhMuc.Name = "TenDanhMuc";
+            this.TenDanhMuc.ReadOnly = true;
+            this.TenDanhMuc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.TenDanhMuc.Width = 190;
             // 
             // txtTenDanhMuc
             // 
@@ -166,31 +191,7 @@ namespace QuanLyThuVien_CSharp
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // MaDanhMuc
-            // 
-            this.MaDanhMuc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.MaDanhMuc.DataPropertyName = "MaDanhMuc";
-            this.MaDanhMuc.Frozen = true;
-            this.MaDanhMuc.HeaderText = "Mã danh mục";
-            this.MaDanhMuc.MinimumWidth = 6;
-            this.MaDanhMuc.Name = "MaDanhMuc";
-            this.MaDanhMuc.ReadOnly = true;
-            this.MaDanhMuc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.MaDanhMuc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // TenDanhMuc
-            // 
-            this.TenDanhMuc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.TenDanhMuc.DataPropertyName = "TenDanhMuc";
-            this.TenDanhMuc.Frozen = true;
-            this.TenDanhMuc.HeaderText = "Tên danh mục";
-            this.TenDanhMuc.MinimumWidth = 6;
-            this.TenDanhMuc.Name = "TenDanhMuc";
-            this.TenDanhMuc.ReadOnly = true;
-            this.TenDanhMuc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.TenDanhMuc.Width = 190;
-            // 
-            // DanhMuc_Form
+            // fQuanLyDanhMuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -205,7 +206,7 @@ namespace QuanLyThuVien_CSharp
             this.Controls.Add(this.txtTenDanhMuc);
             this.Controls.Add(this.dgvDanhMuc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "DanhMuc_Form";
+            this.Name = "fQuanLyDanhMuc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhMuc)).EndInit();

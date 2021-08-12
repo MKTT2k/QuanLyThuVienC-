@@ -33,5 +33,16 @@ namespace QuanLyThuVien_CSharp.Properties {
                 return ((string)(this["QuanLyThuVienCSharpConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\sqlexpress;Initial Catalog=QuanLyThuVienCSharp;Integrated Security=" +
+            "True")]
+        public string QuanLyThuVienCSharpConnectionString1 {
+            get {
+                return ((string)(this["QuanLyThuVienCSharpConnectionString1"]));
+            }
+        }
     }
 }
