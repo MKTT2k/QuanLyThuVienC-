@@ -91,6 +91,30 @@
     <Compile Include="GUI\AdminForm\QuanLySach\fThemSach.Designer.cs">
       <DependentUpon>fThemSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ManagerForm\QLPhieuMuonTra\fBillView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ManagerForm\QLPhieuMuonTra\fBillView.Designer.cs">
+      <DependentUpon>fBillView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ManagerForm\QLPhieuMuonTra\fAddPhieuMuonTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ManagerForm\QLPhieuMuonTra\fAddPhieuMuonTra.Designer.cs">
+      <DependentUpon>fAddPhieuMuonTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ManagerForm\QLPhieuMuonTra\fEditPhieuMuonTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ManagerForm\QLPhieuMuonTra\fEditPhieuMuonTra.Designer.cs">
+      <DependentUpon>fEditPhieuMuonTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ManagerForm\QLPhieuMuonTra\fQLPhieuMuonTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ManagerForm\QLPhieuMuonTra\fQLPhieuMuonTra.Designer.cs">
+      <DependentUpon>fQLPhieuMuonTra.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ManagerForm\XemSach\fXemSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +138,10 @@
     <EmbeddedResource Include="GUI\AdminForm\QuanLySach\fThemSach.resx">
       <DependentUpon>fThemSach.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ManagerForm\QLPhieuMuonTra\fBillView.resx">
+      <DependentUpon>fBillView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ManagerForm\QLPhieuMuonTra\PhieuMuon.rdlc" />
     <EmbeddedResource Include="GUI\ManagerForm\XemSach\fXemSach.resx">
       <DependentUpon>fXemSach.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,7 +218,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GUI\ManagerForm\QLDocGia\" />
-    <Folder Include="GUI\ManagerForm\QLPhieuMuonTra\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="SqlServerTypes\readme.htm" />
