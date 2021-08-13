@@ -1,12 +1,6 @@
-﻿using QuanLyThuVien_CSharp.BLL;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyThuVien_CSharp
@@ -18,6 +12,7 @@ namespace QuanLyThuVien_CSharp
         public fQuanLyDanhMuc()
         {
             InitializeComponent();
+            //this.Text = "Quản lý danh mục";
             LoadData();
         }
 
@@ -25,6 +20,7 @@ namespace QuanLyThuVien_CSharp
         {
             dgvDanhMuc.DataSource = dataContext.DANHMUCs.Select(p => p).OrderBy(p=>p.MaDanhMuc);
 
+            timer1.Start();
             txtTenDanhMuc.Clear();
             ActiveControl = txtTenDanhMuc;
             btnThem.Enabled = false;
@@ -153,6 +149,12 @@ namespace QuanLyThuVien_CSharp
         {
             if (char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
                 e.Handled = true;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            string str = "Quản lý danh mục    ";
+            this.Text = str.Substring(str.Length - 1) + str.Substring(0, str.Length - 1);
         }
     }
 }

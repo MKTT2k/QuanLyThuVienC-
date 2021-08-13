@@ -58,11 +58,17 @@
     <Compile Include="GUI\AdminForm\fQuanLyDanhMuc.Designer.cs">
       <DependentUpon>fQuanLyDanhMuc.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\AdminForm\fQuanLySach.cs">
+    <Compile Include="GUI\AdminForm\QuanLySach\fQuanLySach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\AdminForm\fQuanLySach.Designer.cs">
+    <Compile Include="GUI\AdminForm\QuanLySach\fQuanLySach.Designer.cs">
       <DependentUpon>fQuanLySach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AdminForm\QuanLySach\fThemSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AdminForm\QuanLySach\fThemSach.Designer.cs">
+      <DependentUpon>fThemSach.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,8 +80,11 @@
     <EmbeddedResource Include="GUI\AdminForm\fQuanLyDanhMuc.resx">
       <DependentUpon>fQuanLyDanhMuc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\AdminForm\fQuanLySach.resx">
+    <EmbeddedResource Include="GUI\AdminForm\QuanLySach\fQuanLySach.resx">
       <DependentUpon>fQuanLySach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AdminForm\QuanLySach\fThemSach.resx">
+      <DependentUpon>fThemSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -17,7 +17,7 @@ namespace QuanLyThuVien_CSharp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new QuanLyThuVien_CSharp.GUI.AdminForm.fQuanLySach());
-            Application.Run(new QuanLyThuVien_CSharp.GUI.AdminForm.fQuanLySach());
+            Application.Run(new fQuanLyDanhMuc());
         }
     }
 }
