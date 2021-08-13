@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using QuanLyThuVien_CSharp.BLL;
+using QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyDanhMuc;
 
 namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
 {
@@ -29,7 +30,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             LoadData();
         }
 
-        private void LoadData()
+        public void LoadData()
         {
             cbbTenDanhMuc.DataSource = dataContext.DANHMUCs.Select(p => p);
             cbbTenDanhMuc.DisplayMember = "TenDanhMuc";
@@ -162,7 +163,10 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
                 sach.AnhSach = new ConvertImages().ConvertImageToBytes(ptbAnhSach.Image);
                 dataContext.SACHes.InsertOnSubmit(sach);
                 dataContext.SubmitChanges();
+                QuanLySach.LoadData();
                 MessageBox.Show("Lưu thành công!", "Successfully", MessageBoxButtons.OK);
+                this.Dispose();
+                
             }
             catch (Exception ex)
             {
@@ -194,12 +198,25 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
 
         private void btnQuayLai_Click(object sender, EventArgs e)
         {
+            if (textChange == true)
+            {
+                if (MessageBox.Show("Bạn có muốn lưu thông tin sách không?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    btnLuu_Click(sender, e);
+                }
+            }
             this.Dispose();
         }
 
         private void btnXoaNDNhap_Click(object sender, EventArgs e)
         {
             LoadData();
+        }
+
+        private void btnThemDanhMuc_Click(object sender, EventArgs e)
+        {
+            fThemDanhMuc danhMucForm = new fThemDanhMuc(this);
+            danhMucForm.ShowDialog();
         }
     }
 }

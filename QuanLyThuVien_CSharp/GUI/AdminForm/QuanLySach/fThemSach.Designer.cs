@@ -29,11 +29,6 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnQuayLai = new System.Windows.Forms.Button();
-            this.btnXoaNDNhap = new System.Windows.Forms.Button();
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.btnThayAnh = new System.Windows.Forms.Button();
-            this.ptbAnhSach = new System.Windows.Forms.PictureBox();
             this.lbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,72 +47,16 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             this.dtpNamXuatBan = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbAnhSach)).BeginInit();
+            this.btnThemDanhMuc = new System.Windows.Forms.Button();
+            this.btnQuayLai = new System.Windows.Forms.Button();
+            this.btnXoaNDNhap = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.btnThayAnh = new System.Windows.Forms.Button();
+            this.ptbAnhSach = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLanXuatBan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAnhSach)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnQuayLai
-            // 
-            this.btnQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuayLai.Image = global::QuanLyThuVien_CSharp.Properties.Resources._return;
-            this.btnQuayLai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQuayLai.Location = new System.Drawing.Point(870, 492);
-            this.btnQuayLai.Name = "btnQuayLai";
-            this.btnQuayLai.Size = new System.Drawing.Size(182, 54);
-            this.btnQuayLai.TabIndex = 12;
-            this.btnQuayLai.Text = "Quay lại";
-            this.btnQuayLai.UseVisualStyleBackColor = true;
-            this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
-            // 
-            // btnXoaNDNhap
-            // 
-            this.btnXoaNDNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaNDNhap.Image = global::QuanLyThuVien_CSharp.Properties.Resources.clear;
-            this.btnXoaNDNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoaNDNhap.Location = new System.Drawing.Point(584, 492);
-            this.btnXoaNDNhap.Name = "btnXoaNDNhap";
-            this.btnXoaNDNhap.Size = new System.Drawing.Size(256, 54);
-            this.btnXoaNDNhap.TabIndex = 11;
-            this.btnXoaNDNhap.Text = "Xóa nội dung nhập";
-            this.btnXoaNDNhap.UseVisualStyleBackColor = true;
-            this.btnXoaNDNhap.Click += new System.EventHandler(this.btnXoaNDNhap_Click);
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Image = global::QuanLyThuVien_CSharp.Properties.Resources.save;
-            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuu.Location = new System.Drawing.Point(391, 492);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(160, 54);
-            this.btnLuu.TabIndex = 10;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
-            // btnThayAnh
-            // 
-            this.btnThayAnh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThayAnh.Image = global::QuanLyThuVien_CSharp.Properties.Resources.replace;
-            this.btnThayAnh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThayAnh.Location = new System.Drawing.Point(16, 337);
-            this.btnThayAnh.Name = "btnThayAnh";
-            this.btnThayAnh.Size = new System.Drawing.Size(238, 54);
-            this.btnThayAnh.TabIndex = 1;
-            this.btnThayAnh.Text = "Thay ảnh sách";
-            this.btnThayAnh.UseVisualStyleBackColor = true;
-            this.btnThayAnh.Click += new System.EventHandler(this.btnThayAnh_Click);
-            // 
-            // ptbAnhSach
-            // 
-            this.ptbAnhSach.Image = global::QuanLyThuVien_CSharp.Properties.Resources.book;
-            this.ptbAnhSach.Location = new System.Drawing.Point(32, 89);
-            this.ptbAnhSach.Name = "ptbAnhSach";
-            this.ptbAnhSach.Size = new System.Drawing.Size(206, 233);
-            this.ptbAnhSach.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptbAnhSach.TabIndex = 0;
-            this.ptbAnhSach.TabStop = false;
             // 
             // lbl
             // 
@@ -317,12 +256,89 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // btnThemDanhMuc
+            // 
+            this.btnThemDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemDanhMuc.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnThemDanhMuc.Image = global::QuanLyThuVien_CSharp.Properties.Resources.add_category;
+            this.btnThemDanhMuc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThemDanhMuc.Location = new System.Drawing.Point(553, 61);
+            this.btnThemDanhMuc.Name = "btnThemDanhMuc";
+            this.btnThemDanhMuc.Size = new System.Drawing.Size(246, 54);
+            this.btnThemDanhMuc.TabIndex = 13;
+            this.btnThemDanhMuc.Text = "Thêm danh mục";
+            this.btnThemDanhMuc.UseVisualStyleBackColor = true;
+            this.btnThemDanhMuc.Click += new System.EventHandler(this.btnThemDanhMuc_Click);
+            // 
+            // btnQuayLai
+            // 
+            this.btnQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuayLai.Image = global::QuanLyThuVien_CSharp.Properties.Resources._return;
+            this.btnQuayLai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQuayLai.Location = new System.Drawing.Point(870, 492);
+            this.btnQuayLai.Name = "btnQuayLai";
+            this.btnQuayLai.Size = new System.Drawing.Size(182, 54);
+            this.btnQuayLai.TabIndex = 12;
+            this.btnQuayLai.Text = "Quay lại";
+            this.btnQuayLai.UseVisualStyleBackColor = true;
+            this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
+            // 
+            // btnXoaNDNhap
+            // 
+            this.btnXoaNDNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaNDNhap.Image = global::QuanLyThuVien_CSharp.Properties.Resources.clear;
+            this.btnXoaNDNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoaNDNhap.Location = new System.Drawing.Point(584, 492);
+            this.btnXoaNDNhap.Name = "btnXoaNDNhap";
+            this.btnXoaNDNhap.Size = new System.Drawing.Size(256, 54);
+            this.btnXoaNDNhap.TabIndex = 11;
+            this.btnXoaNDNhap.Text = "Xóa nội dung nhập";
+            this.btnXoaNDNhap.UseVisualStyleBackColor = true;
+            this.btnXoaNDNhap.Click += new System.EventHandler(this.btnXoaNDNhap_Click);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Image = global::QuanLyThuVien_CSharp.Properties.Resources.save;
+            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLuu.Location = new System.Drawing.Point(391, 492);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(160, 54);
+            this.btnLuu.TabIndex = 10;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // btnThayAnh
+            // 
+            this.btnThayAnh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThayAnh.Image = global::QuanLyThuVien_CSharp.Properties.Resources.replace;
+            this.btnThayAnh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThayAnh.Location = new System.Drawing.Point(16, 337);
+            this.btnThayAnh.Name = "btnThayAnh";
+            this.btnThayAnh.Size = new System.Drawing.Size(238, 54);
+            this.btnThayAnh.TabIndex = 1;
+            this.btnThayAnh.Text = "Thay ảnh sách";
+            this.btnThayAnh.UseVisualStyleBackColor = true;
+            this.btnThayAnh.Click += new System.EventHandler(this.btnThayAnh_Click);
+            // 
+            // ptbAnhSach
+            // 
+            this.ptbAnhSach.Image = global::QuanLyThuVien_CSharp.Properties.Resources.book;
+            this.ptbAnhSach.Location = new System.Drawing.Point(32, 89);
+            this.ptbAnhSach.Name = "ptbAnhSach";
+            this.ptbAnhSach.Size = new System.Drawing.Size(206, 233);
+            this.ptbAnhSach.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbAnhSach.TabIndex = 0;
+            this.ptbAnhSach.TabStop = false;
+            // 
             // fThemSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(1064, 558);
+            this.Controls.Add(this.btnThemDanhMuc);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpNamXuatBan);
             this.Controls.Add(this.lbl1);
@@ -348,9 +364,9 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             this.Name = "fThemSach";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm thông tin sách mới";
-            ((System.ComponentModel.ISupportInitialize)(this.ptbAnhSach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLanXuatBan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAnhSach)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -381,5 +397,6 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
         private System.Windows.Forms.DateTimePicker dtpNamXuatBan;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button btnThemDanhMuc;
     }
 }

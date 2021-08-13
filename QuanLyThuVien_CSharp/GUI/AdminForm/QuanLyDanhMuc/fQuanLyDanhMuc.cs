@@ -58,7 +58,9 @@ namespace QuanLyThuVien_CSharp
                 suaDanhMuc.TenDanhMuc = txtTenDanhMuc.Text;
                 dataContext.SubmitChanges();
                 txtTenDanhMuc.Clear();
+                MessageBox.Show("Sửa thành công", "Successfully", MessageBoxButtons.OK);
                 LoadData();
+                
             }
             catch (Exception ex)
             {
@@ -79,6 +81,7 @@ namespace QuanLyThuVien_CSharp
                         dataContext.DANHMUCs.DeleteOnSubmit(i);
                         dataContext.SubmitChanges();
                     }
+                    MessageBox.Show("Xóa thành công", "Successfully", MessageBoxButtons.OK);
                     LoadData();
                 }
             }
@@ -110,6 +113,7 @@ namespace QuanLyThuVien_CSharp
 
                 dataContext.DANHMUCs.InsertOnSubmit(themDanhMuc);
                 dataContext.SubmitChanges();
+                MessageBox.Show("Thêm thành công", "Successfully", MessageBoxButtons.OK);
             }
             catch (Exception ex)
             {
