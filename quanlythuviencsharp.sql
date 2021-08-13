@@ -52,7 +52,7 @@ CREATE TABLE [dbo].[SACH]
     [NhaXuatBan] NVARCHAR(50) NULL,
     [NamXuatBan] DATE NULL,
     [LanXuatBan] INT NULL,
-    [GiaMuon] MONEY NULL,
+    [GiaMuon] INT NULL,
     [MaDanhMuc] INT NOT NULL
     -- Specify more columns here
 );

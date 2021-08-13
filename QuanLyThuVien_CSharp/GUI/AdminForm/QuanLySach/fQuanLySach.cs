@@ -15,7 +15,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm
     public partial class fQuanLySach : Form
     {
         QuanLyThuVien_CSharpDataContext dataContext = new QuanLyThuVien_CSharpDataContext();
-        //int index = -1;
+        int index = -1;
         public fQuanLySach()
         {
             InitializeComponent();
@@ -54,6 +54,27 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm
         {
             fThemSach themSach = new fThemSach(this);
             themSach.ShowDialog();
+        }
+
+        private void dgvSach_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            index = e.RowIndex;
+            if (index >= 0)
+            {
+                btnSua.Enabled = true;
+                btnXoa.Enabled = true;
+            }
+            else
+            {
+                btnSua.Enabled = false;
+                btnXoa.Enabled = false;
+            }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            fSuaThongTinSach suaThongTinSach = new fSuaThongTinSach(this,Int32.Parse(dgvSach.Rows[index].Cells[1].Value.ToString()));
+            suaThongTinSach.ShowDialog();
         }
     }
 }

@@ -70,6 +70,12 @@
     <Compile Include="GUI\AdminForm\QuanLySach\fQuanLySach.Designer.cs">
       <DependentUpon>fQuanLySach.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\AdminForm\QuanLySach\fSuaThongTinSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AdminForm\QuanLySach\fSuaThongTinSach.Designer.cs">
+      <DependentUpon>fSuaThongTinSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\AdminForm\QuanLySach\fThemSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\AdminForm\QuanLySach\fQuanLySach.resx">
       <DependentUpon>fQuanLySach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AdminForm\QuanLySach\fSuaThongTinSach.resx">
+      <DependentUpon>fSuaThongTinSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\AdminForm\QuanLySach\fThemSach.resx">
       <DependentUpon>fThemSach.cs</DependentUpon>
@@ -166,7 +175,7 @@
     <None Include="Resources\search.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\book.png" />
+    <EmbeddedResource Include="Resources\book.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\replace.png" />

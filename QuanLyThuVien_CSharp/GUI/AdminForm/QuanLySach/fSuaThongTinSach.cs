@@ -1,34 +1,35 @@
-﻿using System;
+﻿using QuanLyThuVien_CSharp.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
-using QuanLyThuVien_CSharp.BLL;
-using QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyDanhMuc;
 
 namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
 {
-    public partial class fThemSach : Form
+    
+    public partial class fSuaThongTinSach : Form
     {
         QuanLyThuVien_CSharpDataContext dataContext = new QuanLyThuVien_CSharpDataContext();
         fQuanLySach QuanLySach;
+        int MaSach;
         bool textChange;
-        bool hasImage = false;
-        
-        public fThemSach()
+        public fSuaThongTinSach()
         {
             InitializeComponent();
         }
-        public fThemSach(fQuanLySach f)
+
+        public fSuaThongTinSach(fQuanLySach f, int _MaSach)
         {
             InitializeComponent();
-            LoadData();
             QuanLySach = f;
+            MaSach = _MaSach;
+            this.LoadData();
         }
 
         public void LoadData()
@@ -36,41 +37,20 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             cbbTenDanhMuc.DataSource = dataContext.DANHMUCs.Select(p => p);
             cbbTenDanhMuc.DisplayMember = "TenDanhMuc";
             cbbTenDanhMuc.ValueMember = "MaDanhMuc";
-            openFileDialog1.FileName = null;
 
-            cbbTenDanhMuc.SelectedIndex = 0;
-            txtTenSach.Clear();
-            ActiveControl = txtTenSach;
-            txtTacGia.Clear();
-            txtNhaXuatBan.Clear();
-            txtGiaMuon.Clear();
-            nudLanXuatBan.Value = 1;
-            nudSoLuong.Value = 1;
-            dtpNamXuatBan.Value.ToString("2000-12-17");
-            ptbAnhSach.Image = QuanLyThuVien_CSharp.Properties.Resources.book;
-
-            btnLuu.Enabled = false;
-            btnXoaNDNhap.Enabled = false;
-            textChange = false;
+            var sach = dataContext.SACHes.Single(p => p.MaSach == MaSach);
+            cbbTenDanhMuc.SelectedValue = sach.MaDanhMuc;
+            txtTenSach.Text = sach.TenSach;
+            txtTacGia.Text = sach.TacGia;
+            nudSoLuong.Text = sach.SoLuong.ToString();
+            txtGiaMuon.Text = sach.GiaMuon.ToString();
+            txtNhaXuatBan.Text = sach.NhaXuatBan;
+            dtpNamXuatBan.Value = sach.NamXuatBan.Value;
+            nudLanXuatBan.Text = sach.LanXuatBan.ToString();
+            ptbAnhSach.Image = new ConvertImages().ConvertBytesToImage((byte[])sach.AnhSach.ToArray());
             
-        }
-
-        private void txtTacGia_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
-                e.Handled = true;
-        }
-
-        private void txtGiaMuon_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && (e.KeyChar != '.'))
-                e.Handled = true;
-        }
-
-        private void cbbTenDanhMuc_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            textChange = true;
-            btnLuu.Enabled = true;
+            textChange = false;
+            btnLuu.Enabled = false;
             btnXoaNDNhap.Enabled = true;
         }
 
@@ -147,11 +127,6 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
                     MessageBox.Show("Tên nhà xuất bản không được để trống!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-                if (!hasImage)
-                {
-                    MessageBox.Show("Chưa có ảnh!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
 
                 SACH sach = new SACH();
                 sach.TenSach = txtTenSach.Text;
@@ -166,17 +141,13 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
                 dataContext.SACHes.InsertOnSubmit(sach);
                 dataContext.SubmitChanges();
                 QuanLySach.LoadData();
-                MessageBox.Show("Lưu thành công!", "Successfully", MessageBoxButtons.OK);
-                if (MessageBox.Show("Bạn có muốn thêm thông tin sách mới nữa không?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
-                {
-                    LoadData();
-                }
-                else this.Dispose();
+                MessageBox.Show("Sửa thành công!", "Successfully", MessageBoxButtons.OK);
+                this.Dispose();
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi "+ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -192,7 +163,6 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
                 {
                     img = Image.FromFile(openFileDialog1.FileName);
                     ptbAnhSach.Image = img;
-                    hasImage = true;
                     btnLuu.Enabled = true;
                 }
                 catch (FileNotFoundException fileEx)
@@ -207,7 +177,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
         {
             if (textChange == true)
             {
-                if (MessageBox.Show("Bạn có muốn lưu thông tin sách không?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+                if (MessageBox.Show("Bạn có muốn lưu lại thông tin sách không?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
                 {
                     btnLuu_Click(sender, e);
                 }
@@ -217,25 +187,40 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
 
         private void btnXoaNDNhap_Click(object sender, EventArgs e)
         {
-            LoadData();
+            cbbTenDanhMuc.SelectedIndex = 0;
+            txtTenSach.Clear();
+            ActiveControl = txtTenSach;
+            txtTacGia.Clear();
+            txtNhaXuatBan.Clear();
+            txtGiaMuon.Clear();
+
+            btnLuu.Enabled = false;
+            btnXoaNDNhap.Enabled = false;
+            textChange = false;
         }
 
-        private void btnThemDanhMuc_Click(object sender, EventArgs e)
-        {
-            fThemDanhMuc danhMucForm = new fThemDanhMuc(this);
-            danhMucForm.ShowDialog();
-        }
-
-        private void fThemSach_FormClosing(object sender, FormClosingEventArgs e)
+        private void fSuaThongTinSach_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (textChange == true)
             {
-                if (MessageBox.Show("Bạn có muốn lưu thông tin sách không?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+                if (MessageBox.Show("Bạn có muốn lưu lại thông tin sách không?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
                 {
                     btnLuu_Click(sender, e);
                 }
             }
             this.Dispose();
+        }
+
+        private void txtTacGia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtGiaMuon_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && (e.KeyChar != '.'))
+                e.Handled = true;
         }
     }
 }
