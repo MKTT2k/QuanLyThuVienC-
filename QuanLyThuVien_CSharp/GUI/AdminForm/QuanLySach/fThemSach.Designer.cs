@@ -65,9 +65,10 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             this.btnQuayLai.Location = new System.Drawing.Point(870, 492);
             this.btnQuayLai.Name = "btnQuayLai";
             this.btnQuayLai.Size = new System.Drawing.Size(182, 54);
-            this.btnQuayLai.TabIndex = 4;
+            this.btnQuayLai.TabIndex = 12;
             this.btnQuayLai.Text = "Quay lại";
             this.btnQuayLai.UseVisualStyleBackColor = true;
+            this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
             // 
             // btnXoaNDNhap
             // 
@@ -77,9 +78,10 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             this.btnXoaNDNhap.Location = new System.Drawing.Point(584, 492);
             this.btnXoaNDNhap.Name = "btnXoaNDNhap";
             this.btnXoaNDNhap.Size = new System.Drawing.Size(256, 54);
-            this.btnXoaNDNhap.TabIndex = 3;
+            this.btnXoaNDNhap.TabIndex = 11;
             this.btnXoaNDNhap.Text = "Xóa nội dung nhập";
             this.btnXoaNDNhap.UseVisualStyleBackColor = true;
+            this.btnXoaNDNhap.Click += new System.EventHandler(this.btnXoaNDNhap_Click);
             // 
             // btnLuu
             // 
@@ -89,7 +91,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             this.btnLuu.Location = new System.Drawing.Point(391, 492);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(160, 54);
-            this.btnLuu.TabIndex = 2;
+            this.btnLuu.TabIndex = 10;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
@@ -124,7 +126,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             this.lbl.Location = new System.Drawing.Point(322, 61);
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(115, 20);
-            this.lbl.TabIndex = 5;
+            this.lbl.TabIndex = 0;
             this.lbl.Text = "Tên danh mục";
             // 
             // label2
@@ -134,7 +136,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             this.label2.Location = new System.Drawing.Point(322, 132);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 20);
-            this.label2.TabIndex = 6;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Tên sách";
             // 
             // label3
@@ -144,7 +146,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             this.label3.Location = new System.Drawing.Point(322, 203);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 20);
-            this.label3.TabIndex = 7;
+            this.label3.TabIndex = 0;
             this.label3.Text = "Tác giả";
             // 
             // label4
@@ -154,7 +156,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             this.label4.Location = new System.Drawing.Point(322, 274);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 20);
-            this.label4.TabIndex = 8;
+            this.label4.TabIndex = 0;
             this.label4.Text = "Số lượng";
             // 
             // label5
@@ -164,7 +166,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             this.label5.Location = new System.Drawing.Point(322, 345);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 20);
-            this.label5.TabIndex = 9;
+            this.label5.TabIndex = 0;
             this.label5.Text = "Giá mượn";
             // 
             // cbbTenDanhMuc
@@ -175,7 +177,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             this.cbbTenDanhMuc.Location = new System.Drawing.Point(325, 84);
             this.cbbTenDanhMuc.Name = "cbbTenDanhMuc";
             this.cbbTenDanhMuc.Size = new System.Drawing.Size(199, 28);
-            this.cbbTenDanhMuc.TabIndex = 10;
+            this.cbbTenDanhMuc.TabIndex = 2;
             this.cbbTenDanhMuc.SelectedIndexChanged += new System.EventHandler(this.cbbTenDanhMuc_SelectedIndexChanged);
             // 
             // txtTenSach
@@ -184,7 +186,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             this.txtTenSach.Location = new System.Drawing.Point(325, 155);
             this.txtTenSach.Name = "txtTenSach";
             this.txtTenSach.Size = new System.Drawing.Size(306, 27);
-            this.txtTenSach.TabIndex = 11;
+            this.txtTenSach.TabIndex = 3;
             this.txtTenSach.TextChanged += new System.EventHandler(this.txtTenSach_TextChanged);
             // 
             // txtGiaMuon
@@ -193,7 +195,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             this.txtGiaMuon.Location = new System.Drawing.Point(325, 365);
             this.txtGiaMuon.Name = "txtGiaMuon";
             this.txtGiaMuon.Size = new System.Drawing.Size(172, 27);
-            this.txtGiaMuon.TabIndex = 12;
+            this.txtGiaMuon.TabIndex = 6;
             this.txtGiaMuon.TextChanged += new System.EventHandler(this.txtGiaMuon_TextChanged);
             this.txtGiaMuon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiaMuon_KeyPress);
             // 
@@ -203,7 +205,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             this.txtTacGia.Location = new System.Drawing.Point(325, 225);
             this.txtTacGia.Name = "txtTacGia";
             this.txtTacGia.Size = new System.Drawing.Size(306, 27);
-            this.txtTacGia.TabIndex = 13;
+            this.txtTacGia.TabIndex = 4;
             this.txtTacGia.TextChanged += new System.EventHandler(this.txtTacGia_TextChanged);
             this.txtTacGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTacGia_KeyPress);
             // 
@@ -223,7 +225,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             0});
             this.nudSoLuong.Name = "nudSoLuong";
             this.nudSoLuong.Size = new System.Drawing.Size(172, 27);
-            this.nudSoLuong.TabIndex = 14;
+            this.nudSoLuong.TabIndex = 5;
             this.nudSoLuong.Value = new decimal(new int[] {
             1,
             0,
@@ -242,7 +244,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             0});
             this.nudLanXuatBan.Name = "nudLanXuatBan";
             this.nudLanXuatBan.Size = new System.Drawing.Size(136, 27);
-            this.nudLanXuatBan.TabIndex = 18;
+            this.nudLanXuatBan.TabIndex = 9;
             this.nudLanXuatBan.Value = new decimal(new int[] {
             1,
             0,
@@ -256,7 +258,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             this.txtNhaXuatBan.Location = new System.Drawing.Point(734, 225);
             this.txtNhaXuatBan.Name = "txtNhaXuatBan";
             this.txtNhaXuatBan.Size = new System.Drawing.Size(306, 27);
-            this.txtNhaXuatBan.TabIndex = 17;
+            this.txtNhaXuatBan.TabIndex = 7;
             this.txtNhaXuatBan.TextChanged += new System.EventHandler(this.txtNhaXuatBan_TextChanged);
             // 
             // lbl2
@@ -266,7 +268,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             this.lbl2.Location = new System.Drawing.Point(731, 343);
             this.lbl2.Name = "lbl2";
             this.lbl2.Size = new System.Drawing.Size(105, 20);
-            this.lbl2.TabIndex = 16;
+            this.lbl2.TabIndex = 0;
             this.lbl2.Text = "Lần xuất bản";
             // 
             // label7
@@ -276,7 +278,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             this.label7.Location = new System.Drawing.Point(731, 203);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(107, 20);
-            this.label7.TabIndex = 15;
+            this.label7.TabIndex = 0;
             this.label7.Text = "Nhà xuất bản";
             // 
             // lbl1
@@ -286,7 +288,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             this.lbl1.Location = new System.Drawing.Point(731, 273);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(112, 20);
-            this.lbl1.TabIndex = 19;
+            this.lbl1.TabIndex = 0;
             this.lbl1.Text = "Năm xuất bản";
             // 
             // dtpNamXuatBan
@@ -297,7 +299,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             this.dtpNamXuatBan.Location = new System.Drawing.Point(734, 295);
             this.dtpNamXuatBan.Name = "dtpNamXuatBan";
             this.dtpNamXuatBan.Size = new System.Drawing.Size(200, 27);
-            this.dtpNamXuatBan.TabIndex = 20;
+            this.dtpNamXuatBan.TabIndex = 8;
             this.dtpNamXuatBan.Value = new System.DateTime(2000, 12, 17, 10, 42, 0, 0);
             this.dtpNamXuatBan.ValueChanged += new System.EventHandler(this.dtpNamXuatBan_ValueChanged);
             // 
@@ -308,7 +310,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             this.label1.Location = new System.Drawing.Point(503, 371);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 20);
-            this.label1.TabIndex = 21;
+            this.label1.TabIndex = 0;
             this.label1.Text = "VNĐ";
             // 
             // openFileDialog1
@@ -344,6 +346,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             this.Controls.Add(this.btnThayAnh);
             this.Controls.Add(this.ptbAnhSach);
             this.Name = "fThemSach";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm thông tin sách mới";
             ((System.ComponentModel.ISupportInitialize)(this.ptbAnhSach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).EndInit();

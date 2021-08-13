@@ -15,10 +15,15 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
     public partial class fThemSach : Form
     {
         QuanLyThuVien_CSharpDataContext dataContext = new QuanLyThuVien_CSharpDataContext();
+        fQuanLySach QuanLySach;
         bool textChange;
         bool hasImage = false;
         
         public fThemSach()
+        {
+            InitializeComponent();
+        }
+        public fThemSach(fQuanLySach f)
         {
             InitializeComponent();
             LoadData();
@@ -168,7 +173,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
         private void btnThayAnh_Click(object sender, EventArgs e)
         {
             openFileDialog1.Title = "Chọn ảnh";
-            openFileDialog1.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
+            openFileDialog1.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png, *.gif) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png; *.gif";
             Image img;
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -185,6 +190,16 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
                 }
 
             }
+        }
+
+        private void btnQuayLai_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void btnXoaNDNhap_Click(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }

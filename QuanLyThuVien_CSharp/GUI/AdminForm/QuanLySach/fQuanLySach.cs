@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,7 +30,6 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm
             cbbTimKiem.Items.Add("Tên danh mục");
             cbbTimKiem.SelectedIndex = 0;
             txtNoiDungTim.Clear();
-            btnThem.Enabled = false;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
             btnIn.Enabled = false;
@@ -50,5 +50,10 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm
 
         }
 
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            fThemSach themSach = new fThemSach(this);
+            themSach.ShowDialog();
+        }
     }
 }
