@@ -12,7 +12,7 @@ namespace QuanLyThuVien_CSharp
         public fQuanLyDanhMuc()
         {
             InitializeComponent();
-            //this.Text = "Quản lý danh mục";
+            this.Text = "Quản lý danh mục";
             LoadData();
         }
 
@@ -20,7 +20,6 @@ namespace QuanLyThuVien_CSharp
         {
             dgvDanhMuc.DataSource = dataContext.DANHMUCs.Select(p => p).OrderBy(p=>p.MaDanhMuc);
 
-            timer1.Start();
             txtTenDanhMuc.Clear();
             ActiveControl = txtTenDanhMuc;
             btnThem.Enabled = false;
@@ -151,10 +150,5 @@ namespace QuanLyThuVien_CSharp
                 e.Handled = true;
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            string str = "Quản lý danh mục    ";
-            this.Text = str.Substring(str.Length - 1) + str.Substring(0, str.Length - 1);
-        }
     }
 }
