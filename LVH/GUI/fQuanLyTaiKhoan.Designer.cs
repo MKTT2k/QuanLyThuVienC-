@@ -41,7 +41,7 @@ namespace LVH.GUI
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.AnhDaiDien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnhDaiDien = new System.Windows.Forms.DataGridViewImageColumn();
             this.TenDangNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenNguoiDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -166,7 +166,7 @@ namespace LVH.GUI
             this.btnEdit.TabIndex = 0;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnSua_Click);
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
@@ -176,7 +176,7 @@ namespace LVH.GUI
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnThem_Click);
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // panel2
             // 
@@ -195,6 +195,7 @@ namespace LVH.GUI
             this.AnhDaiDien.Name = "AnhDaiDien";
             this.AnhDaiDien.ReadOnly = true;
             this.AnhDaiDien.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.AnhDaiDien.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.AnhDaiDien.Width = 125;
             // 
             // TenDangNhap
@@ -272,7 +273,7 @@ namespace LVH.GUI
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnLoad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AnhDaiDien;
+        private System.Windows.Forms.DataGridViewImageColumn AnhDaiDien;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDangNhap;
         private System.Windows.Forms.DataGridViewTextBoxColumn MatKhau;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNguoiDung;

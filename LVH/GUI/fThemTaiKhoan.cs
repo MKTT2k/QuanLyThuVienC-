@@ -54,7 +54,7 @@ namespace LVH.GUI
             try
             {               
                 TAIKHOAN themTaiKhoan = new TAIKHOAN();
-                themTaiKhoan.AnhDaiDien = new BUS.ConvertImage().ConvertImageToBytes(lbl_image.Image);
+                themTaiKhoan.AnhDaiDien = new ConvertImage().ConvertImageToBytes(lbl_image.Image);
                 themTaiKhoan.MatKhau = "123";
                 themTaiKhoan.TenDangNhap = txtUserName.Text;
                 themTaiKhoan.TenNguoiDung = txtName.Text;

@@ -28,7 +28,7 @@ namespace LVH.GUI
                 //themTaiKhoan.TenDangNhap = TenDangNhap.Text;
 
                 //dataContext.TAIKHOANs.InsertOnSubmit(themTaiKhoan);
-                dataContext.SubmitChanges();
+                
             }
             catch (Exception ex)
             {
@@ -36,13 +36,13 @@ namespace LVH.GUI
             }          
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
             fThemTaiKhoan f = new fThemTaiKhoan(this);
             f.ShowDialog();
         }
 
-        private void btnSua_Click(object sender, EventArgs e) 
+        private void btnEdit_Click(object sender, EventArgs e) 
         {
             //byte[] AnhDaiDien = new BUS.ConvertImage().ConvertImageToBytes(dgvTaiKhoan.Rows[index].Cells[0].Value);
             fSuaTaiKhoan f = new fSuaTaiKhoan();
