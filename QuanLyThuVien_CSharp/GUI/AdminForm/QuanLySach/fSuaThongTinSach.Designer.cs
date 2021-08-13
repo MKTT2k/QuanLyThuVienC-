@@ -188,6 +188,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             this.cbbTenDanhMuc.Name = "cbbTenDanhMuc";
             this.cbbTenDanhMuc.Size = new System.Drawing.Size(199, 28);
             this.cbbTenDanhMuc.TabIndex = 25;
+            this.cbbTenDanhMuc.SelectedIndexChanged += new System.EventHandler(this.cbbTenDanhMuc_SelectedIndexChanged);
             // 
             // txtTenSach
             // 

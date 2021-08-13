@@ -141,6 +141,8 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
                 dataContext.SACHes.InsertOnSubmit(sach);
                 dataContext.SubmitChanges();
                 QuanLySach.LoadData();
+
+                textChange = false;
                 MessageBox.Show("Sửa thành công!", "Successfully", MessageBoxButtons.OK);
                 this.Dispose();
 
@@ -221,6 +223,13 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && (e.KeyChar != '.'))
                 e.Handled = true;
+        }
+
+        private void cbbTenDanhMuc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textChange = true;
+            btnLuu.Enabled = true;
+            btnXoaNDNhap.Enabled = true;
         }
     }
 }

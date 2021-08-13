@@ -166,6 +166,8 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
                 dataContext.SACHes.InsertOnSubmit(sach);
                 dataContext.SubmitChanges();
                 QuanLySach.LoadData();
+
+                textChange = false;
                 MessageBox.Show("Lưu thành công!", "Successfully", MessageBoxButtons.OK);
                 if (MessageBox.Show("Bạn có muốn thêm thông tin sách mới nữa không?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
                 {
