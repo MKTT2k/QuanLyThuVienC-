@@ -11,11 +11,6 @@ namespace QuanLyThuVien_CSharp.DTO
         public string hoTen { get; set; }
         public string maSV { get; set; }
         public string thoiGian { get; set; }
-
-        public DocGia()
-        {
-
-        }
     }
     
 }
