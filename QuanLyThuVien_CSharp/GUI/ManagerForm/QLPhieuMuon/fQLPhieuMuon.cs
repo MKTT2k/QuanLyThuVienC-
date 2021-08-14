@@ -38,7 +38,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
 
         private void dgvPheuMuon_DoubleClick(object sender, EventArgs e)
         {
-            fEditPhieuMuon f = new fEditPhieuMuon(this, 2);
+            fEditPhieuMuon f = new fEditPhieuMuon(this, 5);
             f.ShowDialog();
             index = -1;
         }

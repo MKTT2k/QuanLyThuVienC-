@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
 {
@@ -71,6 +72,54 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
                 lblStatus.Text = "Tình trạng: Đã trả đủ";
                 lblStatus.ForeColor = Color.Green;
             }
+        }
+
+        private void dgvSachMuon_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            index = e.RowIndex;
+            if (index >= 0)
+            {
+                btnReturn.Enabled = true;
+            }
+            else
+            {
+                btnReturn.Enabled = false;
+            }
+        }
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            if (index >= 0)
+            {
+                dgvSachMuon.Rows[index].Cells[3].Value = "Đã trả";
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            DateTime localDate = DateTime.Now;
+            String currentDate = localDate.Date.ToString(new CultureInfo("en-GB")).Split(' ')[0];
+            String ngay = currentDate.Substring(0, 2);
+            String thang = currentDate.Substring(3, 5);
+            String nam = currentDate.Substring(6);
+            for(int i =0; i<dgvSachMuon.Rows.Count; i++)
+            {
+                var s = db.CTPHIEUMUONs.Single(p => p.ID == Int32.Parse(dgvSachMuon.Rows[i].Cells[0].Value.ToString()));
+                if(s.TinhTrang == false && dgvSachMuon.Rows[i].Cells[3].Value.ToString().Equals("Đã trả"))
+                {
+                    s.TinhTrang = true;
+                    s.NgayTra = DateTime.ParseExact(nam + "/" + thang + "/" + ngay, "yyyy/MM/dd", System.Globalization.CultureInfo.InvariantCulture);
+                    var s1 = db.SACHes.Single(p => p.MaSach == Int32.Parse(dgvSachMuon.Rows[i].Cells[1].Value.ToString()));
+                    s1.SoLuong = s1.SoLuong + 1;
+                    db.SubmitChanges();
+                }
+            }
+            QLPhieuMuon.loadForm();
+            this.Dispose();
         }
     }
 }
