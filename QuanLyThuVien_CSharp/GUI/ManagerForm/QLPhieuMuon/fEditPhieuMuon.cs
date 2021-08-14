@@ -104,7 +104,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             DateTime localDate = DateTime.Now;
             String currentDate = localDate.Date.ToString(new CultureInfo("en-GB")).Split(' ')[0];
             String ngay = currentDate.Substring(0, 2);
-            String thang = currentDate.Substring(3, 5);
+            String thang = currentDate.Substring(3, 2);
             String nam = currentDate.Substring(6);
             for(int i =0; i<dgvSachMuon.Rows.Count; i++)
             {
@@ -112,7 +112,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
                 if(s.TinhTrang == false && dgvSachMuon.Rows[i].Cells[3].Value.ToString().Equals("Đã trả"))
                 {
                     s.TinhTrang = true;
-                    s.NgayTra = DateTime.ParseExact(nam + "/" + thang + "/" + ngay, "yyyy/MM/dd", System.Globalization.CultureInfo.InvariantCulture);
+                    s.NgayTra = DateTime.ParseExact(thang + "/" + ngay + "/" + nam, "MM/dd/yyyy", System.Globalization.CultureInfo.InvariantCulture);
                     var s1 = db.SACHes.Single(p => p.MaSach == Int32.Parse(dgvSachMuon.Rows[i].Cells[1].Value.ToString()));
                     s1.SoLuong = s1.SoLuong + 1;
                     db.SubmitChanges();
