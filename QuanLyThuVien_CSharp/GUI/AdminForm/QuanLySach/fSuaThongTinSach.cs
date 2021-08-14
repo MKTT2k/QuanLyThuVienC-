@@ -128,17 +128,17 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
                     return;
                 }
 
-                SACH sach = new SACH();
-                sach.TenSach = txtTenSach.Text;
-                sach.TacGia = txtTacGia.Text;
-                sach.SoLuong = Int32.Parse(nudSoLuong.Text);
-                sach.GiaMuon = Int32.Parse(txtGiaMuon.Text);
-                sach.NhaXuatBan = txtNhaXuatBan.Text;
-                sach.NamXuatBan = dtpNamXuatBan.Value;
-                sach.LanXuatBan = Int32.Parse(nudLanXuatBan.Text);
-                sach.MaDanhMuc = Int32.Parse(cbbTenDanhMuc.SelectedValue.ToString());
-                sach.AnhSach = new ConvertImages().ConvertImageToBytes(ptbAnhSach.Image);
-                dataContext.SACHes.InsertOnSubmit(sach);
+                SACH sachNew = dataContext.SACHes.Single(p => p.MaSach == MaSach);
+                sachNew.TenSach = txtTenSach.Text;
+                sachNew.TacGia = txtTacGia.Text;
+                sachNew.SoLuong = Int32.Parse(nudSoLuong.Text);
+                sachNew.GiaMuon = Int32.Parse(txtGiaMuon.Text);
+                sachNew.NhaXuatBan = txtNhaXuatBan.Text;
+                sachNew.NamXuatBan = dtpNamXuatBan.Value;
+                sachNew.LanXuatBan = Int32.Parse(nudLanXuatBan.Text);
+                sachNew.MaDanhMuc = Int32.Parse(cbbTenDanhMuc.SelectedValue.ToString());
+                sachNew.AnhSach = new ConvertImages().ConvertImageToBytes(ptbAnhSach.Image);
+                
                 dataContext.SubmitChanges();
                 QuanLySach.LoadData();
 
