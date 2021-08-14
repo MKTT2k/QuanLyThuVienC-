@@ -33,6 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FastMember, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\FastMember.1.5.0\lib\net461\FastMember.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Excel\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -51,6 +62,7 @@
     <Compile Include="BLL\DanhMuc_BLL.cs" />
     <Compile Include="DAL\DataConnection.cs" />
     <Compile Include="DTO\DanhMuc_DTO.cs" />
+    <Compile Include="DTO\DocGia.cs" />
     <Compile Include="DTO\Sach_DTO.cs" />
     <Compile Include="GUI\AdminForm\QuanLyDanhMuc\fQuanLyDanhMuc.cs">
       <SubType>Form</SubType>
@@ -81,6 +93,18 @@
     </Compile>
     <Compile Include="GUI\AdminForm\QuanLySach\fThemSach.Designer.cs">
       <DependentUpon>fThemSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ManagerForm\QLDocGia\fDeleteEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ManagerForm\QLDocGia\fDeleteEntry.Designer.cs">
+      <DependentUpon>fDeleteEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ManagerForm\QLDocGia\fQLDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ManagerForm\QLDocGia\fQLDocGia.Designer.cs">
+      <DependentUpon>fQLDocGia.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\ManagerForm\QLPhieuMuon\fAddPhieuMuon.cs">
       <SubType>Form</SubType>
@@ -125,6 +149,9 @@
     <EmbeddedResource Include="GUI\AdminForm\QuanLySach\fThemSach.resx">
       <DependentUpon>fThemSach.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ManagerForm\QLDocGia\fQLDocGia.resx">
+      <DependentUpon>fQLDocGia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ManagerForm\QLPhieuMuon\fAddPhieuMuon.resx">
       <DependentUpon>fAddPhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +171,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
