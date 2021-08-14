@@ -259,7 +259,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // btnThemDanhMuc
             // 
             this.btnThemDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemDanhMuc.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnThemDanhMuc.ForeColor = System.Drawing.Color.Red;
             this.btnThemDanhMuc.Image = global::QuanLyThuVien_CSharp.Properties.Resources.add_category;
             this.btnThemDanhMuc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThemDanhMuc.Location = new System.Drawing.Point(553, 61);
@@ -286,6 +286,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // btnXoaNDNhap
             // 
             this.btnXoaNDNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaNDNhap.ForeColor = System.Drawing.Color.DarkGreen;
             this.btnXoaNDNhap.Image = global::QuanLyThuVien_CSharp.Properties.Resources.clear;
             this.btnXoaNDNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXoaNDNhap.Location = new System.Drawing.Point(584, 492);
@@ -299,6 +300,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // btnLuu
             // 
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.ForeColor = System.Drawing.Color.Red;
             this.btnLuu.Image = global::QuanLyThuVien_CSharp.Properties.Resources.save;
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLuu.Location = new System.Drawing.Point(391, 492);
@@ -312,6 +314,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // btnThayAnh
             // 
             this.btnThayAnh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThayAnh.ForeColor = System.Drawing.Color.Red;
             this.btnThayAnh.Image = global::QuanLyThuVien_CSharp.Properties.Resources.replace;
             this.btnThayAnh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThayAnh.Location = new System.Drawing.Point(16, 337);

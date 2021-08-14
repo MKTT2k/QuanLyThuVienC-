@@ -29,13 +29,13 @@ namespace QuanLyThuVien_CSharp
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvDanhMuc = new System.Windows.Forms.DataGridView();
             this.MaDanhMuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDanhMuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTenDanhMuc = new System.Windows.Forms.TextBox();
             this.lblTenDanhMuc = new System.Windows.Forms.Label();
-            this.btnQuayLai = new System.Windows.Forms.Button();
+            this.btnTroLai = new System.Windows.Forms.Button();
             this.btnBoQua = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -59,14 +59,14 @@ namespace QuanLyThuVien_CSharp
             this.MaDanhMuc,
             this.TenDanhMuc});
             this.dgvDanhMuc.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDanhMuc.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDanhMuc.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDanhMuc.GridColor = System.Drawing.SystemColors.Window;
             this.dgvDanhMuc.Location = new System.Drawing.Point(13, 13);
             this.dgvDanhMuc.MultiSelect = false;
@@ -125,18 +125,18 @@ namespace QuanLyThuVien_CSharp
             this.lblTenDanhMuc.TabIndex = 0;
             this.lblTenDanhMuc.Text = "Tên danh mục";
             // 
-            // btnQuayLai
+            // btnTroLai
             // 
-            this.btnQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuayLai.Image = global::QuanLyThuVien_CSharp.Properties.Resources._return;
-            this.btnQuayLai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQuayLai.Location = new System.Drawing.Point(634, 496);
-            this.btnQuayLai.Name = "btnQuayLai";
-            this.btnQuayLai.Size = new System.Drawing.Size(173, 54);
-            this.btnQuayLai.TabIndex = 6;
-            this.btnQuayLai.Text = "Quay lại";
-            this.btnQuayLai.UseVisualStyleBackColor = true;
-            this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
+            this.btnTroLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTroLai.Image = global::QuanLyThuVien_CSharp.Properties.Resources.home;
+            this.btnTroLai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTroLai.Location = new System.Drawing.Point(634, 496);
+            this.btnTroLai.Name = "btnTroLai";
+            this.btnTroLai.Size = new System.Drawing.Size(173, 54);
+            this.btnTroLai.TabIndex = 6;
+            this.btnTroLai.Text = "Trở lại";
+            this.btnTroLai.UseVisualStyleBackColor = true;
+            this.btnTroLai.Click += new System.EventHandler(this.btnTroLai_Click);
             // 
             // btnBoQua
             // 
@@ -199,7 +199,7 @@ namespace QuanLyThuVien_CSharp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(819, 562);
-            this.Controls.Add(this.btnQuayLai);
+            this.Controls.Add(this.btnTroLai);
             this.Controls.Add(this.btnBoQua);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
@@ -226,7 +226,7 @@ namespace QuanLyThuVien_CSharp
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnBoQua;
-        private System.Windows.Forms.Button btnQuayLai;
+        private System.Windows.Forms.Button btnTroLai;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDanhMuc;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDanhMuc;
     }

@@ -35,7 +35,6 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm
             txtNoiDungTim.Clear();
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
-            btnIn.Enabled = false;
 
             try
             {
@@ -65,13 +64,11 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm
             {
                 btnSua.Enabled = true;
                 btnXoa.Enabled = true;
-                btnIn.Enabled = true;
             }
             else
             {
                 btnSua.Enabled = false;
                 btnXoa.Enabled = false;
-                btnIn.Enabled = false;
             }
         }
 
@@ -201,7 +198,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm
                     inRow = inHeaderLength + 2 + m;
                     excelWorkSheet.Cells[inRow, inColumn] = table.Rows[m].ItemArray[n].ToString();
                     if (m % 2 == 0)
-                        excelWorkSheet.get_Range("A" + inRow.ToString(), "H" + inRow.ToString()).Interior.Color = System.Drawing.ColorTranslator.FromHtml("#FCE4D6");
+                        excelWorkSheet.get_Range("A" + inRow.ToString(), "H" + inRow.ToString()).Interior.Color = System.Drawing.ColorTranslator.FromHtml("#DCF3F6");
                 }
             }
             excelWorkSheet.Cells[table.Rows.Count + inHeaderLength + 2, 8] = "Tổng sách: " + tongSach.ToString();
@@ -211,17 +208,17 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm
             OfficeExcel.Range cellRang = excelWorkSheet.get_Range("A1", "H3");
             cellRang.Merge(false);
             cellRang.Interior.Color = System.Drawing.Color.White;
-            cellRang.Font.Color = System.Drawing.Color.Gray;
+            cellRang.Font.Color = System.Drawing.Color.Red;
             cellRang.HorizontalAlignment = OfficeExcel.XlHAlign.xlHAlignCenter;
             cellRang.VerticalAlignment = OfficeExcel.XlVAlign.xlVAlignCenter;
             cellRang.Font.Size = 16;
-            excelWorkSheet.Cells[1, 1] = "Danh sách đầu sách trong kho";
+            excelWorkSheet.Cells[1, 1] = "Danh sách các sách trong kho";
 
             //Dinh dang cot
             cellRang = excelWorkSheet.get_Range("A4", "H4");
             cellRang.Font.Bold = true;
             cellRang.Font.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.White);
-            cellRang.Interior.Color = System.Drawing.ColorTranslator.FromHtml("#ED7D31");
+            cellRang.Interior.Color = System.Drawing.ColorTranslator.FromHtml("#F2AB0E");
 
             excelWorkSheet.Columns[1].ColumnWidth = 10;
             excelWorkSheet.Columns[2].ColumnWidth = 30;
@@ -279,6 +276,15 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm
                     table.Rows.Add(row);
                 }
                 ExportDataSetToExcel(table, saveFileDialog.FileName, tongsach);
+
+
+                string fileOpen = saveFileDialog.FileName;
+                if(MessageBox.Show("Bạn có muốn xem file vừa lưu không?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    //OpenFileDialog openFileDialog = new OpenFileDialog();
+                    FileInfo fi = new FileInfo(fileOpen);
+                    System.Diagnostics.Process.Start(fileOpen);   
+                }
             }
         }
     }

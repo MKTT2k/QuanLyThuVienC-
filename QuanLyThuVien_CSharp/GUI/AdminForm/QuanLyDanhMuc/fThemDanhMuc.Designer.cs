@@ -59,6 +59,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyDanhMuc
             // 
             this.btnLuu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.ForeColor = System.Drawing.Color.Red;
             this.btnLuu.Image = global::QuanLyThuVien_CSharp.Properties.Resources.save;
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLuu.Location = new System.Drawing.Point(74, 140);
@@ -88,6 +89,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyDanhMuc
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(471, 232);
             this.Controls.Add(this.btnBoQua);
             this.Controls.Add(this.btnLuu);

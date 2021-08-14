@@ -28,11 +28,6 @@ namespace QuanLyThuVien_CSharp
             btnBoQua.Enabled = false;
         }
 
-        private void btnQuayLai_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
-
         private void btnBoQua_Click(object sender, EventArgs e)
         {
             LoadData();
@@ -154,5 +149,9 @@ namespace QuanLyThuVien_CSharp
                 e.Handled = true;
         }
 
+        private void btnTroLai_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }
