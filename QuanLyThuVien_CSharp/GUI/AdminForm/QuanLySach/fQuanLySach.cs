@@ -219,15 +219,18 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm
             cellRang.Font.Bold = true;
             cellRang.Font.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.White);
             cellRang.Interior.Color = System.Drawing.ColorTranslator.FromHtml("#F2AB0E");
+            cellRang.HorizontalAlignment = OfficeExcel.XlHAlign.xlHAlignCenter;
+            cellRang.VerticalAlignment = OfficeExcel.XlVAlign.xlVAlignCenter;
+            excelWorkSheet.Rows[4].RowHeight = 20;
 
             excelWorkSheet.Columns[1].ColumnWidth = 10;
-            excelWorkSheet.Columns[2].ColumnWidth = 30;
-            excelWorkSheet.Columns[3].ColumnWidth = 30;
+            excelWorkSheet.Columns[2].ColumnWidth = 25;
+            excelWorkSheet.Columns[3].ColumnWidth = 25;
             excelWorkSheet.Columns[4].ColumnWidth = 20;
             excelWorkSheet.Columns[5].ColumnWidth = 20;
             excelWorkSheet.Columns[6].ColumnWidth = 25;
             excelWorkSheet.Columns[7].ColumnWidth = 15;
-            excelWorkSheet.Columns[8].ColumnWidth = 20;
+            excelWorkSheet.Columns[8].ColumnWidth = 30;
             //excelWorkSheet.Columns.AutoFit();
 
             excelWorkBook.SaveAs(fileName, Default, Default, Default, false, Default, OfficeExcel.XlSaveAsAccessMode.xlNoChange, Default, Default, Default, Default, Default);

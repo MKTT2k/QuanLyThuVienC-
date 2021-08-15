@@ -38,6 +38,9 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <HintPath>..\..\..\..\..\..\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Excel\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -54,8 +57,10 @@
   <ItemGroup>
     <Compile Include="BLL\ConvertImages.cs" />
     <Compile Include="BLL\DanhMuc_BLL.cs" />
+    <Compile Include="BLL\ThongKe_BLL.cs" />
     <Compile Include="DAL\DataConnection.cs" />
     <Compile Include="DTO\DanhMuc_DTO.cs" />
+    <Compile Include="DTO\DocGia.cs" />
     <Compile Include="DTO\Sach_DTO.cs" />
     <Compile Include="GUI\AdminForm\QuanLyDanhMuc\fQuanLyDanhMuc.cs">
       <SubType>Form</SubType>
@@ -128,6 +133,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

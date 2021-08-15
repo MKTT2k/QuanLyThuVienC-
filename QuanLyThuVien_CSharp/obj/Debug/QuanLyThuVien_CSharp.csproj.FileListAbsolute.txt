@@ -13,3 +13,6 @@ C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\De
 C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyDanhMuc.fThemDanhMuc.resources
 C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach.fSuaThongTinSach.resources
 C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.GUI.AdminForm.ThongKe.fThongKe.resources
+C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.csproj.CopyComplete

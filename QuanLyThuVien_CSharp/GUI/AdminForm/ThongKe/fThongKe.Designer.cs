@@ -29,15 +29,19 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.ThongKe
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvThongKe = new System.Windows.Forms.DataGridView();
-            this.cbbThang = new System.Windows.Forms.ComboBox();
-            this.cbbNam = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnXuatExcel = new System.Windows.Forms.Button();
             this.btnQuayLai = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
-            this.btnXuatExcel = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbbNam = new System.Windows.Forms.ComboBox();
+            this.cbbThang = new System.Windows.Forms.ComboBox();
+            this.dgvThongKe = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongKe)).BeginInit();
             this.SuspendLayout();
@@ -57,59 +61,20 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.ThongKe
             this.panel1.Size = new System.Drawing.Size(1140, 84);
             this.panel1.TabIndex = 0;
             // 
-            // dgvThongKe
+            // btnXuatExcel
             // 
-            this.dgvThongKe.BackgroundColor = System.Drawing.Color.Azure;
-            this.dgvThongKe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvThongKe.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvThongKe.Location = new System.Drawing.Point(0, 84);
-            this.dgvThongKe.Name = "dgvThongKe";
-            this.dgvThongKe.RowHeadersWidth = 51;
-            this.dgvThongKe.RowTemplate.Height = 24;
-            this.dgvThongKe.Size = new System.Drawing.Size(1140, 505);
-            this.dgvThongKe.TabIndex = 1;
-            // 
-            // cbbThang
-            // 
-            this.cbbThang.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbbThang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbThang.FormattingEnabled = true;
-            this.cbbThang.Location = new System.Drawing.Point(312, 39);
-            this.cbbThang.Name = "cbbThang";
-            this.cbbThang.Size = new System.Drawing.Size(167, 28);
-            this.cbbThang.TabIndex = 0;
-            // 
-            // cbbNam
-            // 
-            this.cbbNam.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbbNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbNam.FormattingEnabled = true;
-            this.cbbNam.Location = new System.Drawing.Point(547, 38);
-            this.cbbNam.Name = "cbbNam";
-            this.cbbNam.Size = new System.Drawing.Size(121, 28);
-            this.cbbNam.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(245, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Tháng";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(497, 46);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 20);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Năm";
+            this.btnXuatExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnXuatExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXuatExcel.ForeColor = System.Drawing.Color.Indigo;
+            this.btnXuatExcel.Image = global::QuanLyThuVien_CSharp.Properties.Resources.export_to_excel;
+            this.btnXuatExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXuatExcel.Location = new System.Drawing.Point(923, 24);
+            this.btnXuatExcel.Name = "btnXuatExcel";
+            this.btnXuatExcel.Size = new System.Drawing.Size(205, 54);
+            this.btnXuatExcel.TabIndex = 4;
+            this.btnXuatExcel.Text = "Xuất Excel";
+            this.btnXuatExcel.UseVisualStyleBackColor = true;
+            this.btnXuatExcel.Click += new System.EventHandler(this.btnXuatExcel_Click);
             // 
             // btnQuayLai
             // 
@@ -119,7 +84,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.ThongKe
             this.btnQuayLai.Location = new System.Drawing.Point(12, 12);
             this.btnQuayLai.Name = "btnQuayLai";
             this.btnQuayLai.Size = new System.Drawing.Size(160, 54);
-            this.btnQuayLai.TabIndex = 6;
+            this.btnQuayLai.TabIndex = 5;
             this.btnQuayLai.Text = "Trở lại";
             this.btnQuayLai.UseVisualStyleBackColor = true;
             // 
@@ -133,24 +98,99 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.ThongKe
             this.btnThongKe.Location = new System.Drawing.Point(726, 25);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(160, 54);
-            this.btnThongKe.TabIndex = 4;
+            this.btnThongKe.TabIndex = 3;
             this.btnThongKe.Text = "Thống kê";
             this.btnThongKe.UseVisualStyleBackColor = true;
             this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
-            // btnXuatExcel
+            // label2
             // 
-            this.btnXuatExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnXuatExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXuatExcel.ForeColor = System.Drawing.Color.Indigo;
-            this.btnXuatExcel.Image = global::QuanLyThuVien_CSharp.Properties.Resources.export_to_excel;
-            this.btnXuatExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXuatExcel.Location = new System.Drawing.Point(923, 24);
-            this.btnXuatExcel.Name = "btnXuatExcel";
-            this.btnXuatExcel.Size = new System.Drawing.Size(205, 54);
-            this.btnXuatExcel.TabIndex = 11;
-            this.btnXuatExcel.Text = "Xuất Excel";
-            this.btnXuatExcel.UseVisualStyleBackColor = true;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(497, 46);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Năm";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(245, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tháng";
+            // 
+            // cbbNam
+            // 
+            this.cbbNam.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbbNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbNam.FormattingEnabled = true;
+            this.cbbNam.Location = new System.Drawing.Point(547, 38);
+            this.cbbNam.Name = "cbbNam";
+            this.cbbNam.Size = new System.Drawing.Size(121, 28);
+            this.cbbNam.TabIndex = 2;
+            // 
+            // cbbThang
+            // 
+            this.cbbThang.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbbThang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbThang.FormattingEnabled = true;
+            this.cbbThang.Location = new System.Drawing.Point(312, 39);
+            this.cbbThang.Name = "cbbThang";
+            this.cbbThang.Size = new System.Drawing.Size(167, 28);
+            this.cbbThang.TabIndex = 1;
+            // 
+            // dgvThongKe
+            // 
+            this.dgvThongKe.AllowUserToAddRows = false;
+            this.dgvThongKe.AllowUserToDeleteRows = false;
+            this.dgvThongKe.AllowUserToResizeColumns = false;
+            this.dgvThongKe.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dgvThongKe.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvThongKe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvThongKe.BackgroundColor = System.Drawing.Color.Azure;
+            this.dgvThongKe.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvThongKe.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvThongKe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvThongKe.ColumnHeadersHeight = 29;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvThongKe.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvThongKe.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvThongKe.Location = new System.Drawing.Point(0, 84);
+            this.dgvThongKe.Name = "dgvThongKe";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvThongKe.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvThongKe.RowHeadersVisible = false;
+            this.dgvThongKe.RowHeadersWidth = 51;
+            this.dgvThongKe.RowTemplate.Height = 24;
+            this.dgvThongKe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvThongKe.Size = new System.Drawing.Size(1140, 505);
+            this.dgvThongKe.TabIndex = 1;
             // 
             // fThongKe
             // 
@@ -160,6 +200,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.ThongKe
             this.Controls.Add(this.dgvThongKe);
             this.Controls.Add(this.panel1);
             this.Name = "fThongKe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fThongKe";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
