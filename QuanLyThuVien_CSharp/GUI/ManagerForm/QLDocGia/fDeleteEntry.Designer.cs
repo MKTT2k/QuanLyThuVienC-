@@ -87,6 +87,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             this.Controls.Add(this.cbbChooseDate);
             this.Name = "fDeleteEntry";
             this.Text = "fDeleteEntry";
+            this.Load += new System.EventHandler(this.fDeleteEntry_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

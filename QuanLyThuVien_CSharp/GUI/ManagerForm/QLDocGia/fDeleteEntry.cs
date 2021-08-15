@@ -62,5 +62,10 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
                 MessageBox.Show(ex.ToString(), "Lỗi");
             }
         }
+
+        private void fDeleteEntry_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

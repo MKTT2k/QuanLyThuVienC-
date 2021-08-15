@@ -205,5 +205,39 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
                 MessageBox.Show(ex.Message, "Lỗi");
             }
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            DateTime localDate = DateTime.Now;
+            string currentDate = localDate.Date.ToString(new CultureInfo("en-GB")).Split(' ')[0];
+            string ngay = currentDate.Substring(0, 2);
+            string thang = currentDate.Substring(3, 2);
+            string nam = currentDate.Substring(6);
+            String ngayMuon = thang + "/" + ngay + "/" + nam;
+            DataSet ds = new DataSet();
+            DataTable table = new DataTable();
+            table.Columns.Add("AnhSach");
+            table.Columns.Add("GiaMuon");
+            table.Columns.Add("LanXuatBan");
+            table.Columns.Add("MaDanhMuc");
+            table.Columns.Add("MaSach");
+            table.Columns.Add("NamXuatBan");
+            table.Columns.Add("NhaXuatBan");
+            table.Columns.Add("SoLuong");
+            table.Columns.Add("TacGia");
+            table.Columns.Add("TenSach");
+            for(int i=0; i<dgvCTPHieu.Rows.Count; i++)
+            {
+                DataRow dr = table.NewRow();
+                dr["MaSach"] = dgvCTPHieu.Rows[i].Cells[0].Value.ToString();
+                dr["TenSach"] = dgvCTPHieu.Rows[i].Cells[1].Value.ToString();
+                dr["GiaMuon"] = dgvCTPHieu.Rows[i].Cells[2].Value.ToString();
+                table.Rows.Add(dr);
+            }
+            ds.Tables.Add(table);
+            fBillView f = new fBillView(ds, txtNguoiMuon.Text, 
+                lblChiTietPhieu.Text, txtTongTien.Text, ngayMuon, tenDangNhap);
+            f.ShowDialog();
+        }
     }
 }
