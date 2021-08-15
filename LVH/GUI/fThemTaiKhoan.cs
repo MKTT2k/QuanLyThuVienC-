@@ -17,9 +17,9 @@ namespace LVH.GUI
     public partial class fThemTaiKhoan : Form
     {
 
-        QLThuVienCSharpDataContext dataContext = new QLThuVienCSharpDataContext();
+        QuanLyThuVienDataContext dataContext = new QuanLyThuVienDataContext();
         fQuanLyTaiKhoan QLTaiKhoan;
-        bool coAnh = false;
+        private bool hasPicture = false;
         public fThemTaiKhoan(fQuanLyTaiKhoan f)
         {
             InitializeComponent();
@@ -32,27 +32,29 @@ namespace LVH.GUI
         {
             openFileDialog1.Title = "chọn ảnh";
             openFileDialog1.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
-            Image img;
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
 
                 try
                 {
-                    img = Image.FromFile(openFileDialog1.FileName);
-                    lbl_image.Image = img;
-                    coAnh = true;
+                    lbl_image.Image = Image.FromFile(openFileDialog1.FileName);
+                    hasPicture = true;
                 }
-                catch (FileNotFoundException x)
+                catch (Exception ex)
                 {
-                    MessageBox.Show(x.Message);
+                    MessageBox.Show("Error: " + ex.Message, "Có lỗi xảy ra");
                 }
             }
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
+        private void addTaiKhoan()
         {
             try
-            {               
+            {
+                if (txtUserName.Text == "") throw new Exception("Tên đăng nhập không được để trống");
+                if (txtName.Text == "") throw new Exception("Tên người không được để trống");
+                if (!hasPicture) throw new Exception("Chưa chọn ảnh đại diện");
+
                 TAIKHOAN themTaiKhoan = new TAIKHOAN();
                 themTaiKhoan.AnhDaiDien = new ConvertImage().ConvertImageToBytes(lbl_image.Image);
                 themTaiKhoan.MatKhau = "123";
@@ -60,9 +62,10 @@ namespace LVH.GUI
                 themTaiKhoan.TenNguoiDung = txtName.Text;
                 themTaiKhoan.LoaiTaiKhoan = 1;
                 themTaiKhoan.TinhTrang = rdbEnabled.Checked ? true : false;
-
+                
                 dataContext.TAIKHOANs.InsertOnSubmit(themTaiKhoan);
                 dataContext.SubmitChanges();
+                MessageBox.Show("Thêm thành công", "Thông báo");
             }
             catch (Exception ex)
             {
@@ -70,9 +73,15 @@ namespace LVH.GUI
             }
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void btnThem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            addTaiKhoan();
+            this.Dispose();          
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {        
+            this.Dispose();
         }
     }
 }

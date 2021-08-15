@@ -4,72 +4,78 @@ using System.Windows.Forms;
 using LVH.BUS;
 using System.Linq;
 using System.Reflection;
+using System.Data.Linq;
+using System.Drawing;
 
 namespace LVH.GUI
 {
     public partial class fQuanLyTaiKhoan : Form
     {
         int index = -1;
-        QLThuVienCSharpDataContext dataContext = new QLThuVienCSharpDataContext();
-
+        QuanLyThuVienDataContext dataContext = new QuanLyThuVienDataContext();
         public fQuanLyTaiKhoan()
         {
             InitializeComponent();
         }
 
-
-        private void GUI_QuanLyTaiKhoan_Load(object sender, EventArgs e)
+        private void LoadData()
         {
             try
             {
-                dgvTaiKhoan.DataSource = dataContext.TAIKHOANs.Select(p => p).OrderBy(p => p.IDTaiKhoan);
-                //dgvTaiKhoan.DataSource = dataContext.TAIKHOANs.Where(p => p.IDTaiKhoan == 1);
-                //TAIKHOAN themTaiKhoan = new TAIKHOAN();
-                //themTaiKhoan.TenDangNhap = TenDangNhap.Text;
-
-                //dataContext.TAIKHOANs.InsertOnSubmit(themTaiKhoan);
-                
+                var s = from p in dataContext.TAIKHOANs
+                        select new {AnhDaiDien = p.AnhDaiDien.ToArray() , p.TenDangNhap, p.MatKhau, p.TenNguoiDung, p.LoaiTaiKhoan, p.TinhTrang };
+                dgvTaiKhoan.DataSource = s.ToList();               
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message, "Có lỗi xảy ra");
-            }          
+            }
+        }
+
+        private void GUI_QuanLyTaiKhoan_Load(object sender, EventArgs e)
+        {
+            
+            btnEdit.Enabled = false;
+            btnDelete.Enabled = false;
+            LoadData();
+            dgvTaiKhoan.ClearSelection();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             fThemTaiKhoan f = new fThemTaiKhoan(this);
             f.ShowDialog();
+            LoadData();
         }
 
-        private void btnEdit_Click(object sender, EventArgs e) 
+        private void btnEdit_Click(object sender, EventArgs e)
         {
-            //byte[] AnhDaiDien = new BUS.ConvertImage().ConvertImageToBytes(dgvTaiKhoan.Rows[index].Cells[0].Value);
-            fSuaTaiKhoan f = new fSuaTaiKhoan();
+            fSuaTaiKhoan f = new fSuaTaiKhoan(this, dgvTaiKhoan.Rows[index].Cells[1].Value.ToString());
             f.ShowDialog();
+            LoadData();
         }
 
         private void dgvTaiKhoan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            index = e.RowIndex;
-            if (index >= 0)
+            try
             {
-                btnEdit.Enabled = true;
-                btnDelete.Enabled = true;
+                index = e.RowIndex;
+                if (index >= 0)
+                {
+                    btnEdit.Enabled = true;
+                    btnDelete.Enabled = true;
+                }
+                else
+                {
+                    btnEdit.Enabled = false;
+                    btnDelete.Enabled = false;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                btnEdit.Enabled = false;
-                btnDelete.Enabled = false;
+                MessageBox.Show("Error: " + ex.Message, "Có lỗi xảy ra");
             }
-        }
 
-        public void DeleteAccount()
-        {
-            TAIKHOAN xoaTaiKhoan = new TAIKHOAN();
-            xoaTaiKhoan.TenDangNhap = dgvTaiKhoan.Rows[index].Cells[0].Value.ToString();
-            dataContext.TAIKHOANs.DeleteOnSubmit(xoaTaiKhoan);
-            dataContext.SubmitChanges();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -80,18 +86,51 @@ namespace LVH.GUI
                 {
                     MessageBox.Show("Vui lòng chọn đối tượng cần xoá!");
                 }
-                else
-                {
-                    if (MessageBox.Show("Bạn có chắc chắn muốn xoá tài khoản " + dgvTaiKhoan.Rows[index].Cells[1].Value.ToString() + " không ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+                else 
+                    if (MessageBox.Show("Bạn có chắc chắn muốn xoá tài khoản " + dgvTaiKhoan.Rows[index].Cells[1].Value.ToString() + " không ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                     {
-                        DeleteAccount();
+                        var xoaTaiKhoan = dataContext.TAIKHOANs.Where(p => p.TenDangNhap == dgvTaiKhoan.Rows[index].Cells[1].Value.ToString());
+                        foreach (var i in xoaTaiKhoan)
+                        {
+                            dataContext.TAIKHOANs.DeleteOnSubmit(i);
+                            dataContext.SubmitChanges();                       
+                        }
+                        MessageBox.Show("Xóa thành công", "Thông báo");
+                        LoadData();
                     }
-                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Lỗi");
             }
+        }
+
+        private void Search(string howSearch)
+        {
+            if (howSearch == "Tên đăng nhập")
+            {
+                var s = from p in dataContext.TAIKHOANs
+                        where p.TenDangNhap.Contains(txtSearch.Text)
+                        select new { AnhDaiDien = p.AnhDaiDien.ToArray(), p.TenDangNhap, p.MatKhau, p.TenNguoiDung, p.LoaiTaiKhoan, p.TinhTrang };
+                dgvTaiKhoan.DataSource = s.ToList();
+            }
+            else if (howSearch == "Tên người dùng")
+            {
+                var s = from p in dataContext.TAIKHOANs
+                        where p.TenNguoiDung.Contains(txtSearch.Text)
+                        select new { AnhDaiDien = p.AnhDaiDien.ToArray(), p.TenDangNhap, p.MatKhau, p.TenNguoiDung, p.LoaiTaiKhoan, p.TinhTrang };
+                dgvTaiKhoan.DataSource = s.ToList();
+            }
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            Search(cbbSearch.Text);
         }
     }
 }

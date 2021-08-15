@@ -51,7 +51,7 @@ namespace LVH.GUI
             this.btnDoiMK.TabIndex = 0;
             this.btnDoiMK.Text = "Đổi mật khẩu";
             this.btnDoiMK.UseVisualStyleBackColor = true;
-            this.btnDoiMK.Click += new System.EventHandler(this.btnQLTK_Click);
+            this.btnDoiMK.Click += new System.EventHandler(this.btnDoiMK_Click);
             // 
             // fTrangChu
             // 
@@ -61,6 +61,7 @@ namespace LVH.GUI
             this.Controls.Add(this.btnDoiMK);
             this.Controls.Add(this.btnQLTK);
             this.Name = "fTrangChu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang chủ";
             this.ResumeLayout(false);
 

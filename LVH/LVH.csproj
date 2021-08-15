@@ -51,6 +51,12 @@
     <Compile Include="DAL\DBConnection.cs" />
     <Compile Include="BUS\BUS_TaiKhoan.cs" />
     <Compile Include="DTO\DTO_TaiKhoan.cs" />
+    <Compile Include="GUI\fDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fDoiMatKhau.Designer.cs">
+      <DependentUpon>fDoiMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\fSuaTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,11 +89,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QLThuVienCSharp.designer.cs">
+    <Compile Include="QuanLyThuVienCSharp.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QLThuVienCSharp.dbml</DependentUpon>
+      <DependentUpon>QuanLyThuVienCSharp.dbml</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GUI\fDoiMatKhau.resx">
+      <DependentUpon>fDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\fSuaTaiKhoan.resx">
       <DependentUpon>fSuaTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,13 +130,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="QLThuVienCSharp.dbml">
+    <None Include="QuanLyThuVienCSharp.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>QLThuVienCSharp.designer.cs</LastGenOutput>
+      <LastGenOutput>QuanLyThuVienCSharp.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="QLThuVienCSharp.dbml.layout">
-      <DependentUpon>QLThuVienCSharp.dbml</DependentUpon>
+    <None Include="QuanLyThuVienCSharp.dbml.layout">
+      <DependentUpon>QuanLyThuVienCSharp.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -2,35 +2,55 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Linq;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using static System.Net.WebRequestMethods;
+using LVH.GUI;
 namespace LVH.GUI
 {
     public partial class fSuaTaiKhoan : Form
     {
-        QLThuVienCSharpDataContext dataContext = new QLThuVienCSharpDataContext();
-        private byte[] AnhDaiDien;
-        private string TenDangNhap, TenNguoiDung;
-        private bool TinhTrang;
-        public fSuaTaiKhoan()
+        QuanLyThuVienDataContext dataContext = new QuanLyThuVienDataContext();
+        fQuanLyTaiKhoan QuanLyTaiKhoan;
+        String UserName;
+        int IDTaiKhoan;
+
+        public fSuaTaiKhoan(fQuanLyTaiKhoan f, string TenDangNhap)
         {
             InitializeComponent();
+            QuanLyTaiKhoan = f;
+            UserName = TenDangNhap;
+            prepare();
+            
         }
-        public fSuaTaiKhoan(byte[] AnhDaiDien, string TenDangNhap, string TenNguoiDung, bool TinhTrang)
+
+        private void prepare()
         {
-            InitializeComponent();
-            this.AnhDaiDien = AnhDaiDien;
-            this.TenDangNhap = TenDangNhap;
-            this.TenNguoiDung = TenNguoiDung;
-            this.TinhTrang = TinhTrang;
-
+            try
+            {
+                var s = from p in dataContext.TAIKHOANs
+                        where p.TenDangNhap == UserName
+                        select new {p.IDTaiKhoan, AnhDaiDien = p.AnhDaiDien.ToArray(), p.TenDangNhap, p.MatKhau, p.TenNguoiDung, p.LoaiTaiKhoan, p.TinhTrang };
+                foreach (var i in s.ToList())
+                {
+                    IDTaiKhoan = i.IDTaiKhoan ;
+                    lbl_image.Image = new BUS.ConvertImage().ConvertBytesToImage(i.AnhDaiDien);
+                    txtUserName.Text = i.TenDangNhap;
+                    txtName.Text = i.TenNguoiDung;
+                    if (i.TinhTrang == true) rdbEnabled.Checked = true;
+                    else rdDisabled.Checked = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Có lỗi xảy ra");
+            }
         }
-
         
         private void btnChooseImg_Click(object sender, EventArgs e)
         {
@@ -44,25 +64,37 @@ namespace LVH.GUI
                     img = Image.FromFile(openFileDialog1.FileName);
                     lbl_image.Image = img;
                 }
-                catch (FileNotFoundException x)
+                catch (Exception ex)
                 {
-                    MessageBox.Show(x.Message);
+                    MessageBox.Show("Error: " + ex.Message, "Có lỗi xảy ra");
                 }
             }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            TAIKHOAN suaTaiKhoan = new TAIKHOAN();
-            suaTaiKhoan.AnhDaiDien = new BUS.ConvertImage().ConvertImageToBytes(lbl_image.Image);
-            suaTaiKhoan.TenNguoiDung = txtName.Text;           
+            try
+            {
+                var querry = (from p in dataContext.TAIKHOANs
+                              where p.IDTaiKhoan == IDTaiKhoan
+                              select p).FirstOrDefault<TAIKHOAN>();
+                querry.AnhDaiDien = new BUS.ConvertImage().ConvertImageToBytes(lbl_image.Image);
+                querry.TenNguoiDung = txtName.Text;
+                dataContext.SubmitChanges();
+                MessageBox.Show("Sửa thành công");
+                this.Dispose();
+            }            
+             catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Có lỗi xảy ra");
+            }
         }
 
         private void fSuaTaiKhoan_Load(object sender, EventArgs e)
         {
-            lbl_image.Image = new BUS.ConvertImage().ConvertBytesToImage(AnhDaiDien);
-            txtUserName.Text = TenDangNhap;
-            txtName.Text = TenNguoiDung;
+            //lbl_image.Image = new BUS.ConvertImage().ConvertBytesToImage(AnhDaiDien);
+            //txtUserName.Text = TenDangNhap;
+            //txtName.Text = TenNguoiDung;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

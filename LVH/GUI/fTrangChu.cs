@@ -12,9 +12,11 @@ namespace LVH.GUI
 {
     public partial class fTrangChu : Form
     {
-        public fTrangChu()
+        String Username;
+        public fTrangChu(string Username)
         {
             InitializeComponent();
+            this.Username = Username;
         }
 
         private void btnQLTK_Click(object sender, EventArgs e)
@@ -22,6 +24,13 @@ namespace LVH.GUI
             fQuanLyTaiKhoan f = new fQuanLyTaiKhoan();
             this.Hide();
             f.Show();
+        }
+
+        private void btnDoiMK_Click(object sender, EventArgs e)
+        {
+            fDoiMatKhau fdoimatkhau = new fDoiMatKhau(Username);
+            this.Hide();
+            fdoimatkhau.Show();
         }
     }
 }

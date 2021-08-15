@@ -55,11 +55,11 @@ namespace LVH.GUI
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(311, 107);
+            this.label3.Location = new System.Drawing.Point(17, 49);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 20);
-            this.label3.TabIndex = 39;
+            this.label3.TabIndex = 1;
             this.label3.Text = "Tên đăng nhập";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -67,11 +67,11 @@ namespace LVH.GUI
             // 
             this.txtUserName.Enabled = false;
             this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserName.Location = new System.Drawing.Point(315, 140);
+            this.txtUserName.Location = new System.Drawing.Point(21, 82);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(333, 30);
-            this.txtUserName.TabIndex = 38;
+            this.txtUserName.TabIndex = 1;
             // 
             // panel3
             // 
@@ -81,7 +81,7 @@ namespace LVH.GUI
             this.panel3.Location = new System.Drawing.Point(289, 351);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(308, 94);
-            this.panel3.TabIndex = 40;
+            this.panel3.TabIndex = 2;
             // 
             // rdDisabled
             // 
@@ -90,7 +90,7 @@ namespace LVH.GUI
             this.rdDisabled.Margin = new System.Windows.Forms.Padding(4);
             this.rdDisabled.Name = "rdDisabled";
             this.rdDisabled.Size = new System.Drawing.Size(99, 20);
-            this.rdDisabled.TabIndex = 32;
+            this.rdDisabled.TabIndex = 2;
             this.rdDisabled.TabStop = true;
             this.rdDisabled.Text = "Vô hiệu hoá";
             this.rdDisabled.UseVisualStyleBackColor = true;
@@ -103,7 +103,7 @@ namespace LVH.GUI
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 20);
-            this.label7.TabIndex = 29;
+            this.label7.TabIndex = 2;
             this.label7.Text = "Tình trạng";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -114,7 +114,7 @@ namespace LVH.GUI
             this.rdbEnabled.Margin = new System.Windows.Forms.Padding(4);
             this.rdbEnabled.Name = "rdbEnabled";
             this.rdbEnabled.Size = new System.Drawing.Size(82, 20);
-            this.rdbEnabled.TabIndex = 31;
+            this.rdbEnabled.TabIndex = 1;
             this.rdbEnabled.TabStop = true;
             this.rdbEnabled.Text = "Kích hoạt";
             this.rdbEnabled.UseVisualStyleBackColor = true;
@@ -124,7 +124,7 @@ namespace LVH.GUI
             this.btnCancel.Location = new System.Drawing.Point(656, 403);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(97, 40);
-            this.btnCancel.TabIndex = 36;
+            this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -134,7 +134,7 @@ namespace LVH.GUI
             this.btnEdit.Location = new System.Drawing.Point(656, 346);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(97, 40);
-            this.btnEdit.TabIndex = 37;
+            this.btnEdit.TabIndex = 3;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -146,7 +146,7 @@ namespace LVH.GUI
             this.label1.Location = new System.Drawing.Point(241, 5);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(284, 38);
-            this.label1.TabIndex = 35;
+            this.label1.TabIndex = 0;
             this.label1.Text = "SỬA TÀI KHOẢN";
             // 
             // panel1
@@ -156,7 +156,7 @@ namespace LVH.GUI
             this.panel1.Location = new System.Drawing.Point(48, 58);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(208, 268);
-            this.panel1.TabIndex = 41;
+            this.panel1.TabIndex = 0;
             // 
             // lbl_image
             // 
@@ -174,40 +174,42 @@ namespace LVH.GUI
             this.btnChooseImg.Location = new System.Drawing.Point(55, 216);
             this.btnChooseImg.Name = "btnChooseImg";
             this.btnChooseImg.Size = new System.Drawing.Size(97, 40);
-            this.btnChooseImg.TabIndex = 15;
+            this.btnChooseImg.TabIndex = 0;
             this.btnChooseImg.Text = "Chọn ảnh";
             this.btnChooseImg.UseVisualStyleBackColor = true;
             this.btnChooseImg.Click += new System.EventHandler(this.btnChooseImg_Click);
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.txtUserName);
             this.panel2.Controls.Add(this.txtName);
             this.panel2.Location = new System.Drawing.Point(289, 58);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(464, 268);
-            this.panel2.TabIndex = 42;
+            this.panel2.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(22, 143);
+            this.label5.Location = new System.Drawing.Point(17, 133);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(123, 20);
-            this.label5.TabIndex = 28;
+            this.label5.TabIndex = 2;
             this.label5.Text = "Tên người dùng";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(26, 176);
+            this.txtName.Location = new System.Drawing.Point(21, 166);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(333, 30);
-            this.txtName.TabIndex = 30;
+            this.txtName.TabIndex = 3;
             // 
             // openFileDialog1
             // 
@@ -215,11 +217,10 @@ namespace LVH.GUI
             // 
             // fSuaTaiKhoan
             // 
+            this.AcceptButton = this.btnEdit;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 454);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnEdit);
@@ -227,7 +228,7 @@ namespace LVH.GUI
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "fSuaTaiKhoan";
-            this.Text = "fSuaTaiKhoan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.fSuaTaiKhoan_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
