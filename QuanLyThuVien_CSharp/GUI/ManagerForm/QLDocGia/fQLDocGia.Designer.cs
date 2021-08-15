@@ -86,6 +86,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             this.btnExport.TabIndex = 9;
             this.btnExport.Text = "Xuất file";
             this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // btnDeleteHistory
             // 
@@ -104,6 +105,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             this.btnSearch.TabIndex = 7;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // cbbDate
             // 
@@ -112,10 +114,14 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             this.cbbDate.Name = "cbbDate";
             this.cbbDate.Size = new System.Drawing.Size(121, 24);
             this.cbbDate.TabIndex = 6;
+            this.cbbDate.SelectedIndexChanged += new System.EventHandler(this.cbbDate_SelectedIndexChanged);
             // 
             // cbbSearch
             // 
             this.cbbSearch.FormattingEnabled = true;
+            this.cbbSearch.Items.AddRange(new object[] {
+            "Họ và tên",
+            "Mã sinh viên"});
             this.cbbSearch.Location = new System.Drawing.Point(663, 17);
             this.cbbSearch.Name = "cbbSearch";
             this.cbbSearch.Size = new System.Drawing.Size(121, 24);
@@ -129,6 +135,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -242,6 +249,10 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             this.ThoiGianDen.MinimumWidth = 6;
             this.ThoiGianDen.Name = "ThoiGianDen";
             this.ThoiGianDen.Width = 500;
+            // 
+            // timer
+            // 
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // fQLDocGia
             // 

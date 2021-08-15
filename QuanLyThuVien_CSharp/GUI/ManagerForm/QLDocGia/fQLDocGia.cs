@@ -11,7 +11,7 @@ using System.IO;
 using System.Globalization;
 using Newtonsoft.Json;
 using FastMember;
-using Office = Microsoft.Office.Interop.Excel;
+using OfficeExcel = Microsoft.Office.Interop.Excel;
 using QuanLyThuVien_CSharp.DTO;
 
 namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
@@ -103,12 +103,12 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
                 }
                 if (newList != null)
                 {
-                    dgvList.DataSource = items;
+                    dgvList.DataSource = newList;
                 }
                 else
                 {
                     newList = new List<DocGia>();
-                    dgvList.DataSource = items;
+                    dgvList.DataSource = newList;
                 }
             }
         }
@@ -132,12 +132,12 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
                 }
                 if (newList != null)
                 {
-                    dgvList.DataSource = items;
+                    dgvList.DataSource = newList;
                 }
                 else
                 {
                     newList = new List<DocGia>();
-                    dgvList.DataSource = items;
+                    dgvList.DataSource = newList;
                 }
             }
         }
@@ -211,9 +211,243 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            if (index < 0)
+                MessageBox.Show("Vui lòng chọn đối tượng cần sửa");
+            else
+            {
+                String chooseDate = cbbDate.SelectedItem.ToString();
+                String ngay = chooseDate.Substring(0, 2);
+                String thang = chooseDate.Substring(3, 2);
+                String nam = chooseDate.Substring(6);
+                if(i == 0)
+                {
+                    items[index].hoTen = txtStudentName.Text;
+                    items[index].maSV = txtStudentCode.Text;
+                } 
+                else if (i == 1)
+                {
+                    int realIndex = -1;
+                    foreach (var a in items)
+                    {
+                        realIndex++;
+                        if (a.hoTen.Contains(txtSearch.Text))
+                            i--;
+                        if (i == 0)
+                            break;
+                    }
+                    items[realIndex].hoTen = txtStudentName.Text;
+                    items[realIndex].maSV = txtStudentCode.Text;
+                }
+                else if (i == 2)
+                {
+                    int realIndex = -1;
+                    foreach (var a in items)
+                    {
+                        realIndex++;
+                        if (a.maSV.Contains(txtSearch.Text))
+                            i--;
+                        if (i == 0)
+                            break;
+                    }
+                    items[realIndex].hoTen = txtStudentName.Text;
+                    items[realIndex].maSV = txtStudentCode.Text;
+                }
+                String jsOut = JsonConvert.SerializeObject(items.ToArray(), Formatting.Indented);
 
+                //write string to file
+                File.WriteAllText(@"LichSuDocGia/" + nam + thang + ngay + ".txt", jsOut);
+
+            }
+            loadList();
         }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int index = dgvList.CurrentCell.RowIndex;
+                if (index < 0)
+                    MessageBox.Show("Vui lòng chọn đối tượng cần xóa");
+                else
+                {
+                    if(MessageBox.Show("Bạn có chắc chắc muốn xóa không?", "Thông báo", MessageBoxButtons.OKCancel, 
+                        MessageBoxIcon.Question) == DialogResult.OK)
+                    {
+                        String chooseDate = cbbDate.SelectedItem.ToString();
+                        String ngay = chooseDate.Substring(0, 2);
+                        String thang = chooseDate.Substring(3, 2);
+                        String nam = chooseDate.Substring(6);
+                        if (i == 0)
+                            items.RemoveAt(index);
+                        else if (i == 1)
+                        {
+                            int realIndex = -1;
+                            foreach (var a in items)
+                            {
+                                realIndex++;
+                                if (a.hoTen.Contains(txtSearch.Text))
+                                    i--;
+                                if (i == 0)
+                                    break;
+                            }
+                            items.RemoveAt(realIndex);
+                        }
+                        else if (i == 2)
+                        {
+                            int realIndex = -1;
+                            foreach (var a in items)
+                            {
+                                realIndex++;
+                                if (a.maSV.Contains(txtSearch.Text))
+                                    i--;
+                                if (i == 0)
+                                    break;
+                            }
+                            items.RemoveAt(realIndex);
+                        }
+                        String jsOut = JsonConvert.SerializeObject(items.ToArray(), Formatting.Indented);
 
+                        //write string to file
+                        File.WriteAllText(@"LichSuDocGia/" + nam + thang + ngay + ".txt", jsOut);
+                        index= - 1;
+                    }
+                }
+                txtStudentName.Clear();
+                txtStudentCode.Clear();
+                loadList();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Lỗi"); 
+            }
+        }
+        private void cbbDate_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!cbbDate.SelectedItem.Equals(currentDate))
+            {
+                btnAdd.Enabled = false;
+                btnEdit.Enabled = false;
+                btnDelete.Enabled = false;
+                isCurrent = false;
+            }
+            else
+            {
+                btnAdd.Enabled = true;
+                btnEdit.Enabled = false;
+                btnDelete.Enabled = false;
+                isCurrent = true;
+            }
+            loadList();
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtSearch.Text.Equals(""))
+                    loadCombo();
+                else if (cbbSearch.SelectedIndex == 0)
+                    searchStudentName();
+                else if (cbbSearch.SelectedIndex == 1)
+                    searchStudentCode();
+                btnEdit.Enabled = false;
+                btnDelete.Enabled = false;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Lỗi");
+            }
+        }
+    
+        public void ExportDateSetToExcel(DataTable ds, String filePath)
+        {
+            int inHeaderLength = 3, inColumn = 0, inRow = 0;
+            System.Reflection.Missing Default = System.Reflection.Missing.Value;
+            //tạo file excel
+            OfficeExcel.Application excelApp = new OfficeExcel.Application();
+            OfficeExcel.Workbook excelWorkBook = excelApp.Workbooks.Add(1);
+            //tạo sheet
+            OfficeExcel.Worksheet excelWorkSheet = excelWorkBook.Sheets.Add(Default,
+                excelWorkBook.Sheets[excelWorkBook.Sheets.Count], 1, Default);
+            //tạo cột
+            excelWorkSheet.Cells[inHeaderLength + 1, 1] = "Họ và tên";
+            excelWorkSheet.Cells[inHeaderLength + 1, 2] = "Mã sinh viên";
+            excelWorkSheet.Cells[inHeaderLength + 1, 3] = "Thời gian đến";
+            //tạo dòng
+            for(int j=0; j < ds.Rows.Count; j++)
+            {
+                for(int k=0; k < ds.Columns.Count; k++)
+                {
+                    inColumn = k + 1;
+                    inRow = inHeaderLength + 2 + j;
+                    excelWorkSheet.Cells[inRow, inColumn] = ds.Rows[j].ItemArray[k].ToString();
+                    if (j % 2 == 0)
+                    {
+                        excelWorkSheet.get_Range("A" + inRow.ToString(), "C" + 
+                            inRow.ToString()).Interior.Color = System.Drawing.ColorTranslator.FromHtml("#FCE4D6");
+                    }
+                }
+            }
+            //Tiêu đề
+            OfficeExcel.Range cellRang = excelWorkSheet.get_Range("A1", "C3");
+            cellRang.Merge(false);
+            cellRang.Interior.Color = System.Drawing.Color.White;
+            cellRang.Font.Color = System.Drawing.Color.Gray;
+            cellRang.HorizontalAlignment = OfficeExcel.XlHAlign.xlHAlignCenter;
+            cellRang.VerticalAlignment = OfficeExcel.XlHAlign.xlHAlignCenter;
+            cellRang.Font.Size = 16;
+            excelWorkSheet.Cells[1, 1] = "Danh sách sinh viên đến thư viện ngày " + cbbDate.SelectedIndex.ToString();
+
+            //Định dạng cột
+            cellRang = excelWorkSheet.get_Range("A4", "C4");
+            cellRang.Font.Bold = true;
+            cellRang.Font.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.White);
+            cellRang.Interior.Color = System.Drawing.ColorTranslator.FromHtml("#ED7D31");
+
+            //for (int j =1; j<= 3; j++)
+            //{
+            //    excelWorkSheet.Columns[i].ColumnWidth = 30;
+            //}
+
+            excelWorkBook.SaveAs(filePath, Default, Default, Default, false, Default, 
+                OfficeExcel.XlSaveAsAccessMode.xlNoChange, Default, Default, Default, Default, Default);
+            excelWorkBook.Close();
+            excelApp.Quit();
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            saveFileDialog.Title = "Chọn chỗ lưu";
+            saveFileDialog.DefaultExt = "xlsx";
+            saveFileDialog.Filter = "Excel files (*.xlsx) | *.xlsx";
+            saveFileDialog.FileName = "LichSuDocGia";
+            if(saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                String chooseDate = cbbDate.SelectedItem.ToString();
+                String ngay = chooseDate.Substring(0, 2);
+                String thang = chooseDate.Substring(3, 2);
+                String nam = chooseDate.Substring(6);
+                using (StreamReader reader = new StreamReader(@"LichSuDocGia/" + nam + thang + ngay + ".txt"))
+                {
+                    String js = reader.ReadToEnd();
+                    items = JsonConvert.DeserializeObject<List<DocGia>>(js);
+                    if(items == null)
+                    {
+                        items = new List<DocGia>();
+                    }
+                }
+                DataTable table = new DataTable();
+                using (var reader = ObjectReader.Create((List<DocGia>)dgvList.DataSource))
+                {
+                    table.Load(reader);
+                }
+                ExportDateSetToExcel(table, saveFileDialog.FileName);
+            }
+        }
     }
 }
