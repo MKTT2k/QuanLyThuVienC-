@@ -401,7 +401,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             cellRang.HorizontalAlignment = OfficeExcel.XlHAlign.xlHAlignCenter;
             cellRang.VerticalAlignment = OfficeExcel.XlHAlign.xlHAlignCenter;
             cellRang.Font.Size = 16;
-            excelWorkSheet.Cells[1, 1] = "Danh sách sinh viên đến thư viện ngày " + cbbDate.SelectedIndex.ToString();
+            excelWorkSheet.Cells[1, 1] = "Danh sách đến thư viện ngày " + cbbDate.SelectedItem.ToString();
 
             //Định dạng cột
             cellRang = excelWorkSheet.get_Range("A4", "C4");
@@ -409,10 +409,10 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             cellRang.Font.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.White);
             cellRang.Interior.Color = System.Drawing.ColorTranslator.FromHtml("#ED7D31");
 
-            //for (int j =1; j<= 3; j++)
-            //{
-            //    excelWorkSheet.Columns[i].ColumnWidth = 30;
-            //}
+            excelWorkSheet.Columns[1].ColumnWidth = 30;
+            excelWorkSheet.Columns[2].ColumnWidth = 30;
+            excelWorkSheet.Columns[3].ColumnWidth = 50;
+            excelWorkSheet.Rows[3].ColumnWidth = 50;
 
             excelWorkBook.SaveAs(filePath, Default, Default, Default, false, Default, 
                 OfficeExcel.XlSaveAsAccessMode.xlNoChange, Default, Default, Default, Default, Default);
@@ -447,7 +447,27 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
                     table.Load(reader);
                 }
                 ExportDateSetToExcel(table, saveFileDialog.FileName);
+                MessageBox.Show("Tạo thành công file execel tại \n " + saveFileDialog.FileName);
+                string fileOpen = saveFileDialog.FileName;
+                if (MessageBox.Show("Bạn có muốn xem file vừa lưu không?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    //OpenFileDialog openFileDialog = new OpenFileDialog();
+                    FileInfo fi = new FileInfo(fileOpen);
+                    System.Diagnostics.Process.Start(fileOpen);
+                }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            MessageBox.Show(cbbDate.SelectedItem.ToString());
+        }
+
+        private void btnDeleteHistory_Click(object sender, EventArgs e)
+        {
+            fDeleteEntry f = new fDeleteEntry(this);
+            f.ShowDialog();
         }
     }
 }

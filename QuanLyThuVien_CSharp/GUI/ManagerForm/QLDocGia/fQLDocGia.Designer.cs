@@ -52,12 +52,14 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.printDocument = new System.Drawing.Printing.PrintDocument();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnExport);
             this.panel1.Controls.Add(this.btnDeleteHistory);
             this.panel1.Controls.Add(this.btnSearch);
@@ -96,6 +98,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             this.btnDeleteHistory.TabIndex = 8;
             this.btnDeleteHistory.Text = "Xóa lịch sử";
             this.btnDeleteHistory.UseVisualStyleBackColor = true;
+            this.btnDeleteHistory.Click += new System.EventHandler(this.btnDeleteHistory_Click);
             // 
             // btnSearch
             // 
@@ -254,6 +257,16 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             // 
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(717, 98);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // fQLDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -294,5 +307,6 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
         private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSV;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGianDen;
+        private System.Windows.Forms.Button button1;
     }
 }

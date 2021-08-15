@@ -51,3 +51,4 @@ C:\Users\Administrator\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CShar
 C:\Users\Administrator\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Administrator\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia.fQLDocGia.resources
 C:\Users\Administrator\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.csproj.CopyComplete
+C:\Users\Administrator\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia.fDeleteEntry.resources

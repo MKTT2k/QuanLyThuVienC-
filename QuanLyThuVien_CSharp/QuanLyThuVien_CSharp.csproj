@@ -149,6 +149,9 @@
     <EmbeddedResource Include="GUI\AdminForm\QuanLySach\fThemSach.resx">
       <DependentUpon>fThemSach.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ManagerForm\QLDocGia\fDeleteEntry.resx">
+      <DependentUpon>fDeleteEntry.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ManagerForm\QLDocGia\fQLDocGia.resx">
       <DependentUpon>fQLDocGia.cs</DependentUpon>
     </EmbeddedResource>
