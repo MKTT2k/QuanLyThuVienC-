@@ -1,26 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.Linq;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace LVH.GUI
 {
     public partial class fDoiMatKhau : Form
     {
         QuanLyThuVienDataContext dataContext = new QuanLyThuVienDataContext();
-        String UserName;
+        String userName;
 
-        public fDoiMatKhau(string Username)
+        public fDoiMatKhau(string username)
         {
             InitializeComponent();
-            this.UserName = Username;
+            userName = username;
         }
 
         private void btnChangePassword_Click(object sender, EventArgs e)
@@ -32,7 +25,7 @@ namespace LVH.GUI
                 else if (dataContext.TAIKHOANs.Where(p=>p.MatKhau == txtOldPassword.Text).Count() > 0) 
                 {
                     var querry = (from p in dataContext.TAIKHOANs
-                                  where p.TenDangNhap == UserName
+                                  where p.TenDangNhap == userName
                                   select p).FirstOrDefault<TAIKHOAN>();
                     querry.MatKhau = txtNewPassword.Text;
                     dataContext.SubmitChanges();
@@ -40,7 +33,6 @@ namespace LVH.GUI
                     this.Dispose();
                 }
                 else MessageBox.Show("Sai mật khẩu", "Lỗi");
-
             }
             catch (Exception ex)
             {

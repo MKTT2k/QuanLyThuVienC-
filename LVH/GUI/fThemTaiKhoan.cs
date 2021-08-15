@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.Linq;
 using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using LVH.BUS;
-using LVH.DTO;
 
 namespace LVH.GUI
 {
@@ -18,14 +9,15 @@ namespace LVH.GUI
     {
 
         QuanLyThuVienDataContext dataContext = new QuanLyThuVienDataContext();
-        fQuanLyTaiKhoan QLTaiKhoan;
+        fQuanLyTaiKhoan QuanLyTaiKhoan;
         private bool hasPicture = false;
+
         public fThemTaiKhoan(fQuanLyTaiKhoan f)
         {
             InitializeComponent();
             openFileDialog1.FileName = null;
             rdbEnabled.Checked = true;
-            QLTaiKhoan = f;
+            QuanLyTaiKhoan = f;
         }
 
         private void btnChonAnh_Click(object sender, EventArgs e)
@@ -47,18 +39,18 @@ namespace LVH.GUI
             }
         }
 
-        private void addTaiKhoan()
+        private void AddTaiKhoan()
         {
             try
             {
-                if (txtUserName.Text == "") throw new Exception("Tên đăng nhập không được để trống");
+                if (txtUsername.Text == "") throw new Exception("Tên đăng nhập không được để trống");
                 if (txtName.Text == "") throw new Exception("Tên người không được để trống");
                 if (!hasPicture) throw new Exception("Chưa chọn ảnh đại diện");
 
                 TAIKHOAN themTaiKhoan = new TAIKHOAN();
                 themTaiKhoan.AnhDaiDien = new ConvertImage().ConvertImageToBytes(lbl_image.Image);
                 themTaiKhoan.MatKhau = "123";
-                themTaiKhoan.TenDangNhap = txtUserName.Text;
+                themTaiKhoan.TenDangNhap = txtUsername.Text;
                 themTaiKhoan.TenNguoiDung = txtName.Text;
                 themTaiKhoan.LoaiTaiKhoan = 1;
                 themTaiKhoan.TinhTrang = rdbEnabled.Checked ? true : false;
@@ -75,7 +67,7 @@ namespace LVH.GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            addTaiKhoan();
+            AddTaiKhoan();
             this.Dispose();          
         }
 

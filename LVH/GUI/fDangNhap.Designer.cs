@@ -31,11 +31,11 @@ namespace LVH
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtTenDangNhap = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtMatKhau = new System.Windows.Forms.TextBox();
-            this.btnDangNhap = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -57,12 +57,12 @@ namespace LVH
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên đăng nhập";
             // 
-            // txtTenDangNhap
+            // txtUsername
             // 
-            this.txtTenDangNhap.Location = new System.Drawing.Point(199, 80);
-            this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.Size = new System.Drawing.Size(245, 22);
-            this.txtTenDangNhap.TabIndex = 0;
+            this.txtUsername.Location = new System.Drawing.Point(199, 80);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(245, 22);
+            this.txtUsername.TabIndex = 0;
             // 
             // label3
             // 
@@ -73,52 +73,52 @@ namespace LVH
             this.label3.TabIndex = 1;
             this.label3.Text = "Mật khẩu";
             // 
-            // txtMatKhau
+            // txtPassword
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(199, 139);
-            this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(245, 22);
-            this.txtMatKhau.TabIndex = 1;
-            this.txtMatKhau.UseSystemPasswordChar = true;
+            this.txtPassword.Location = new System.Drawing.Point(199, 139);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(245, 22);
+            this.txtPassword.TabIndex = 1;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
-            // btnDangNhap
+            // btnLogin
             // 
-            this.btnDangNhap.Location = new System.Drawing.Point(149, 208);
-            this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(113, 41);
-            this.btnDangNhap.TabIndex = 2;
-            this.btnDangNhap.Text = "Đăng nhập";
-            this.btnDangNhap.UseVisualStyleBackColor = true;
-            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
+            this.btnLogin.Location = new System.Drawing.Point(149, 208);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(113, 41);
+            this.btnLogin.TabIndex = 2;
+            this.btnLogin.Text = "Đăng nhập";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // btnThoat
+            // btnExit
             // 
-            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnThoat.Location = new System.Drawing.Point(327, 208);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(102, 41);
-            this.btnThoat.TabIndex = 3;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = true;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnExit.Location = new System.Drawing.Point(327, 208);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(102, 41);
+            this.btnExit.TabIndex = 3;
+            this.btnExit.Text = "Thoát";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // FormDangNhap
             // 
-            this.AcceptButton = this.btnDangNhap;
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(512, 261);
-            this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.btnDangNhap);
-            this.Controls.Add(this.txtMatKhau);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtTenDangNhap);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormDangNhap_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLogin_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,11 +128,11 @@ namespace LVH
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtTenDangNhap;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtMatKhau;
-        private System.Windows.Forms.Button btnDangNhap;
-        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnExit;
     }
 }
 

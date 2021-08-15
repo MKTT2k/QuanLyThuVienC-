@@ -30,7 +30,7 @@ namespace LVH.GUI
         private void InitializeComponent()
         {
             this.label3 = new System.Windows.Forms.Label();
-            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.rdDisabled = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
@@ -63,15 +63,15 @@ namespace LVH.GUI
             this.label3.Text = "Tên đăng nhập";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtUserName
+            // txtUsername
             // 
-            this.txtUserName.Enabled = false;
-            this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserName.Location = new System.Drawing.Point(21, 82);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(333, 30);
-            this.txtUserName.TabIndex = 1;
+            this.txtUsername.Enabled = false;
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(21, 82);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(333, 30);
+            this.txtUsername.TabIndex = 1;
             // 
             // panel3
             // 
@@ -183,7 +183,7 @@ namespace LVH.GUI
             // 
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.txtUserName);
+            this.panel2.Controls.Add(this.txtUsername);
             this.panel2.Controls.Add(this.txtName);
             this.panel2.Location = new System.Drawing.Point(289, 58);
             this.panel2.Name = "panel2";
@@ -229,7 +229,6 @@ namespace LVH.GUI
             this.Controls.Add(this.panel2);
             this.Name = "fSuaTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Load += new System.EventHandler(this.fSuaTaiKhoan_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -244,7 +243,7 @@ namespace LVH.GUI
         #endregion
 
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.RadioButton rdDisabled;
         private System.Windows.Forms.Label label7;

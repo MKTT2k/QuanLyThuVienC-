@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
-using LVH.BUS;
 using System.Linq;
-using System.Reflection;
-using System.Data.Linq;
-using System.Drawing;
 
 namespace LVH.GUI
 {
@@ -24,7 +20,7 @@ namespace LVH.GUI
             {
                 var s = from p in dataContext.TAIKHOANs
                         select new {AnhDaiDien = p.AnhDaiDien.ToArray() , p.TenDangNhap, p.MatKhau, p.TenNguoiDung, p.LoaiTaiKhoan, p.TinhTrang };
-                dgvTaiKhoan.DataSource = s.ToList();               
+                dgvAccount.DataSource = s.ToList();               
             }
             catch (Exception ex)
             {
@@ -38,7 +34,7 @@ namespace LVH.GUI
             btnEdit.Enabled = false;
             btnDelete.Enabled = false;
             LoadData();
-            dgvTaiKhoan.ClearSelection();
+            dgvAccount.ClearSelection();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -50,7 +46,7 @@ namespace LVH.GUI
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            fSuaTaiKhoan f = new fSuaTaiKhoan(this, dgvTaiKhoan.Rows[index].Cells[1].Value.ToString());
+            fSuaTaiKhoan f = new fSuaTaiKhoan(this, dgvAccount.Rows[index].Cells[1].Value.ToString());
             f.ShowDialog();
             LoadData();
         }
@@ -87,10 +83,10 @@ namespace LVH.GUI
                     MessageBox.Show("Vui lòng chọn đối tượng cần xoá!");
                 }
                 else 
-                    if (MessageBox.Show("Bạn có chắc chắn muốn xoá tài khoản " + dgvTaiKhoan.Rows[index].Cells[1].Value.ToString() + " không ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                    if (MessageBox.Show("Bạn có chắc chắn muốn xoá tài khoản " + dgvAccount.Rows[index].Cells[1].Value.ToString() + " không ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                     {
-                        var xoaTaiKhoan = dataContext.TAIKHOANs.Where(p => p.TenDangNhap == dgvTaiKhoan.Rows[index].Cells[1].Value.ToString());
-                        foreach (var i in xoaTaiKhoan)
+                        var deleteAccount = dataContext.TAIKHOANs.Where(p => p.TenDangNhap == dgvAccount.Rows[index].Cells[1].Value.ToString());
+                        foreach (var i in deleteAccount)
                         {
                             dataContext.TAIKHOANs.DeleteOnSubmit(i);
                             dataContext.SubmitChanges();                       
@@ -112,14 +108,14 @@ namespace LVH.GUI
                 var s = from p in dataContext.TAIKHOANs
                         where p.TenDangNhap.Contains(txtSearch.Text)
                         select new { AnhDaiDien = p.AnhDaiDien.ToArray(), p.TenDangNhap, p.MatKhau, p.TenNguoiDung, p.LoaiTaiKhoan, p.TinhTrang };
-                dgvTaiKhoan.DataSource = s.ToList();
+                dgvAccount.DataSource = s.ToList();
             }
             else if (howSearch == "Tên người dùng")
             {
                 var s = from p in dataContext.TAIKHOANs
                         where p.TenNguoiDung.Contains(txtSearch.Text)
                         select new { AnhDaiDien = p.AnhDaiDien.ToArray(), p.TenDangNhap, p.MatKhau, p.TenNguoiDung, p.LoaiTaiKhoan, p.TinhTrang };
-                dgvTaiKhoan.DataSource = s.ToList();
+                dgvAccount.DataSource = s.ToList();
             }
         }
 

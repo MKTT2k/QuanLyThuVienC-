@@ -1,32 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.Linq;
 using System.Drawing;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Net.WebRequestMethods;
-using LVH.GUI;
 namespace LVH.GUI
 {
     public partial class fSuaTaiKhoan : Form
     {
         QuanLyThuVienDataContext dataContext = new QuanLyThuVienDataContext();
         fQuanLyTaiKhoan QuanLyTaiKhoan;
-        String UserName;
-        int IDTaiKhoan;
+        String userName;
+        int IDAccount;
 
-        public fSuaTaiKhoan(fQuanLyTaiKhoan f, string TenDangNhap)
+        public fSuaTaiKhoan(fQuanLyTaiKhoan f, string username)
         {
             InitializeComponent();
             QuanLyTaiKhoan = f;
-            UserName = TenDangNhap;
-            prepare();
-            
+            userName = username;
+            prepare();           
         }
 
         private void prepare()
@@ -34,13 +25,13 @@ namespace LVH.GUI
             try
             {
                 var s = from p in dataContext.TAIKHOANs
-                        where p.TenDangNhap == UserName
+                        where p.TenDangNhap == userName
                         select new {p.IDTaiKhoan, AnhDaiDien = p.AnhDaiDien.ToArray(), p.TenDangNhap, p.MatKhau, p.TenNguoiDung, p.LoaiTaiKhoan, p.TinhTrang };
                 foreach (var i in s.ToList())
                 {
-                    IDTaiKhoan = i.IDTaiKhoan ;
+                    IDAccount = i.IDTaiKhoan ;
                     lbl_image.Image = new BUS.ConvertImage().ConvertBytesToImage(i.AnhDaiDien);
-                    txtUserName.Text = i.TenDangNhap;
+                    txtUsername.Text = i.TenDangNhap;
                     txtName.Text = i.TenNguoiDung;
                     if (i.TinhTrang == true) rdbEnabled.Checked = true;
                     else rdDisabled.Checked = true;
@@ -76,7 +67,7 @@ namespace LVH.GUI
             try
             {
                 var querry = (from p in dataContext.TAIKHOANs
-                              where p.IDTaiKhoan == IDTaiKhoan
+                              where p.IDTaiKhoan == IDAccount
                               select p).FirstOrDefault<TAIKHOAN>();
                 querry.AnhDaiDien = new BUS.ConvertImage().ConvertImageToBytes(lbl_image.Image);
                 querry.TenNguoiDung = txtName.Text;
@@ -88,13 +79,6 @@ namespace LVH.GUI
             {
                 MessageBox.Show("Error: " + ex.Message, "Có lỗi xảy ra");
             }
-        }
-
-        private void fSuaTaiKhoan_Load(object sender, EventArgs e)
-        {
-            //lbl_image.Image = new BUS.ConvertImage().ConvertBytesToImage(AnhDaiDien);
-            //txtUserName.Text = TenDangNhap;
-            //txtName.Text = TenNguoiDung;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

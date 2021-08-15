@@ -29,7 +29,7 @@ namespace LVH.GUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvTaiKhoan = new System.Windows.Forms.DataGridView();
+            this.dgvAccount = new System.Windows.Forms.DataGridView();
             this.AnhDaiDien = new System.Windows.Forms.DataGridViewImageColumn();
             this.TenDangNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,6 +37,7 @@ namespace LVH.GUI
             this.LoaiTaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbbSearch = new System.Windows.Forms.ComboBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -45,43 +46,43 @@ namespace LVH.GUI
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).BeginInit();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgvTaiKhoan
+            // dgvAccount
             // 
-            this.dgvTaiKhoan.AllowUserToAddRows = false;
-            this.dgvTaiKhoan.AllowUserToDeleteRows = false;
-            this.dgvTaiKhoan.AllowUserToResizeColumns = false;
-            this.dgvTaiKhoan.AllowUserToResizeRows = false;
-            this.dgvTaiKhoan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvTaiKhoan.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvTaiKhoan.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            this.dgvTaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTaiKhoan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvAccount.AllowUserToAddRows = false;
+            this.dgvAccount.AllowUserToDeleteRows = false;
+            this.dgvAccount.AllowUserToResizeColumns = false;
+            this.dgvAccount.AllowUserToResizeRows = false;
+            this.dgvAccount.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAccount.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvAccount.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAccount.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.AnhDaiDien,
             this.TenDangNhap,
             this.MatKhau,
             this.TenNguoiDung,
             this.LoaiTaiKhoan,
             this.TinhTrang});
-            this.dgvTaiKhoan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvTaiKhoan.Location = new System.Drawing.Point(0, 0);
-            this.dgvTaiKhoan.MultiSelect = false;
-            this.dgvTaiKhoan.Name = "dgvTaiKhoan";
-            this.dgvTaiKhoan.ReadOnly = true;
-            this.dgvTaiKhoan.RowHeadersVisible = false;
-            this.dgvTaiKhoan.RowHeadersWidth = 51;
-            this.dgvTaiKhoan.RowTemplate.Height = 100;
-            this.dgvTaiKhoan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTaiKhoan.Size = new System.Drawing.Size(893, 330);
-            this.dgvTaiKhoan.TabIndex = 0;
-            this.dgvTaiKhoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTaiKhoan_CellClick);
+            this.dgvAccount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvAccount.Location = new System.Drawing.Point(0, 0);
+            this.dgvAccount.MultiSelect = false;
+            this.dgvAccount.Name = "dgvAccount";
+            this.dgvAccount.ReadOnly = true;
+            this.dgvAccount.RowHeadersVisible = false;
+            this.dgvAccount.RowHeadersWidth = 51;
+            this.dgvAccount.RowTemplate.Height = 100;
+            this.dgvAccount.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAccount.Size = new System.Drawing.Size(893, 330);
+            this.dgvAccount.StandardTab = true;
+            this.dgvAccount.TabIndex = 0;
+            this.dgvAccount.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTaiKhoan_CellClick);
             // 
             // AnhDaiDien
             // 
@@ -144,6 +145,17 @@ namespace LVH.GUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(893, 128);
             this.panel1.TabIndex = 1;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cbbSearch);
+            this.groupBox1.Controls.Add(this.txtSearch);
+            this.groupBox1.Location = new System.Drawing.Point(552, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(327, 82);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tìm kiếm";
             // 
             // cbbSearch
             // 
@@ -217,22 +229,11 @@ namespace LVH.GUI
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dgvTaiKhoan);
+            this.panel2.Controls.Add(this.dgvAccount);
             this.panel2.Location = new System.Drawing.Point(0, 153);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(893, 330);
             this.panel2.TabIndex = 2;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.cbbSearch);
-            this.groupBox1.Controls.Add(this.txtSearch);
-            this.groupBox1.Location = new System.Drawing.Point(552, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(327, 82);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Tìm kiếm";
             // 
             // fQuanLyTaiKhoan
             // 
@@ -245,19 +246,19 @@ namespace LVH.GUI
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_QuanLyTaiKhoan";
             this.Load += new System.EventHandler(this.GUI_QuanLyTaiKhoan_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvTaiKhoan;
+        private System.Windows.Forms.DataGridView dgvAccount;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
