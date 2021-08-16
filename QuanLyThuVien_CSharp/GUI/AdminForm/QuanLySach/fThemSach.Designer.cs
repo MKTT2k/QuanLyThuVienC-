@@ -60,6 +60,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // 
             // lbl
             // 
+            this.lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl.AutoSize = true;
             this.lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl.Location = new System.Drawing.Point(322, 61);
@@ -70,6 +71,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(322, 132);
@@ -80,6 +82,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(322, 203);
@@ -90,6 +93,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(322, 274);
@@ -100,6 +104,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(322, 345);
@@ -110,6 +115,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // 
             // cbbTenDanhMuc
             // 
+            this.cbbTenDanhMuc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbbTenDanhMuc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbTenDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbTenDanhMuc.FormattingEnabled = true;
@@ -121,6 +127,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // 
             // txtTenSach
             // 
+            this.txtTenSach.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenSach.Location = new System.Drawing.Point(325, 155);
             this.txtTenSach.Name = "txtTenSach";
@@ -130,6 +137,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // 
             // txtGiaMuon
             // 
+            this.txtGiaMuon.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtGiaMuon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGiaMuon.Location = new System.Drawing.Point(325, 365);
             this.txtGiaMuon.Name = "txtGiaMuon";
@@ -140,6 +148,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // 
             // txtTacGia
             // 
+            this.txtTacGia.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTacGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTacGia.Location = new System.Drawing.Point(325, 225);
             this.txtTacGia.Name = "txtTacGia";
@@ -150,6 +159,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // 
             // nudSoLuong
             // 
+            this.nudSoLuong.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.nudSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudSoLuong.Location = new System.Drawing.Point(325, 295);
             this.nudSoLuong.Maximum = new decimal(new int[] {
@@ -174,6 +184,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // 
             // nudLanXuatBan
             // 
+            this.nudLanXuatBan.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.nudLanXuatBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudLanXuatBan.Location = new System.Drawing.Point(734, 364);
             this.nudLanXuatBan.Minimum = new decimal(new int[] {
@@ -193,6 +204,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // 
             // txtNhaXuatBan
             // 
+            this.txtNhaXuatBan.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNhaXuatBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNhaXuatBan.Location = new System.Drawing.Point(734, 225);
             this.txtNhaXuatBan.Name = "txtNhaXuatBan";
@@ -202,6 +214,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // 
             // lbl2
             // 
+            this.lbl2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl2.AutoSize = true;
             this.lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl2.Location = new System.Drawing.Point(731, 343);
@@ -212,6 +225,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(731, 203);
@@ -222,6 +236,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // 
             // lbl1
             // 
+            this.lbl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl1.AutoSize = true;
             this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1.Location = new System.Drawing.Point(731, 273);
@@ -232,6 +247,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // 
             // dtpNamXuatBan
             // 
+            this.dtpNamXuatBan.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtpNamXuatBan.CustomFormat = "yyyy-MM-dd";
             this.dtpNamXuatBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNamXuatBan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -244,6 +260,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(503, 371);
@@ -258,6 +275,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // 
             // btnThemDanhMuc
             // 
+            this.btnThemDanhMuc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnThemDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemDanhMuc.ForeColor = System.Drawing.Color.Red;
             this.btnThemDanhMuc.Image = global::QuanLyThuVien_CSharp.Properties.Resources.add_category;
@@ -272,6 +290,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // 
             // btnQuayLai
             // 
+            this.btnQuayLai.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuayLai.Image = global::QuanLyThuVien_CSharp.Properties.Resources._return;
             this.btnQuayLai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -285,6 +304,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // 
             // btnXoaNDNhap
             // 
+            this.btnXoaNDNhap.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnXoaNDNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaNDNhap.ForeColor = System.Drawing.Color.DarkGreen;
             this.btnXoaNDNhap.Image = global::QuanLyThuVien_CSharp.Properties.Resources.clear;
@@ -299,6 +319,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // 
             // btnLuu
             // 
+            this.btnLuu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.Color.Red;
             this.btnLuu.Image = global::QuanLyThuVien_CSharp.Properties.Resources.save;
@@ -313,6 +334,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // 
             // btnThayAnh
             // 
+            this.btnThayAnh.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnThayAnh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThayAnh.ForeColor = System.Drawing.Color.Red;
             this.btnThayAnh.Image = global::QuanLyThuVien_CSharp.Properties.Resources.replace;
@@ -327,6 +349,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // 
             // ptbAnhSach
             // 
+            this.ptbAnhSach.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ptbAnhSach.Image = global::QuanLyThuVien_CSharp.Properties.Resources.book;
             this.ptbAnhSach.Location = new System.Drawing.Point(32, 89);
             this.ptbAnhSach.Name = "ptbAnhSach";
