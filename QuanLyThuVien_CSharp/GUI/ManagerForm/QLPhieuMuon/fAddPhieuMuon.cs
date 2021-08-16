@@ -237,6 +237,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             ds.Tables.Add(table);
             fBillView f = new fBillView(ds, txtNguoiMuon.Text, 
                 lblChiTietPhieu.Text, txtTongTien.Text, ngayMuon, tenDangNhap);
+            MessageBox.Show(ngayMuon);
             f.ShowDialog();
         }
     }

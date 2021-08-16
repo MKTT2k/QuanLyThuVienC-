@@ -36,26 +36,26 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             reportViewer1.ProcessingMode = ProcessingMode.Local;
             reportViewer1.LocalReport.ReportEmbeddedResource = "QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon.PhieuMuon.rdlc";
 
-            //ReportParameter rpmMaSinhVien = new ReportParameter("MaSinhVien");
-            //rpmMaSinhVien.Values.Add(MaSinhVien);
-            //this.reportViewer1.LocalReport.SetParameters(rpmMaSinhVien);
+            ReportParameter rpmMaSinhVien = new ReportParameter("MaSinhVien");
+            rpmMaSinhVien.Values.Add(MaSinhVien);
+            this.reportViewer1.LocalReport.SetParameters(rpmMaSinhVien);
 
-            //ReportParameter rpmSoPhieuMuon = new ReportParameter("SoPhieuMuon");
-            //rpmSoPhieuMuon.Values.Add(SoPhieuMuon);
-            //this.reportViewer1.LocalReport.SetParameters(rpmSoPhieuMuon);
+            ReportParameter rpmSoPhieuMuon = new ReportParameter("SoPhieuMuon");
+            rpmSoPhieuMuon.Values.Add(SoPhieuMuon);
+            this.reportViewer1.LocalReport.SetParameters(rpmSoPhieuMuon);
 
-            //ReportParameter rpmTongTien = new ReportParameter("TongTien");
-            //rpmTongTien.Values.Add(TongTien);
-            //this.reportViewer1.LocalReport.SetParameters(rpmTongTien);
+            ReportParameter rpmTongTien = new ReportParameter("TongTien");
+            rpmTongTien.Values.Add(TongTien);
+            this.reportViewer1.LocalReport.SetParameters(rpmTongTien);
 
-            //ReportParameter rpmNgayLapPhieu = new ReportParameter("NgayLapPhieu");
-            //rpmNgayLapPhieu.Values.Add(NgayLapPhieu);
-            //this.reportViewer1.LocalReport.SetParameters(rpmNgayLapPhieu);
+            ReportParameter rpmNgayLapPhieu = new ReportParameter("NgayLapPhieu");
+            rpmNgayLapPhieu.Values.Add(NgayLapPhieu);
+            this.reportViewer1.LocalReport.SetParameters(rpmNgayLapPhieu);
 
-            //ReportParameter rpmNguoiLapPhieu = new ReportParameter("NguoiLapPhieu");
-            //rpmNguoiLapPhieu.Values.Add(NguoiLapPhieu);
-            //this.reportViewer1.LocalReport.SetParameters(rpmNguoiLapPhieu);
-            if(ds.Tables[0].Rows.Count > 0)
+            ReportParameter rpmTaiKhoanLap = new ReportParameter("TaiKhoanLap");
+            rpmTaiKhoanLap.Values.Add(NguoiLapPhieu);
+            this.reportViewer1.LocalReport.SetParameters(rpmTaiKhoanLap);
+            if (ds.Tables[0].Rows.Count > 0)
             {
                 ReportDataSource rds = new ReportDataSource();
                 rds.Name = "dsSach";

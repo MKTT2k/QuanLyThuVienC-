@@ -112,3 +112,4 @@ C:\Users\Administrator\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CShar
 C:\Users\Administrator\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.csproj.CopyComplete
 C:\Users\Administrator\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.exe
 C:\Users\Administrator\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.pdb
+C:\Users\Administrator\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.csprojAssemblyReference.cache
