@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FastMember, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\FastMember.1.5.0\lib\net461\FastMember.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -98,6 +101,30 @@
     <Compile Include="GUI\MainForm\fDangNhap.Designer.cs">
       <DependentUpon>fDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ManagerForm\QLDocGia\fDeleteEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ManagerForm\QLDocGia\fDeleteEntry.Designer.cs">
+      <DependentUpon>fDeleteEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ManagerForm\QLDocGia\fQLDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ManagerForm\QLDocGia\fQLDocGia.Designer.cs">
+      <DependentUpon>fQLDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ManagerForm\QLPhieuMuon\fAddPhieuMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ManagerForm\QLPhieuMuon\fAddPhieuMuon.Designer.cs">
+      <DependentUpon>fAddPhieuMuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ManagerForm\QLPhieuMuon\fQLPhieuMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ManagerForm\QLPhieuMuon\fQLPhieuMuon.Designer.cs">
+      <DependentUpon>fQLPhieuMuon.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\QuanLyTaiKhoan\fDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +182,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MainForm\fDangNhap.resx">
       <DependentUpon>fDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ManagerForm\QLDocGia\fDeleteEntry.resx">
+      <DependentUpon>fDeleteEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ManagerForm\QLDocGia\fQLDocGia.resx">
+      <DependentUpon>fQLDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ManagerForm\QLPhieuMuon\fAddPhieuMuon.resx">
+      <DependentUpon>fAddPhieuMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ManagerForm\QLPhieuMuon\fQLPhieuMuon.resx">
+      <DependentUpon>fQLPhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuanLyTaiKhoan\fDoiMatKhau.resx">
       <DependentUpon>fDoiMatKhau.cs</DependentUpon>
