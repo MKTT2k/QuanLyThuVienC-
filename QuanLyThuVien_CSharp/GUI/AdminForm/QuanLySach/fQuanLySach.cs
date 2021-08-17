@@ -109,7 +109,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm
                 if (txtNoiDungTim.Text.Equals(""))
                 {
                     MessageBox.Show("Nếu muốn tìm kiếm thì nhập nội dung nhé!", "Empty", MessageBoxButtons.OK);
-                    LoadData();
+                    return;
                 }
                 else
                 {
@@ -143,7 +143,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm
                             s = from p in dataContext.SACHes
                                 join k in dataContext.DANHMUCs
                                 on p.MaDanhMuc equals k.MaDanhMuc
-                                where (p.NamXuatBan).Value.ToString("yyyy") == txtNoiDungTim.Text
+                                where (p.NamXuatBan.ToString().Contains(txtNoiDungTim.Text))
                                 select new { AnhSach = p.AnhSach.ToArray(), p.MaSach, p.TenSach, p.TacGia, p.NhaXuatBan, k.TenDanhMuc, p.NamXuatBan, p.LanXuatBan, p.SoLuong, p.GiaMuon };
                             dgvSach.DataSource = s.ToList();
                             break;
@@ -161,7 +161,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Lỗi");
+                MessageBox.Show("Lỗi " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -170,7 +170,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm
             if (cbbTimKiem.SelectedIndex == 0) label2.Text = "Nhập tên sách";
             if (cbbTimKiem.SelectedIndex == 1) label2.Text = "Nhập tên tác giả";
             if (cbbTimKiem.SelectedIndex == 2) label2.Text = "Nhà xuất bản";
-            if (cbbTimKiem.SelectedIndex == 3) label2.Text = "Năm xuất bản";
+            if (cbbTimKiem.SelectedIndex == 3) label2.Text = "Thời gian xuất bản";
             if (cbbTimKiem.SelectedIndex == 4) label2.Text = "Nhập tên danh mục";
         }
 
@@ -289,6 +289,12 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm
                     System.Diagnostics.Process.Start(fileOpen);   
                 }
             }
+        }
+
+
+        private void btnHienThi_Click(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }
