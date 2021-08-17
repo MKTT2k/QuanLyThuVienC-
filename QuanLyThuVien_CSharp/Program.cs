@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan;
+using QuanLyThuVien_CSharp.GUI.MainForm;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,8 +18,8 @@ namespace QuanLyThuVien_CSharp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QuanLyThuVien_CSharp.GUI.AdminForm.ThongKe.fThongKe());
-            //Application.Run(new fQuanLyDanhMuc());
+            //Application.Run(new QuanLyThuVien_CSharp.GUI.AdminForm.ThongKe.fThongKe());
+            Application.Run(new fQuanLyTaiKhoan());
         }
     }
 }

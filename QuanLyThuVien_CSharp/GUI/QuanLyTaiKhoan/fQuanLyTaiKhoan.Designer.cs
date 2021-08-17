@@ -255,7 +255,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
             this.Controls.Add(this.panel1);
             this.Name = "fQuanLyTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fQuanLyTaiKhoan";
+            this.Text = "Quản lý tài khoản";
             this.Load += new System.EventHandler(this.fQuanLyTaiKhoan_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).EndInit();

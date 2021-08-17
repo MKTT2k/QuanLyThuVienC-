@@ -126,7 +126,7 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             this.Controls.Add(this.panel1);
             this.Name = "fDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fDangNhap";
+            this.Text = "Đăng nhập";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fDangNhap_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

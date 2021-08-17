@@ -48,9 +48,12 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
         {
             try
             {
-                if (txtUsername.Text == "") throw new Exception("Tên đăng nhập không được để trống");
-                if (txtName.Text == "") throw new Exception("Tên người không được để trống");
-                if (!hasPicture) throw new Exception("Chưa chọn ảnh đại diện");
+                if (txtUsername.Text == "") 
+                    MessageBox.Show("Tên đăng nhập không được để trống","Có lỗi xảy ra");
+                if (txtName.Text == "")
+                    MessageBox.Show("Tên người dùng không được để trống", "Có lỗi xảy ra");
+                if (!hasPicture) 
+                    MessageBox.Show("Chưa chọn ảnh đại diện", "Có lỗi xảy ra");
 
                 TAIKHOAN themTaiKhoan = new TAIKHOAN();
                 themTaiKhoan.AnhDaiDien = new ConvertImages().ConvertImageToBytes(lbl_image.Image);

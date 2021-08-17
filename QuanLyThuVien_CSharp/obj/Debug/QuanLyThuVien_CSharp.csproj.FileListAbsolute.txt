@@ -35,3 +35,7 @@ C:\Users\ADMIN\OneDrive\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSha
 C:\Users\ADMIN\OneDrive\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.csproj.CopyComplete
 C:\Users\ADMIN\OneDrive\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.exe
 C:\Users\ADMIN\OneDrive\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.pdb
+C:\Users\ADMIN\OneDrive\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.GUI.QuanLyTaiKhoan.fDoiMatKhau.resources
+C:\Users\ADMIN\OneDrive\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan.fQuanLyTaiKhoan.resources
+C:\Users\ADMIN\OneDrive\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan.fSuaTaiKhoan.resources
+C:\Users\ADMIN\OneDrive\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan.fThemTaiKhoan.resources

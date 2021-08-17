@@ -12,9 +12,66 @@ namespace QuanLyThuVien_CSharp.GUI.QuanLyTaiKhoan
 {
     public partial class fDoiMatKhau : Form
     {
-        public fDoiMatKhau()
+        QuanLyThuVien_CSharpDataContext dataContext = new QuanLyThuVien_CSharpDataContext();
+        String userName;
+
+        public fDoiMatKhau(string username)
         {
             InitializeComponent();
+            userName = username;
+        }
+
+        private void ChangePassword()
+        {
+            try
+            {
+                if (txtOldPassword.Text.Equals("") || txtNewPassword.Text.Equals("") || txtConfirmPassword.Text.Equals(""))
+                {
+                    MessageBox.Show("Vui lòng nhập đủ thông tin", "Có lỗi xảy ra");
+                    return;
+                }
+                if (txtNewPassword.Text != txtConfirmPassword.Text)
+                {
+                    MessageBox.Show("Xác nhận mật khẩu mới không đúng", "Có lỗi xảy ra");
+                    return;
+                }
+                if (dataContext.TAIKHOANs.Where(p => p.MatKhau == txtOldPassword.Text).Count() > 0)
+                {
+                    var querry = (from p in dataContext.TAIKHOANs
+                                  where p.TenDangNhap == userName
+                                  select p).FirstOrDefault<TAIKHOAN>();
+                    querry.MatKhau = txtNewPassword.Text;
+                    dataContext.SubmitChanges();
+                    MessageBox.Show("Đổi mật khẩu thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Mật khẩu cũ không chính xác", "Có lỗi xảy ra");
+                    return;
+                }                    
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Có lỗi xảy ra");
+            }
+        }
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            ChangePassword();
+            this.Dispose();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void fDoiMatKhau_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát chương trình?", "Xác nhận", MessageBoxButtons.YesNo) != DialogResult.Yes)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

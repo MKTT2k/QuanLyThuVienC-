@@ -228,7 +228,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
             this.Controls.Add(this.btnCancel);
             this.Name = "fThemTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fThemTaiKhoan";
+            this.Text = "Thêm tài khoản";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fThemTaiKhoan_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.lbl_image)).EndInit();
             this.pnl_Image.ResumeLayout(false);
