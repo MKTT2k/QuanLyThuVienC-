@@ -92,6 +92,36 @@
     <Compile Include="GUI\AdminForm\QuanLySach\fThemSach.Designer.cs">
       <DependentUpon>fThemSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\MainForm\fDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MainForm\fDangNhap.Designer.cs">
+      <DependentUpon>fDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLyTaiKhoan\fDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyTaiKhoan\fDoiMatKhau.Designer.cs">
+      <DependentUpon>fDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLyTaiKhoan\fQuanLyTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyTaiKhoan\fQuanLyTaiKhoan.Designer.cs">
+      <DependentUpon>fQuanLyTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLyTaiKhoan\fSuaTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyTaiKhoan\fSuaTaiKhoan.Designer.cs">
+      <DependentUpon>fSuaTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLyTaiKhoan\fThemTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyTaiKhoan\fThemTaiKhoan.Designer.cs">
+      <DependentUpon>fThemTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\AdminForm\ThongKe\fThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\AdminForm\ThongKe\fThongKe.resx">
       <DependentUpon>fThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainForm\fDangNhap.resx">
+      <DependentUpon>fDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -218,5 +251,6 @@
   <ItemGroup>
     <None Include="Resources\reload.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
