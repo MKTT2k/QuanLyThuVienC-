@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Linq.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
 {
     public partial class fQLPhieuMuon : Form
     {
         QuanLyThuVien_CSharpDataContext db = new QuanLyThuVien_CSharpDataContext();
+        int index = -1;
         public fQLPhieuMuon()
         {
             InitializeComponent();
@@ -33,14 +36,51 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             fAddPhieuMuon f = new fAddPhieuMuon(this);
             f.ShowDialog();
         }
-
-        private void dgvPheuMuon_DoubleClick(object sender, EventArgs e)
+        private void dgvPhieuMuon_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //fEditPhieuMuon f = new fEditPhieuMuon(this, 5);
-            //f.ShowDialog();
-            //index = -1;
+            index = e.RowIndex;
+        }
+        private void dgvPhieuMuon_DoubleClick(object sender, EventArgs e)
+        {
+            fEditPhieuMuon f = new fEditPhieuMuon(this, Int32.Parse(dgvPhieuMuon.Rows[index].Cells[0].Value.ToString()));
+            f.ShowDialog();
+            index = -1;
         }
 
-
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtSearch.Text.Equals(""))
+                {
+                    loadForm();
+                }
+                else if (cbbSearch.SelectedIndex == 0)
+                {
+                    var p = from z in db.PHIEUMUONs
+                            where SqlMethods.Equals(z.SoPhieuMuon.ToString(), txtSearch.Text)
+                            select new { z.SoPhieuMuon, z.TenDangNhap, z.MaSinhVien };
+                    dgvPhieuMuon.DataSource = p;
+                }
+                else if (cbbSearch.SelectedIndex == 1)
+                {
+                    var p = from z in db.PHIEUMUONs
+                            where SqlMethods.Like(z.TenDangNhap, "%" + txtSearch.Text + "%")
+                            select new { z.SoPhieuMuon, z.TenDangNhap, z.MaSinhVien };
+                    dgvPhieuMuon.DataSource = p;
+                }
+                else if (cbbSearch.SelectedIndex == 2)
+                {
+                    var p = from z in db.PHIEUMUONs
+                            where SqlMethods.Like(z.MaSinhVien, "%" + txtSearch.Text + "%")
+                            select new { z.SoPhieuMuon, z.TenDangNhap, z.MaSinhVien };
+                    dgvPhieuMuon.DataSource = p;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi");
+            }
+        }
     }
 }

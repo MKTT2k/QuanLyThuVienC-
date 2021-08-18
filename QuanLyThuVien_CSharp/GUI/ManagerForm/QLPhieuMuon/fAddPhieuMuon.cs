@@ -44,8 +44,8 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 if (cbbSach.Text.Contains("-"))
                 {
                     var s = (from p in db.SACHes
@@ -67,6 +67,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
                     for (int i = 0; i < Int32.Parse(nudSoLuong.Text); i++)
                     {
                         dgvCTPhieu.Rows.Add(s.MaSach, s.TenSach, s.GiaMuon);
+                        ////txtTongTien.Text = (Int32.Parse(txtTongTien.Text) + s.GiaMuon).ToString();
                         txtTongTien.Text = (Int32.Parse(txtTongTien.Text) + s.GiaMuon).ToString();
                     }
                 }
@@ -108,11 +109,11 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
                         txtTongTien.Text = (Int32.Parse(txtTongTien.Text) + s.GiaMuon).ToString();
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Lỗi");
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message, "Lỗi");
+            //}
         }
 
         private void dgvCTPhieu_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -228,10 +229,9 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
                 table.Rows.Add(dr);
             }
             ds.Tables.Add(table);
-            //fBillView f = new fBillView(ds, txtNguoiMuon.Text,
-            //    lblChiTietPhieu.Text, txtTongTien.Text, ngayMuon, tenDangNhap);
-            //MessageBox.Show(ngayMuon);
-            //f.ShowDialog();
+            fBillView f = new fBillView(ds, txtNguoiMuon.Text,
+                lblChiTietPhieu.Text, txtTongTien.Text, ngayMuon, tenDangNhap);
+            f.ShowDialog();
         }
     }
 }

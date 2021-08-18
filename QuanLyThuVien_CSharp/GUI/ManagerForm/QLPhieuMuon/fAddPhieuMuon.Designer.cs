@@ -40,14 +40,14 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.cbbSach = new System.Windows.Forms.ComboBox();
             this.nudSoLuong = new System.Windows.Forms.NumericUpDown();
             this.dgvCTPhieu = new System.Windows.Forms.DataGridView();
+            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnPrint = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiaMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblChiTietPhieu = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTPhieu)).BeginInit();
@@ -114,10 +114,11 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             // txtTongTien
             // 
             this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTongTien.Location = new System.Drawing.Point(446, 119);
+            this.txtTongTien.Location = new System.Drawing.Point(450, 114);
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.Size = new System.Drawing.Size(165, 27);
             this.txtTongTien.TabIndex = 5;
+            this.txtTongTien.Text = "0";
             // 
             // label6
             // 
@@ -165,6 +166,30 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.dgvCTPhieu.Size = new System.Drawing.Size(792, 241);
             this.dgvCTPhieu.TabIndex = 8;
             this.dgvCTPhieu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTPhieu_CellClick);
+            // 
+            // MaSach
+            // 
+            this.MaSach.DataPropertyName = "MaSach";
+            this.MaSach.HeaderText = "Mã sách";
+            this.MaSach.MinimumWidth = 6;
+            this.MaSach.Name = "MaSach";
+            this.MaSach.Width = 125;
+            // 
+            // TenSach
+            // 
+            this.TenSach.DataPropertyName = "TenSach";
+            this.TenSach.HeaderText = "Tên sách";
+            this.TenSach.MinimumWidth = 6;
+            this.TenSach.Name = "TenSach";
+            this.TenSach.Width = 400;
+            // 
+            // GiaMuon
+            // 
+            this.GiaMuon.DataPropertyName = "GiaMuon";
+            this.GiaMuon.HeaderText = "Giá Mượn";
+            this.GiaMuon.MinimumWidth = 6;
+            this.GiaMuon.Name = "GiaMuon";
+            this.GiaMuon.Width = 200;
             // 
             // btnPrint
             // 
@@ -220,30 +245,6 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // MaSach
-            // 
-            this.MaSach.DataPropertyName = "MaSach";
-            this.MaSach.HeaderText = "Mã sách";
-            this.MaSach.MinimumWidth = 6;
-            this.MaSach.Name = "MaSach";
-            this.MaSach.Width = 125;
-            // 
-            // TenSach
-            // 
-            this.TenSach.DataPropertyName = "TenSach";
-            this.TenSach.HeaderText = "Tên sách";
-            this.TenSach.MinimumWidth = 6;
-            this.TenSach.Name = "TenSach";
-            this.TenSach.Width = 400;
-            // 
-            // GiaMuon
-            // 
-            this.GiaMuon.DataPropertyName = "GiaMuon";
-            this.GiaMuon.HeaderText = "Giá Mượn";
-            this.GiaMuon.MinimumWidth = 6;
-            this.GiaMuon.Name = "GiaMuon";
-            this.GiaMuon.Width = 200;
             // 
             // lblChiTietPhieu
             // 

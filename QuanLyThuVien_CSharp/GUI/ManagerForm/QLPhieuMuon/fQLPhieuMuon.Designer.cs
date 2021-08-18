@@ -30,14 +30,14 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.cbbSearch = new System.Windows.Forms.ComboBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.dgvPhieuMuon = new System.Windows.Forms.DataGridView();
             this.SoPhieuMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDangNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaSinhVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.cbbSearch = new System.Windows.Forms.ComboBox();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuMuon)).BeginInit();
             this.SuspendLayout();
@@ -52,8 +52,47 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1073, 114);
+            this.panel1.Size = new System.Drawing.Size(1073, 90);
             this.panel1.TabIndex = 0;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(677, 25);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(229, 27);
+            this.txtSearch.TabIndex = 2;
+            // 
+            // cbbSearch
+            // 
+            this.cbbSearch.FormattingEnabled = true;
+            this.cbbSearch.Items.AddRange(new object[] {
+            "Số phiếu mượn",
+            "Tài khoản lập",
+            "Mã sinh viên"});
+            this.cbbSearch.Location = new System.Drawing.Point(517, 24);
+            this.cbbSearch.Name = "cbbSearch";
+            this.cbbSearch.Size = new System.Drawing.Size(154, 28);
+            this.cbbSearch.TabIndex = 1;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(951, 25);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(110, 36);
+            this.btnSearch.TabIndex = 0;
+            this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(23, 25);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(110, 36);
+            this.btnAdd.TabIndex = 0;
+            this.btnAdd.Text = "Thêm";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
             // 
             // dgvPhieuMuon
             // 
@@ -67,13 +106,15 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.TenDangNhap,
             this.MaSinhVien});
             this.dgvPhieuMuon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvPhieuMuon.Location = new System.Drawing.Point(0, 114);
+            this.dgvPhieuMuon.Location = new System.Drawing.Point(0, 90);
             this.dgvPhieuMuon.Name = "dgvPhieuMuon";
             this.dgvPhieuMuon.RowHeadersVisible = false;
             this.dgvPhieuMuon.RowHeadersWidth = 51;
             this.dgvPhieuMuon.RowTemplate.Height = 24;
-            this.dgvPhieuMuon.Size = new System.Drawing.Size(1073, 477);
+            this.dgvPhieuMuon.Size = new System.Drawing.Size(1073, 501);
             this.dgvPhieuMuon.TabIndex = 1;
+            this.dgvPhieuMuon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuMuon_CellClick);
+            this.dgvPhieuMuon.DoubleClick += new System.EventHandler(this.dgvPhieuMuon_DoubleClick);
             // 
             // SoPhieuMuon
             // 
@@ -98,40 +139,6 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.MaSinhVien.MinimumWidth = 6;
             this.MaSinhVien.Name = "MaSinhVien";
             this.MaSinhVien.Width = 350;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(34, 41);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(110, 36);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "Thêm";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
-            // 
-            // cbbSearch
-            // 
-            this.cbbSearch.FormattingEnabled = true;
-            this.cbbSearch.Location = new System.Drawing.Point(517, 13);
-            this.cbbSearch.Name = "cbbSearch";
-            this.cbbSearch.Size = new System.Drawing.Size(154, 28);
-            this.cbbSearch.TabIndex = 1;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Location = new System.Drawing.Point(677, 14);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(229, 27);
-            this.txtSearch.TabIndex = 2;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(951, 14);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(110, 36);
-            this.btnSearch.TabIndex = 0;
-            this.btnSearch.Text = "Tìm kiếm";
-            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // fQLPhieuMuon
             // 
