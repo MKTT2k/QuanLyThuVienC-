@@ -129,3 +129,4 @@ C:\Users\Administrator\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CShar
 C:\Users\Administrator\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon.fBillView.resources
 C:\Users\Administrator\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\RdlCompile.cache
 C:\Users\Administrator\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\RdlCompile.compiled
+C:\Users\Administrator\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.GUI.ManagerForm.XemSach.fXemSach.resources
