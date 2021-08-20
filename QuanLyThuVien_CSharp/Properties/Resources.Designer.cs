@@ -243,6 +243,26 @@ namespace QuanLyThuVien_CSharp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap manage_account {
+            get {
+                object obj = ResourceManager.GetObject("manage-account", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap manage_book {
+            get {
+                object obj = ResourceManager.GetObject("manage-book", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap modify_book {
             get {
                 object obj = ResourceManager.GetObject("modify-book", resourceCulture);
@@ -293,6 +313,16 @@ namespace QuanLyThuVien_CSharp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap reader {
+            get {
+                object obj = ResourceManager.GetObject("reader", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap reload {
             get {
                 object obj = ResourceManager.GetObject("reload", resourceCulture);
@@ -336,6 +366,16 @@ namespace QuanLyThuVien_CSharp.Properties {
         internal static System.Drawing.Bitmap statistic {
             get {
                 object obj = ResourceManager.GetObject("statistic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ticket {
+            get {
+                object obj = ResourceManager.GetObject("ticket", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

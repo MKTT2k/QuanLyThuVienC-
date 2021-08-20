@@ -12,6 +12,7 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
 {
     public partial class fTrangChuAdmin : Form
     {
+        private Button currentBtn;
         private Form currentChildForm;
         bool userMenu = false;
         string userName, tenND;
@@ -34,6 +35,8 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
         {
             btnDoiMatKhau.Visible = false;
             btnDangXuat.Visible = false;
+            if(currentChildForm!=null)
+                currentChildForm.Close();
             if(accountType == 0)
             {
                 btnQuanLySach.Visible = true;
@@ -47,6 +50,31 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
                 btnQuanLyTaiKhoan.Visible = false;
                 btnThongKe.Visible = false;
                 btnXemSach.Visible = true;
+            }
+        }
+
+        private void ActivateButton(object senderBtn, Color color)
+        {
+            if (senderBtn != null)
+            {
+                DisableButton();
+
+                currentBtn = (Button)senderBtn;
+                currentBtn.BackColor = Color.Crimson;
+                currentBtn.ForeColor = color;
+                currentBtn.TextAlign = ContentAlignment.MiddleRight;
+                currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
+                lblTieuDe.Text = currentBtn.Text;
+            }
+        }
+        private void DisableButton()
+        {
+            if (currentBtn != null)
+            {
+                currentBtn.BackColor = Color.Beige;
+                currentBtn.ForeColor = Color.Black;
+                currentBtn.TextAlign = ContentAlignment.MiddleCenter;
+                currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
             }
         }
         private void OpenChildForm(Form childForm)
@@ -95,45 +123,54 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
 
         private void btnQuanLySach_Click(object sender, EventArgs e)
         {
+            ActivateButton(sender, RGBColors.color1);
+            lblIcon.Image = QuanLyThuVien_CSharp.Properties.Resources.manage_book;
             OpenChildForm(new AdminForm.fQuanLySach());
-            lblTieuDe.Text = "Quản lý sách";
         }
 
         private void btnXemSach_Click(object sender, EventArgs e)
         {
+            ActivateButton(sender, RGBColors.color1);
+            lblIcon.Image = QuanLyThuVien_CSharp.Properties.Resources.manage_book;
             OpenChildForm(new ManagerForm.XemSach.fXemSach());
-            lblTieuDe.Text = "Xem sách";
         }
 
         private void btnQuanLyMuonTra_Click(object sender, EventArgs e)
         {
+            ActivateButton(sender, RGBColors.color1);
+            lblIcon.Image = QuanLyThuVien_CSharp.Properties.Resources.ticket;
             OpenChildForm(new ManagerForm.QLPhieuMuon.fQLPhieuMuon());
-            lblTieuDe.Text = "Quản lý mượn trả";
         }
 
         private void btnQuanLyDocGia_Click(object sender, EventArgs e)
         {
+            ActivateButton(sender, RGBColors.color1);
+            lblIcon.Image = QuanLyThuVien_CSharp.Properties.Resources.reader;
             OpenChildForm(new ManagerForm.QLDocGia.fQLDocGia());
-            lblTieuDe.Text = "Quản lý độc giả";
         }
 
         private void btnQuanLyTaiKhoan_Click(object sender, EventArgs e)
         {
-            //lblIcon.Image = QuanLyThuVien_CSharp.Properties.Resources;
+            ActivateButton(sender, RGBColors.color1);
+            lblIcon.Image = QuanLyThuVien_CSharp.Properties.Resources.manage_account;
             OpenChildForm(new AdminForm.QuanLyTaiKhoan.fQuanLyTaiKhoan());
-            lblTieuDe.Text = "Quản lý tài khoản";
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
+            ActivateButton(sender, RGBColors.color1);
             lblIcon.Image = QuanLyThuVien_CSharp.Properties.Resources.statistic;
             OpenChildForm(new AdminForm.ThongKe.fThongKe());
-            lblTieuDe.Text = "Thống kê";
         }
 
         private void btnDoiMatKhau_Click(object sender, EventArgs e)
         {
             OpenChildForm(new QuanLyTaiKhoan.fDoiMatKhau(btnUser.Text));
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            LoadData();
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
