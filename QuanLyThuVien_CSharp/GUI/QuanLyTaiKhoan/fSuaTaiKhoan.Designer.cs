@@ -89,7 +89,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
             this.rdDisabled.Location = new System.Drawing.Point(202, 52);
             this.rdDisabled.Margin = new System.Windows.Forms.Padding(4);
             this.rdDisabled.Name = "rdDisabled";
-            this.rdDisabled.Size = new System.Drawing.Size(99, 20);
+            this.rdDisabled.Size = new System.Drawing.Size(105, 21);
             this.rdDisabled.TabIndex = 2;
             this.rdDisabled.TabStop = true;
             this.rdDisabled.Text = "Vô hiệu hoá";
@@ -113,7 +113,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
             this.rdbEnabled.Location = new System.Drawing.Point(21, 52);
             this.rdbEnabled.Margin = new System.Windows.Forms.Padding(4);
             this.rdbEnabled.Name = "rdbEnabled";
-            this.rdbEnabled.Size = new System.Drawing.Size(82, 20);
+            this.rdbEnabled.Size = new System.Drawing.Size(88, 21);
             this.rdbEnabled.TabIndex = 1;
             this.rdbEnabled.TabStop = true;
             this.rdbEnabled.Text = "Kích hoạt";
@@ -230,7 +230,6 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
             this.Name = "fSuaTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa tài khoản";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fSuaTaiKhoan_FormClosing);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);

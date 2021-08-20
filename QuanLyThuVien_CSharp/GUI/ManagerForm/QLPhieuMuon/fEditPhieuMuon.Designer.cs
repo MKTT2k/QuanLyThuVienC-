@@ -29,6 +29,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,20 +42,21 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.dgvSachMuon = new System.Windows.Forms.DataGridView();
-            this.lblSoPhieu = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblSoPhieu = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSachMuon)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(75, 24);
+            this.label1.Location = new System.Drawing.Point(68, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(167, 20);
             this.label1.TabIndex = 0;
@@ -62,9 +64,10 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(75, 79);
+            this.label2.Location = new System.Drawing.Point(68, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(224, 20);
             this.label2.TabIndex = 1;
@@ -72,9 +75,10 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(75, 134);
+            this.label3.Location = new System.Drawing.Point(68, 134);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(208, 20);
             this.label3.TabIndex = 2;
@@ -82,9 +86,10 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(75, 205);
+            this.label4.Location = new System.Drawing.Point(68, 205);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 20);
             this.label4.TabIndex = 3;
@@ -92,9 +97,10 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(562, 79);
+            this.label5.Location = new System.Drawing.Point(555, 79);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(120, 20);
             this.label5.TabIndex = 4;
@@ -102,9 +108,10 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             // 
             // lblStatus
             // 
+            this.lblStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.Location = new System.Drawing.Point(562, 126);
+            this.lblStatus.Location = new System.Drawing.Point(555, 126);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(84, 20);
             this.lblStatus.TabIndex = 4;
@@ -112,28 +119,33 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             // 
             // txtNguoiMuon
             // 
+            this.txtNguoiMuon.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNguoiMuon.Enabled = false;
             this.txtNguoiMuon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNguoiMuon.Location = new System.Drawing.Point(78, 170);
+            this.txtNguoiMuon.Location = new System.Drawing.Point(71, 170);
             this.txtNguoiMuon.Name = "txtNguoiMuon";
             this.txtNguoiMuon.Size = new System.Drawing.Size(251, 27);
             this.txtNguoiMuon.TabIndex = 5;
             // 
             // txtNgayMuon
             // 
+            this.txtNgayMuon.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNgayMuon.Enabled = false;
             this.txtNgayMuon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgayMuon.Location = new System.Drawing.Point(78, 237);
+            this.txtNgayMuon.Location = new System.Drawing.Point(71, 237);
             this.txtNgayMuon.Name = "txtNgayMuon";
             this.txtNgayMuon.Size = new System.Drawing.Size(251, 27);
             this.txtNgayMuon.TabIndex = 5;
             // 
             // btnReturn
             // 
+            this.btnReturn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReturn.Location = new System.Drawing.Point(639, 237);
+            this.btnReturn.Image = global::QuanLyThuVien_CSharp.Properties.Resources.paid;
+            this.btnReturn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReturn.Location = new System.Drawing.Point(632, 210);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(84, 34);
+            this.btnReturn.Size = new System.Drawing.Size(179, 54);
             this.btnReturn.TabIndex = 6;
             this.btnReturn.Text = "Đã trả";
             this.btnReturn.UseVisualStyleBackColor = true;
@@ -141,10 +153,13 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             // 
             // btnSave
             // 
+            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(280, 543);
+            this.btnSave.Image = global::QuanLyThuVien_CSharp.Properties.Resources.save;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(496, 554);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(84, 34);
+            this.btnSave.Size = new System.Drawing.Size(179, 54);
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -152,10 +167,13 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(566, 543);
+            this.btnCancel.Image = global::QuanLyThuVien_CSharp.Properties.Resources.cancel;
+            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancel.Location = new System.Drawing.Point(710, 554);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(84, 34);
+            this.btnCancel.Size = new System.Drawing.Size(179, 54);
             this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -167,6 +185,15 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.dgvSachMuon.AllowUserToDeleteRows = false;
             this.dgvSachMuon.AllowUserToResizeColumns = false;
             this.dgvSachMuon.AllowUserToResizeRows = false;
+            this.dgvSachMuon.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSachMuon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSachMuon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSachMuon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -174,24 +201,16 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.TenSach,
             this.TinhTrang,
             this.NgayTra});
-            this.dgvSachMuon.Location = new System.Drawing.Point(79, 277);
+            this.dgvSachMuon.Location = new System.Drawing.Point(72, 277);
+            this.dgvSachMuon.MultiSelect = false;
             this.dgvSachMuon.Name = "dgvSachMuon";
+            this.dgvSachMuon.ReadOnly = true;
             this.dgvSachMuon.RowHeadersVisible = false;
             this.dgvSachMuon.RowHeadersWidth = 60;
-            this.dgvSachMuon.RowTemplate.Height = 24;
+            this.dgvSachMuon.RowTemplate.Height = 50;
             this.dgvSachMuon.Size = new System.Drawing.Size(857, 260);
             this.dgvSachMuon.TabIndex = 7;
             this.dgvSachMuon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSachMuon_CellClick);
-            // 
-            // lblSoPhieu
-            // 
-            this.lblSoPhieu.AutoSize = true;
-            this.lblSoPhieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoPhieu.Location = new System.Drawing.Point(713, 79);
-            this.lblSoPhieu.Name = "lblSoPhieu";
-            this.lblSoPhieu.Size = new System.Drawing.Size(18, 20);
-            this.lblSoPhieu.TabIndex = 4;
-            this.lblSoPhieu.Text = "0";
             // 
             // ID
             // 
@@ -199,6 +218,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.ID.HeaderText = "ID";
             this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             this.ID.Width = 60;
             // 
             // MaSach
@@ -207,6 +227,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.MaSach.HeaderText = "Mã sách";
             this.MaSach.MinimumWidth = 6;
             this.MaSach.Name = "MaSach";
+            this.MaSach.ReadOnly = true;
             this.MaSach.Width = 125;
             // 
             // TenSach
@@ -215,6 +236,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.TenSach.HeaderText = "Tên sách";
             this.TenSach.MinimumWidth = 6;
             this.TenSach.Name = "TenSach";
+            this.TenSach.ReadOnly = true;
             this.TenSach.Width = 250;
             // 
             // TinhTrang
@@ -223,6 +245,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.TinhTrang.HeaderText = "Tình trạng";
             this.TinhTrang.MinimumWidth = 6;
             this.TinhTrang.Name = "TinhTrang";
+            this.TinhTrang.ReadOnly = true;
             this.TinhTrang.Width = 125;
             // 
             // NgayTra
@@ -231,13 +254,25 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.NgayTra.HeaderText = "Ngày trả";
             this.NgayTra.MinimumWidth = 6;
             this.NgayTra.Name = "NgayTra";
+            this.NgayTra.ReadOnly = true;
             this.NgayTra.Width = 125;
+            // 
+            // lblSoPhieu
+            // 
+            this.lblSoPhieu.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblSoPhieu.AutoSize = true;
+            this.lblSoPhieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSoPhieu.Location = new System.Drawing.Point(706, 79);
+            this.lblSoPhieu.Name = "lblSoPhieu";
+            this.lblSoPhieu.Size = new System.Drawing.Size(18, 20);
+            this.lblSoPhieu.TabIndex = 4;
+            this.lblSoPhieu.Text = "0";
             // 
             // fEditPhieuMuon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(967, 592);
+            this.ClientSize = new System.Drawing.Size(1024, 676);
             this.Controls.Add(this.dgvSachMuon);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);

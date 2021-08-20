@@ -29,12 +29,15 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.XemSach
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvSach = new System.Windows.Forms.DataGridView();
-            this.cbbSearch = new System.Windows.Forms.ComboBox();
-            this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.AnhSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.cbbSearch = new System.Windows.Forms.ComboBox();
+            this.dgvSach = new System.Windows.Forms.DataGridView();
+            this.AnhSach = new System.Windows.Forms.DataGridViewImageColumn();
             this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDanhMuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,8 +60,45 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.XemSach
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(990, 100);
+            this.panel1.Size = new System.Drawing.Size(1203, 100);
             this.panel1.TabIndex = 0;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearch.Image = global::QuanLyThuVien_CSharp.Properties.Resources.search;
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.Location = new System.Drawing.Point(1000, 22);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(179, 54);
+            this.btnSearch.TabIndex = 2;
+            this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearch.Location = new System.Drawing.Point(740, 36);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(237, 27);
+            this.txtSearch.TabIndex = 1;
+            // 
+            // cbbSearch
+            // 
+            this.cbbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbSearch.FormattingEnabled = true;
+            this.cbbSearch.Items.AddRange(new object[] {
+            "Tên sách",
+            "Tác giả",
+            "Nhà xuất bản",
+            "Lần xuất bản",
+            "Tên danh mục"});
+            this.cbbSearch.Location = new System.Drawing.Point(593, 35);
+            this.cbbSearch.Name = "cbbSearch";
+            this.cbbSearch.Size = new System.Drawing.Size(121, 28);
+            this.cbbSearch.TabIndex = 0;
             // 
             // dgvSach
             // 
@@ -66,6 +106,14 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.XemSach
             this.dgvSach.AllowUserToDeleteRows = false;
             this.dgvSach.AllowUserToResizeColumns = false;
             this.dgvSach.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.AnhSach,
@@ -78,55 +126,41 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.XemSach
             this.LanXB,
             this.SoLuong,
             this.GiaMuon});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSach.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSach.Location = new System.Drawing.Point(0, 100);
             this.dgvSach.Name = "dgvSach";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSach.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSach.RowHeadersVisible = false;
             this.dgvSach.RowHeadersWidth = 51;
-            this.dgvSach.RowTemplate.Height = 24;
-            this.dgvSach.Size = new System.Drawing.Size(990, 496);
+            this.dgvSach.RowTemplate.Height = 100;
+            this.dgvSach.Size = new System.Drawing.Size(1203, 532);
             this.dgvSach.TabIndex = 1;
-            // 
-            // cbbSearch
-            // 
-            this.cbbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbbSearch.FormattingEnabled = true;
-            this.cbbSearch.Items.AddRange(new object[] {
-            "Tên sách",
-            "Tác giả",
-            "Nhà xuất bản",
-            "Lần xuất bản",
-            "Tên danh mục"});
-            this.cbbSearch.Location = new System.Drawing.Point(443, 28);
-            this.cbbSearch.Name = "cbbSearch";
-            this.cbbSearch.Size = new System.Drawing.Size(121, 28);
-            this.cbbSearch.TabIndex = 0;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearch.Location = new System.Drawing.Point(590, 29);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(237, 27);
-            this.txtSearch.TabIndex = 1;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.Location = new System.Drawing.Point(850, 28);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(106, 28);
-            this.btnSearch.TabIndex = 2;
-            this.btnSearch.Text = "Tìm kiếm";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // AnhSach
             // 
             this.AnhSach.DataPropertyName = "AnhSach";
             this.AnhSach.HeaderText = "Ảnh";
+            this.AnhSach.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.AnhSach.MinimumWidth = 6;
             this.AnhSach.Name = "AnhSach";
+            this.AnhSach.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.AnhSach.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.AnhSach.Width = 125;
             // 
             // MaSach
             // 
@@ -204,7 +238,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.XemSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(990, 596);
+            this.ClientSize = new System.Drawing.Size(1203, 632);
             this.Controls.Add(this.dgvSach);
             this.Controls.Add(this.panel1);
             this.Name = "fXemSach";
@@ -223,7 +257,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.XemSach
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.ComboBox cbbSearch;
         private System.Windows.Forms.DataGridView dgvSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AnhSach;
+        private System.Windows.Forms.DataGridViewImageColumn AnhSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDanhMuc;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSach;

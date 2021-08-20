@@ -20,7 +20,7 @@ namespace QuanLyThuVien_CSharp
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new QuanLyThuVien_CSharp.GUI.AdminForm.ThongKe.fThongKe());
             //Application.Run(new QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon.fQLPhieuMuon());
-            Application.Run(new QuanLyThuVien_CSharp.GUI.ManagerForm.XemSach.fXemSach());
+            Application.Run(new fDangNhap());
             //Application.Run(new fQuanLyTaiKhoan());
         }
     }

@@ -103,12 +103,5 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
             this.Dispose();
         }
 
-        private void fSuaTaiKhoan_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("Bạn có muốn thoát khỏi giao diện sửa tài khoản?", "Xác nhận", MessageBoxButtons.YesNo) != DialogResult.Yes)
-            {
-                e.Cancel = true;
-            }
-        }
     }
 }

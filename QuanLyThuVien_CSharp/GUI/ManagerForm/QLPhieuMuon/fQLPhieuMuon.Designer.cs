@@ -29,6 +29,9 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.cbbSearch = new System.Windows.Forms.ComboBox();
@@ -52,33 +55,39 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1073, 90);
+            this.panel1.Size = new System.Drawing.Size(1190, 90);
             this.panel1.TabIndex = 0;
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(677, 25);
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearch.Location = new System.Drawing.Point(657, 38);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(229, 27);
             this.txtSearch.TabIndex = 2;
             // 
             // cbbSearch
             // 
+            this.cbbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSearch.FormattingEnabled = true;
             this.cbbSearch.Items.AddRange(new object[] {
             "Số phiếu mượn",
             "Tài khoản lập",
             "Mã sinh viên"});
-            this.cbbSearch.Location = new System.Drawing.Point(517, 24);
+            this.cbbSearch.Location = new System.Drawing.Point(497, 38);
             this.cbbSearch.Name = "cbbSearch";
             this.cbbSearch.Size = new System.Drawing.Size(154, 28);
             this.cbbSearch.TabIndex = 1;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(951, 25);
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearch.Image = global::QuanLyThuVien_CSharp.Properties.Resources.search;
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.Location = new System.Drawing.Point(902, 24);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(110, 36);
+            this.btnSearch.Size = new System.Drawing.Size(179, 54);
             this.btnSearch.TabIndex = 0;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -86,9 +95,12 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(23, 25);
+            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAdd.Image = global::QuanLyThuVien_CSharp.Properties.Resources.add_category;
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(74, 24);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(110, 36);
+            this.btnAdd.Size = new System.Drawing.Size(179, 54);
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -100,18 +112,46 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.dgvPhieuMuon.AllowUserToDeleteRows = false;
             this.dgvPhieuMuon.AllowUserToResizeColumns = false;
             this.dgvPhieuMuon.AllowUserToResizeRows = false;
-            this.dgvPhieuMuon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPhieuMuon.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPhieuMuon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvPhieuMuon.ColumnHeadersHeight = 50;
             this.dgvPhieuMuon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SoPhieuMuon,
             this.TenDangNhap,
             this.MaSinhVien});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPhieuMuon.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPhieuMuon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPhieuMuon.Location = new System.Drawing.Point(0, 90);
+            this.dgvPhieuMuon.MultiSelect = false;
             this.dgvPhieuMuon.Name = "dgvPhieuMuon";
+            this.dgvPhieuMuon.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPhieuMuon.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPhieuMuon.RowHeadersVisible = false;
             this.dgvPhieuMuon.RowHeadersWidth = 51;
             this.dgvPhieuMuon.RowTemplate.Height = 24;
-            this.dgvPhieuMuon.Size = new System.Drawing.Size(1073, 501);
+            this.dgvPhieuMuon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPhieuMuon.Size = new System.Drawing.Size(1190, 575);
             this.dgvPhieuMuon.TabIndex = 1;
             this.dgvPhieuMuon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuMuon_CellClick);
             this.dgvPhieuMuon.DoubleClick += new System.EventHandler(this.dgvPhieuMuon_DoubleClick);
@@ -122,6 +162,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.SoPhieuMuon.HeaderText = "Số phiếu mượn";
             this.SoPhieuMuon.MinimumWidth = 6;
             this.SoPhieuMuon.Name = "SoPhieuMuon";
+            this.SoPhieuMuon.ReadOnly = true;
             this.SoPhieuMuon.Width = 350;
             // 
             // TenDangNhap
@@ -130,6 +171,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.TenDangNhap.HeaderText = "Tài khoản lập phiếu";
             this.TenDangNhap.MinimumWidth = 6;
             this.TenDangNhap.Name = "TenDangNhap";
+            this.TenDangNhap.ReadOnly = true;
             this.TenDangNhap.Width = 350;
             // 
             // MaSinhVien
@@ -138,13 +180,14 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.MaSinhVien.HeaderText = "Mã sinh viên";
             this.MaSinhVien.MinimumWidth = 6;
             this.MaSinhVien.Name = "MaSinhVien";
+            this.MaSinhVien.ReadOnly = true;
             this.MaSinhVien.Width = 350;
             // 
             // fQLPhieuMuon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1073, 591);
+            this.ClientSize = new System.Drawing.Size(1190, 665);
             this.Controls.Add(this.dgvPhieuMuon);
             this.Controls.Add(this.panel1);
             this.Name = "fQLPhieuMuon";

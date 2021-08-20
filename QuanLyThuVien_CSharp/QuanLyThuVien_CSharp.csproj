@@ -119,6 +119,12 @@
     <Compile Include="GUI\MainForm\fDangNhap.Designer.cs">
       <DependentUpon>fDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\MainForm\fTrangChuAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MainForm\fTrangChuAdmin.Designer.cs">
+      <DependentUpon>fTrangChuAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ManagerForm\QLDocGia\fDeleteEntry.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MainForm\fDangNhap.resx">
       <DependentUpon>fDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainForm\fTrangChuAdmin.resx">
+      <DependentUpon>fTrangChuAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ManagerForm\QLDocGia\fDeleteEntry.resx">
       <DependentUpon>fDeleteEntry.cs</DependentUpon>
@@ -351,6 +360,15 @@
     <None Include="Resources\reload.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\logoHaui.jpg" />
+    <None Include="Resources\Male.jpg" />
+    <None Include="Resources\login.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\add-reader.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\delete-history.png" />
+    <None Include="Resources\paid.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

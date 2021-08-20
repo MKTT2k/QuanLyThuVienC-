@@ -13,48 +13,44 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
     public partial class fDangNhap : Form
     {
         QuanLyThuVien_CSharpDataContext dataContext = new QuanLyThuVien_CSharpDataContext();
-        string accountType,status;
+        string status, tenND;
+        int accountType;
 
         public fDangNhap()
         {
             InitializeComponent();
         }
 
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             try
             {
-                if(txtPassword.Text == "" || txtUsername.Text == "")
+                if (txtPassword.Text == "" || txtUsername.Text == "")
                 {
-                    MessageBox.Show("Tài khoản hoặc mật khẩu chưa được nhập","Thông báo");
+                    MessageBox.Show("Tài khoản hoặc mật khẩu chưa được nhập", "Thông báo");
                     return;
                 }
                 if (dataContext.TAIKHOANs.Where(p => p.TenDangNhap == txtUsername.Text && p.MatKhau == txtPassword.Text).Count() > 0)
                 {
                     var s = from p in dataContext.TAIKHOANs
                             where p.TenDangNhap == txtUsername.Text && p.MatKhau == txtPassword.Text
-                            select new { p.LoaiTaiKhoan, p.TinhTrang };
+                            select new { p.LoaiTaiKhoan, p.TinhTrang, p.TenNguoiDung };
+
                     foreach (var i in s)
                     {
-                        accountType = i.LoaiTaiKhoan.ToString();
+                        accountType = i.LoaiTaiKhoan.Value;
                         status = i.TinhTrang.ToString();
+                        tenND = i.TenNguoiDung;
                     }
-                    if(status == "false")
+                    if (status == "false")
                     {
-                        MessageBox.Show("Tài khoản bị vô hiệu hóa!","Thông báo");
+                        MessageBox.Show("Tài khoản bị vô hiệu hóa!", "Thông báo");
                     }
-                    if (accountType == "0")
-                    {
-                        // mở form admin
-                        this.Hide();
-                        //f.ShowDialog();
-                    }
-                    else
-                    {
-                        // mở form user                        
-                        this.Hide();
-                        //f.ShowDialog();
-                    }
+                    this.Hide();
+                    MessageBox.Show("Đăng nhập thành công!", "Thông báo");
+                    fTrangChuAdmin fAdmin = new fTrangChuAdmin(txtUsername.Text, tenND, accountType);
+                    fAdmin.Show();
                 }
                 else
                 {
@@ -70,15 +66,9 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Bạn có muốn thoát chương trình không?", "Confirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                this.Close();
         }
 
-        private void fDangNhap_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("Bạn có muốn thoát chương trình?", "Xác nhận", MessageBoxButtons.YesNo) != DialogResult.Yes)
-            {
-                e.Cancel = true;
-            }
-        }
     }
 }

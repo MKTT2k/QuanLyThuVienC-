@@ -45,52 +45,64 @@ namespace QuanLyThuVien_CSharp.GUI.QuanLyTaiKhoan
             // 
             // txtConfirmPassword
             // 
-            this.txtConfirmPassword.Location = new System.Drawing.Point(186, 97);
+            this.txtConfirmPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmPassword.Location = new System.Drawing.Point(270, 118);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.Size = new System.Drawing.Size(150, 22);
+            this.txtConfirmPassword.Size = new System.Drawing.Size(150, 27);
             this.txtConfirmPassword.TabIndex = 2;
             this.txtConfirmPassword.UseSystemPasswordChar = true;
             // 
             // txtOldPassword
             // 
-            this.txtOldPassword.Location = new System.Drawing.Point(186, 13);
+            this.txtOldPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtOldPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOldPassword.Location = new System.Drawing.Point(270, 34);
             this.txtOldPassword.Name = "txtOldPassword";
-            this.txtOldPassword.Size = new System.Drawing.Size(150, 22);
+            this.txtOldPassword.Size = new System.Drawing.Size(150, 27);
             this.txtOldPassword.TabIndex = 0;
             this.txtOldPassword.UseSystemPasswordChar = true;
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 100);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(67, 125);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(144, 16);
+            this.label3.Size = new System.Drawing.Size(184, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "Xác nhận mật khẩu mới";
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 16);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(67, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 16);
+            this.label1.Size = new System.Drawing.Size(100, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mật khẩu cũ";
             // 
             // txtNewPassword
             // 
-            this.txtNewPassword.Location = new System.Drawing.Point(186, 54);
+            this.txtNewPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtNewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewPassword.Location = new System.Drawing.Point(270, 75);
             this.txtNewPassword.Name = "txtNewPassword";
-            this.txtNewPassword.Size = new System.Drawing.Size(150, 22);
+            this.txtNewPassword.Size = new System.Drawing.Size(150, 27);
             this.txtNewPassword.TabIndex = 1;
             this.txtNewPassword.UseSystemPasswordChar = true;
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 57);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(67, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 16);
+            this.label2.Size = new System.Drawing.Size(109, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mật khẩu mới";
             // 
@@ -98,17 +110,23 @@ namespace QuanLyThuVien_CSharp.GUI.QuanLyTaiKhoan
             // 
             this.panel2.Controls.Add(this.btnCancel);
             this.panel2.Controls.Add(this.btnChangePassword);
-            this.panel2.Location = new System.Drawing.Point(41, 171);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Location = new System.Drawing.Point(0, 182);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(307, 45);
+            this.panel2.Size = new System.Drawing.Size(522, 116);
             this.panel2.TabIndex = 5;
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(191, 3);
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Image = global::QuanLyThuVien_CSharp.Properties.Resources.cancel;
+            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancel.Location = new System.Drawing.Point(270, 18);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(100, 33);
+            this.btnCancel.Size = new System.Drawing.Size(185, 54);
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -116,9 +134,12 @@ namespace QuanLyThuVien_CSharp.GUI.QuanLyTaiKhoan
             // 
             // btnChangePassword
             // 
-            this.btnChangePassword.Location = new System.Drawing.Point(10, 4);
+            this.btnChangePassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnChangePassword.Image = global::QuanLyThuVien_CSharp.Properties.Resources.replace;
+            this.btnChangePassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChangePassword.Location = new System.Drawing.Point(40, 18);
             this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.Size = new System.Drawing.Size(108, 32);
+            this.btnChangePassword.Size = new System.Drawing.Size(211, 54);
             this.btnChangePassword.TabIndex = 0;
             this.btnChangePassword.Text = "Đổi mật khẩu";
             this.btnChangePassword.UseVisualStyleBackColor = true;
@@ -132,9 +153,10 @@ namespace QuanLyThuVien_CSharp.GUI.QuanLyTaiKhoan
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtNewPassword);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(352, 138);
+            this.panel1.Size = new System.Drawing.Size(522, 182);
             this.panel1.TabIndex = 4;
             // 
             // fDoiMatKhau
@@ -142,7 +164,7 @@ namespace QuanLyThuVien_CSharp.GUI.QuanLyTaiKhoan
             this.AcceptButton = this.btnChangePassword;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(375, 226);
+            this.ClientSize = new System.Drawing.Size(522, 298);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "fDoiMatKhau";

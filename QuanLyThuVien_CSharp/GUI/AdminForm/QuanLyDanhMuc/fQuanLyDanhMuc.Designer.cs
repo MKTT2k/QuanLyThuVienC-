@@ -29,6 +29,7 @@ namespace QuanLyThuVien_CSharp
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvDanhMuc = new System.Windows.Forms.DataGridView();
             this.MaDanhMuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,11 +50,18 @@ namespace QuanLyThuVien_CSharp
             this.dgvDanhMuc.AllowUserToDeleteRows = false;
             this.dgvDanhMuc.AllowUserToResizeColumns = false;
             this.dgvDanhMuc.AllowUserToResizeRows = false;
-            this.dgvDanhMuc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dgvDanhMuc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvDanhMuc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDanhMuc.BackgroundColor = System.Drawing.Color.LightCyan;
             this.dgvDanhMuc.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDanhMuc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDanhMuc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhMuc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaDanhMuc,
@@ -107,6 +115,7 @@ namespace QuanLyThuVien_CSharp
             // 
             // txtTenDanhMuc
             // 
+            this.txtTenDanhMuc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTenDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenDanhMuc.Location = new System.Drawing.Point(438, 115);
             this.txtTenDanhMuc.Name = "txtTenDanhMuc";
@@ -117,6 +126,7 @@ namespace QuanLyThuVien_CSharp
             // 
             // lblTenDanhMuc
             // 
+            this.lblTenDanhMuc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTenDanhMuc.AutoSize = true;
             this.lblTenDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenDanhMuc.Location = new System.Drawing.Point(434, 86);
@@ -127,6 +137,7 @@ namespace QuanLyThuVien_CSharp
             // 
             // btnTroLai
             // 
+            this.btnTroLai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTroLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTroLai.Image = global::QuanLyThuVien_CSharp.Properties.Resources.home;
             this.btnTroLai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -140,6 +151,7 @@ namespace QuanLyThuVien_CSharp
             // 
             // btnBoQua
             // 
+            this.btnBoQua.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnBoQua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBoQua.Image = global::QuanLyThuVien_CSharp.Properties.Resources.cancel;
             this.btnBoQua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -153,6 +165,7 @@ namespace QuanLyThuVien_CSharp
             // 
             // btnSua
             // 
+            this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.Red;
             this.btnSua.Image = global::QuanLyThuVien_CSharp.Properties.Resources.modify_category;
@@ -167,6 +180,7 @@ namespace QuanLyThuVien_CSharp
             // 
             // btnXoa
             // 
+            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.DarkGreen;
             this.btnXoa.Image = global::QuanLyThuVien_CSharp.Properties.Resources.delete_category;
@@ -181,6 +195,7 @@ namespace QuanLyThuVien_CSharp
             // 
             // btnThem
             // 
+            this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.Red;
             this.btnThem.Image = global::QuanLyThuVien_CSharp.Properties.Resources.add_category;
@@ -210,7 +225,7 @@ namespace QuanLyThuVien_CSharp
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "fQuanLyDanhMuc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "-";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhMuc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

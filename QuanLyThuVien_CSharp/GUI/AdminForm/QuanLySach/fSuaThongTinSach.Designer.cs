@@ -323,7 +323,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             this.btnThayAnh.ForeColor = System.Drawing.Color.Red;
             this.btnThayAnh.Image = global::QuanLyThuVien_CSharp.Properties.Resources.replace;
             this.btnThayAnh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThayAnh.Location = new System.Drawing.Point(14, 313);
+            this.btnThayAnh.Location = new System.Drawing.Point(49, 314);
             this.btnThayAnh.Name = "btnThayAnh";
             this.btnThayAnh.Size = new System.Drawing.Size(238, 54);
             this.btnThayAnh.TabIndex = 24;
@@ -335,7 +335,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             // 
             this.ptbAnhSach.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ptbAnhSach.Image = global::QuanLyThuVien_CSharp.Properties.Resources.book;
-            this.ptbAnhSach.Location = new System.Drawing.Point(30, 65);
+            this.ptbAnhSach.Location = new System.Drawing.Point(65, 66);
             this.ptbAnhSach.Name = "ptbAnhSach";
             this.ptbAnhSach.Size = new System.Drawing.Size(206, 233);
             this.ptbAnhSach.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

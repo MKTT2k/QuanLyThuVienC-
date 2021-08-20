@@ -37,6 +37,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(52, 40);
@@ -47,10 +48,13 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             // 
             // btnDeleteAndSave
             // 
+            this.btnDeleteAndSave.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnDeleteAndSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteAndSave.Location = new System.Drawing.Point(200, 121);
+            this.btnDeleteAndSave.Image = global::QuanLyThuVien_CSharp.Properties.Resources.save;
+            this.btnDeleteAndSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeleteAndSave.Location = new System.Drawing.Point(56, 110);
             this.btnDeleteAndSave.Name = "btnDeleteAndSave";
-            this.btnDeleteAndSave.Size = new System.Drawing.Size(99, 38);
+            this.btnDeleteAndSave.Size = new System.Drawing.Size(185, 54);
             this.btnDeleteAndSave.TabIndex = 1;
             this.btnDeleteAndSave.Text = "Lưu";
             this.btnDeleteAndSave.UseVisualStyleBackColor = true;
@@ -58,16 +62,20 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(345, 121);
+            this.btnCancel.Image = global::QuanLyThuVien_CSharp.Properties.Resources.cancel;
+            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancel.Location = new System.Drawing.Point(273, 110);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(99, 38);
+            this.btnCancel.Size = new System.Drawing.Size(185, 54);
             this.btnCancel.TabIndex = 2;
-            this.btnCancel.Text = "hủy";
+            this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // cbbChooseDate
             // 
+            this.cbbChooseDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbbChooseDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbChooseDate.FormattingEnabled = true;
             this.cbbChooseDate.Items.AddRange(new object[] {
@@ -89,7 +97,9 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnDeleteAndSave);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "fDeleteEntry";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "fDeleteEntry";
             this.ResumeLayout(false);
             this.PerformLayout();
