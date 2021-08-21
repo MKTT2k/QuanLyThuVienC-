@@ -52,7 +52,7 @@ namespace QuanLyThuVien_CSharp
             this.dgvDanhMuc.AllowUserToResizeRows = false;
             this.dgvDanhMuc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvDanhMuc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvDanhMuc.BackgroundColor = System.Drawing.Color.LightCyan;
+            this.dgvDanhMuc.BackgroundColor = System.Drawing.Color.LightBlue;
             this.dgvDanhMuc.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -76,7 +76,7 @@ namespace QuanLyThuVien_CSharp
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDanhMuc.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDanhMuc.GridColor = System.Drawing.SystemColors.Window;
-            this.dgvDanhMuc.Location = new System.Drawing.Point(13, 13);
+            this.dgvDanhMuc.Location = new System.Drawing.Point(12, 12);
             this.dgvDanhMuc.MultiSelect = false;
             this.dgvDanhMuc.Name = "dgvDanhMuc";
             this.dgvDanhMuc.ReadOnly = true;
@@ -152,6 +152,7 @@ namespace QuanLyThuVien_CSharp
             // btnBoQua
             // 
             this.btnBoQua.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnBoQua.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.btnBoQua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBoQua.Image = global::QuanLyThuVien_CSharp.Properties.Resources.cancel;
             this.btnBoQua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -160,12 +161,13 @@ namespace QuanLyThuVien_CSharp
             this.btnBoQua.Size = new System.Drawing.Size(160, 54);
             this.btnBoQua.TabIndex = 5;
             this.btnBoQua.Text = "Bỏ qua";
-            this.btnBoQua.UseVisualStyleBackColor = true;
+            this.btnBoQua.UseVisualStyleBackColor = false;
             this.btnBoQua.Click += new System.EventHandler(this.btnBoQua_Click);
             // 
             // btnSua
             // 
             this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSua.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.Red;
             this.btnSua.Image = global::QuanLyThuVien_CSharp.Properties.Resources.modify_category;
@@ -175,12 +177,13 @@ namespace QuanLyThuVien_CSharp
             this.btnSua.Size = new System.Drawing.Size(160, 54);
             this.btnSua.TabIndex = 3;
             this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
             this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnXoa.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.DarkGreen;
             this.btnXoa.Image = global::QuanLyThuVien_CSharp.Properties.Resources.delete_category;
@@ -190,12 +193,13 @@ namespace QuanLyThuVien_CSharp
             this.btnXoa.Size = new System.Drawing.Size(160, 54);
             this.btnXoa.TabIndex = 4;
             this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
             this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnThem.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.Red;
             this.btnThem.Image = global::QuanLyThuVien_CSharp.Properties.Resources.add_category;
@@ -205,7 +209,7 @@ namespace QuanLyThuVien_CSharp
             this.btnThem.Size = new System.Drawing.Size(160, 54);
             this.btnThem.TabIndex = 2;
             this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // fQuanLyDanhMuc
