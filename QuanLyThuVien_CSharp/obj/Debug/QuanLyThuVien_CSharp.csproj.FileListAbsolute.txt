@@ -290,3 +290,4 @@ C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\De
 C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan.fQuanLyTaiKhoan.resources
 C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan.fSuaTaiKhoan.resources
 C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan.fThemTaiKhoan.resources
+C:\Users\Administrator\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.GUI.MainForm.fTrangChuAdmin.resources
