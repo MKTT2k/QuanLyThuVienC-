@@ -48,7 +48,6 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
                         MessageBox.Show("Tài khoản bị vô hiệu hóa!", "Thông báo");
                     }
                     this.Hide();
-                    MessageBox.Show("Đăng nhập thành công!", "Thông báo");
                     fTrangChuAdmin fAdmin = new fTrangChuAdmin(txtUsername.Text, tenND, accountType);
                     fAdmin.Show();
                 }

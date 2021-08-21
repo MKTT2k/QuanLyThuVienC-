@@ -47,9 +47,9 @@ namespace QuanLyThuVien_CSharp.GUI.QuanLyTaiKhoan
             // 
             this.txtConfirmPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmPassword.Location = new System.Drawing.Point(270, 118);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(246, 119);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.Size = new System.Drawing.Size(150, 27);
+            this.txtConfirmPassword.Size = new System.Drawing.Size(209, 27);
             this.txtConfirmPassword.TabIndex = 2;
             this.txtConfirmPassword.UseSystemPasswordChar = true;
             // 
@@ -57,9 +57,9 @@ namespace QuanLyThuVien_CSharp.GUI.QuanLyTaiKhoan
             // 
             this.txtOldPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtOldPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOldPassword.Location = new System.Drawing.Point(270, 34);
+            this.txtOldPassword.Location = new System.Drawing.Point(246, 35);
             this.txtOldPassword.Name = "txtOldPassword";
-            this.txtOldPassword.Size = new System.Drawing.Size(150, 27);
+            this.txtOldPassword.Size = new System.Drawing.Size(209, 27);
             this.txtOldPassword.TabIndex = 0;
             this.txtOldPassword.UseSystemPasswordChar = true;
             // 
@@ -68,7 +68,7 @@ namespace QuanLyThuVien_CSharp.GUI.QuanLyTaiKhoan
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(67, 125);
+            this.label3.Location = new System.Drawing.Point(43, 126);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(184, 20);
             this.label3.TabIndex = 0;
@@ -79,7 +79,7 @@ namespace QuanLyThuVien_CSharp.GUI.QuanLyTaiKhoan
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(67, 41);
+            this.label1.Location = new System.Drawing.Point(43, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 20);
             this.label1.TabIndex = 0;
@@ -89,9 +89,9 @@ namespace QuanLyThuVien_CSharp.GUI.QuanLyTaiKhoan
             // 
             this.txtNewPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNewPassword.Location = new System.Drawing.Point(270, 75);
+            this.txtNewPassword.Location = new System.Drawing.Point(246, 76);
             this.txtNewPassword.Name = "txtNewPassword";
-            this.txtNewPassword.Size = new System.Drawing.Size(150, 27);
+            this.txtNewPassword.Size = new System.Drawing.Size(209, 27);
             this.txtNewPassword.TabIndex = 1;
             this.txtNewPassword.UseSystemPasswordChar = true;
             // 
@@ -100,7 +100,7 @@ namespace QuanLyThuVien_CSharp.GUI.QuanLyTaiKhoan
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(67, 82);
+            this.label2.Location = new System.Drawing.Point(43, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 20);
             this.label2.TabIndex = 0;

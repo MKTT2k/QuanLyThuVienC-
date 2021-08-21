@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
 {
@@ -74,6 +69,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
                 if (txtName.Text.Equals(""))
                 {
                     MessageBox.Show("Tên người dùng không được bỏ trống", "Có lỗi xảy ra");
+                    return;
                 }
                 else
                 {
@@ -84,6 +80,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
                     querry.TenNguoiDung = txtName.Text;
                     dataContext.SubmitChanges();
                     MessageBox.Show("Sửa thành công");
+                    this.Dispose();
                 }               
             }
             catch (Exception ex)
@@ -94,8 +91,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
 
         private void btnEdit_Click(object sender, EventArgs e)
         {           
-            editTaiKhoan();
-            this.Dispose();
+            editTaiKhoan();           
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
