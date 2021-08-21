@@ -296,5 +296,11 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm
         {
             LoadData();
         }
+
+        private void btnQuanLyDanhMuc_Click(object sender, EventArgs e)
+        {
+            fQuanLyDanhMuc fDanhMuc = new fQuanLyDanhMuc();
+            fDanhMuc.ShowDialog();
+        }
     }
 }

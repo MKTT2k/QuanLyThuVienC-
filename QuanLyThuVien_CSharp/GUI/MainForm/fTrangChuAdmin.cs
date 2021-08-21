@@ -171,6 +171,7 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             LoadData();
+            DisableButton();
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
