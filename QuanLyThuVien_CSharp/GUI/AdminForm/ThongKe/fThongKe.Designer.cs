@@ -63,7 +63,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.ThongKe
             // 
             this.btnXuatExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnXuatExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXuatExcel.ForeColor = System.Drawing.Color.Indigo;
+            this.btnXuatExcel.ForeColor = System.Drawing.Color.Black;
             this.btnXuatExcel.Image = global::QuanLyThuVien_CSharp.Properties.Resources.export_to_excel;
             this.btnXuatExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXuatExcel.Location = new System.Drawing.Point(923, 73);
@@ -78,7 +78,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.ThongKe
             // 
             this.btnThongKe.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKe.ForeColor = System.Drawing.Color.Red;
+            this.btnThongKe.ForeColor = System.Drawing.Color.Black;
             this.btnThongKe.Image = global::QuanLyThuVien_CSharp.Properties.Resources.statistic;
             this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThongKe.Location = new System.Drawing.Point(602, 73);

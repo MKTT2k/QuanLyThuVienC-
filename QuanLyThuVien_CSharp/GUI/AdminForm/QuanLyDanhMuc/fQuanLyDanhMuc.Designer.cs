@@ -152,8 +152,9 @@ namespace QuanLyThuVien_CSharp
             // btnBoQua
             // 
             this.btnBoQua.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnBoQua.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnBoQua.BackColor = System.Drawing.Color.Gainsboro;
             this.btnBoQua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBoQua.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBoQua.Image = global::QuanLyThuVien_CSharp.Properties.Resources.cancel;
             this.btnBoQua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBoQua.Location = new System.Drawing.Point(634, 243);
@@ -167,9 +168,9 @@ namespace QuanLyThuVien_CSharp
             // btnSua
             // 
             this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnSua.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnSua.BackColor = System.Drawing.Color.Gainsboro;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.ForeColor = System.Drawing.Color.Red;
+            this.btnSua.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnSua.Image = global::QuanLyThuVien_CSharp.Properties.Resources.modify_category;
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSua.Location = new System.Drawing.Point(634, 172);
@@ -183,9 +184,9 @@ namespace QuanLyThuVien_CSharp
             // btnXoa
             // 
             this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnXoa.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnXoa.BackColor = System.Drawing.Color.Gainsboro;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.ForeColor = System.Drawing.Color.DarkGreen;
+            this.btnXoa.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnXoa.Image = global::QuanLyThuVien_CSharp.Properties.Resources.delete_category;
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXoa.Location = new System.Drawing.Point(443, 243);
@@ -199,9 +200,9 @@ namespace QuanLyThuVien_CSharp
             // btnThem
             // 
             this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnThem.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnThem.BackColor = System.Drawing.Color.Gainsboro;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.ForeColor = System.Drawing.Color.Red;
+            this.btnThem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnThem.Image = global::QuanLyThuVien_CSharp.Properties.Resources.add_category;
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThem.Location = new System.Drawing.Point(443, 172);
