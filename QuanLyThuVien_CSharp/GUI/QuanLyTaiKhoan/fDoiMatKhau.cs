@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyThuVien_CSharp.GUI.QuanLyTaiKhoan
@@ -35,6 +30,11 @@ namespace QuanLyThuVien_CSharp.GUI.QuanLyTaiKhoan
                     MessageBox.Show("Xác nhận mật khẩu mới không đúng", "Có lỗi xảy ra");
                     return;
                 }
+                if (dataContext.TAIKHOANs.Where(p => p.MatKhau == txtOldPassword.Text).Count() <= 0)
+                {
+                    MessageBox.Show("Mật khẩu cũ không chính xác", "Có lỗi xảy ra");
+                    return;
+                }
                 if (dataContext.TAIKHOANs.Where(p => p.MatKhau == txtOldPassword.Text).Count() > 0)
                 {
                     var querry = (from p in dataContext.TAIKHOANs
@@ -43,12 +43,9 @@ namespace QuanLyThuVien_CSharp.GUI.QuanLyTaiKhoan
                     querry.MatKhau = txtNewPassword.Text;
                     dataContext.SubmitChanges();
                     MessageBox.Show("Đổi mật khẩu thành công");
+                    this.Dispose();
                 }
-                else
-                {
-                    MessageBox.Show("Mật khẩu cũ không chính xác", "Có lỗi xảy ra");
-                    return;
-                }                    
+                                  
             }
             catch (Exception ex)
             {
@@ -57,8 +54,7 @@ namespace QuanLyThuVien_CSharp.GUI.QuanLyTaiKhoan
         }
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
-            ChangePassword();
-            this.Dispose();
+            ChangePassword();           
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

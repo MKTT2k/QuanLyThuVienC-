@@ -1,12 +1,6 @@
 ﻿using QuanLyThuVien_CSharp.BLL;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
@@ -48,13 +42,22 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
         {
             try
             {
-                if (txtUsername.Text == "") 
-                    MessageBox.Show("Tên đăng nhập không được để trống","Có lỗi xảy ra");
+                if (txtUsername.Text == "")
+                {
+                    MessageBox.Show("Tên đăng nhập không được để trống", "Có lỗi xảy ra");
+                    return;
+                }
                 if (txtName.Text == "")
+                {
                     MessageBox.Show("Tên người dùng không được để trống", "Có lỗi xảy ra");
-                if (!hasPicture) 
-                    MessageBox.Show("Chưa chọn ảnh đại diện", "Có lỗi xảy ra");
+                    return;
+                }
 
+                if (!hasPicture)
+                {
+                    MessageBox.Show("Chưa chọn ảnh đại diện", "Có lỗi xảy ra");
+                    return;
+                }
                 TAIKHOAN themTaiKhoan = new TAIKHOAN();
                 themTaiKhoan.AnhDaiDien = new ConvertImages().ConvertImageToBytes(lbl_image.Image);
                 themTaiKhoan.MatKhau = "123";
@@ -66,6 +69,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
                 dataContext.TAIKHOANs.InsertOnSubmit(themTaiKhoan);
                 dataContext.SubmitChanges();
                 MessageBox.Show("Thêm thành công", "Thông báo");
+                this.Dispose();
             }
             catch (Exception ex)
             {
@@ -74,8 +78,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            addTaiKhoan();
-            this.Dispose();
+            addTaiKhoan();            
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

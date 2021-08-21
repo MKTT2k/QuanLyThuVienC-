@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
@@ -97,6 +92,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
                         dataContext.SubmitChanges();
                     }
                     MessageBox.Show("Xóa thành công", "Thông báo");
+                    LoadData();
                 }
             }
             catch (Exception ex)
@@ -107,8 +103,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            deleteTaiKhoan();
-            LoadData();
+            deleteTaiKhoan();           
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
