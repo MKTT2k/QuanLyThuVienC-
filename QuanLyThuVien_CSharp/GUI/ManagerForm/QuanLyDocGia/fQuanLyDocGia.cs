@@ -19,7 +19,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
     public partial class fQLDocGia : Form
     {
         String currentDate;
-        List<DocGia> items;
+        List<DocGia_DTO> items;
         int index = -1;
         int i = 0;
         bool isCurrent;
@@ -69,14 +69,14 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             using (StreamReader r = new StreamReader(@"LichSuDocGia/" + nam + thang + ngay + ".txt"))
             {
                 String js = r.ReadToEnd();
-                items = JsonConvert.DeserializeObject<List<DocGia>>(js);
+                items = JsonConvert.DeserializeObject<List<DocGia_DTO>>(js);
                 if (items != null)
                 {
                     dgvList.DataSource = items;
                 }
                 else
                 {
-                    items = new List<DocGia>();
+                    items = new List<DocGia_DTO>();
                     dgvList.DataSource = items;
                 }
             }
@@ -94,8 +94,8 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             using (StreamReader reader = new StreamReader(@"LichSuDocGia" + "/" + nam + thang + ngay + ".txt"))
             {
                 String js = reader.ReadToEnd();
-                items = JsonConvert.DeserializeObject<List<DocGia>>(js);
-                List<DocGia> newList = new List<DocGia>();
+                items = JsonConvert.DeserializeObject<List<DocGia_DTO>>(js);
+                List<DocGia_DTO> newList = new List<DocGia_DTO>();
                 foreach (var a in items)
                 {
                     if (a.hoTen.Contains(txtSearch.Text))
@@ -107,7 +107,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
                 }
                 else
                 {
-                    newList = new List<DocGia>();
+                    newList = new List<DocGia_DTO>();
                     dgvList.DataSource = newList;
                 }
             }
@@ -123,8 +123,8 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             using (StreamReader reader = new StreamReader(@"LichSuDocGia" + "/" + nam + thang + ngay + ".txt"))
             {
                 String js = reader.ReadToEnd();
-                items = JsonConvert.DeserializeObject<List<DocGia>>(js);
-                List<DocGia> newList = new List<DocGia>();
+                items = JsonConvert.DeserializeObject<List<DocGia_DTO>>(js);
+                List<DocGia_DTO> newList = new List<DocGia_DTO>();
                 foreach (var a in items)
                 {
                     if (a.maSV.Contains(txtSearch.Text))
@@ -136,7 +136,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
                 }
                 else
                 {
-                    newList = new List<DocGia>();
+                    newList = new List<DocGia_DTO>();
                     dgvList.DataSource = newList;
                 }
             }
@@ -148,7 +148,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             String ngay = chooseDate.Substring(0, 2);
             String thang = chooseDate.Substring(3, 2);
             String nam = chooseDate.Substring(6);
-            items.Add(new DocGia()
+            items.Add(new DocGia_DTO()
             {
                 hoTen = TenDocGia,
                 maSV = MaSV,
@@ -172,11 +172,13 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
                 {
                     txtStudentName.Focus();
                     MessageBox.Show("Tên không được để trống");
+                    return;
                 }
                 if (txtStudentCode.Text.Equals(""))
                 {
                     txtStudentCode.Focus();
                     MessageBox.Show("Mã sinh viên không được để trống");
+                    return;
                 }
                 String chooseDate = cbbDate.SelectedItem.ToString();
                 String ngay = chooseDate.Substring(0, 2);
@@ -436,14 +438,14 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
                 using (StreamReader reader = new StreamReader(@"LichSuDocGia/" + nam + thang + ngay + ".txt"))
                 {
                     String js = reader.ReadToEnd();
-                    items = JsonConvert.DeserializeObject<List<DocGia>>(js);
+                    items = JsonConvert.DeserializeObject<List<DocGia_DTO>>(js);
                     if (items == null)
                     {
-                        items = new List<DocGia>();
+                        items = new List<DocGia_DTO>();
                     }
                 }
                 DataTable table = new DataTable();
-                using (var reader = ObjectReader.Create((List<DocGia>)dgvList.DataSource))
+                using (var reader = ObjectReader.Create((List<DocGia_DTO>)dgvList.DataSource))
                 {
                     table.Load(reader);
                 }

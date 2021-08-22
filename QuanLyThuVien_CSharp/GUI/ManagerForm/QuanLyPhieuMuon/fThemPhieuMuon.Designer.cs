@@ -351,7 +351,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "fAddPhieuMuon";
-            this.Text = "fAddPhieuMuon";
+            this.Text = "fThemPhieuMuon";
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTPhieu)).EndInit();
             this.ResumeLayout(false);

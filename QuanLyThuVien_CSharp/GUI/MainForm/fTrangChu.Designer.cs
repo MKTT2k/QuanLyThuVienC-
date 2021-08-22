@@ -292,6 +292,7 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             this.Name = "fTrangChu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fTrangChuAdmin";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fTrangChu_FormClosing);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

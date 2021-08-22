@@ -68,7 +68,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.ThongKe
                         using (StreamReader r = new StreamReader(@"LichSuDocGia/" + date.Substring(0, 4) + date.Substring(5, 2) + date.Substring(8, 2) + ".txt"))
                         {
                             string json = r.ReadToEnd();
-                            List<DocGia> items = JsonConvert.DeserializeObject<List<DocGia>>(json);
+                            List<DocGia_DTO> items = JsonConvert.DeserializeObject<List<DocGia_DTO>>(json);
                             if (items != null)
                             {
                                 slDocGia = items.Count;
@@ -106,7 +106,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.ThongKe
                             using (StreamReader r = new StreamReader(@"LichSuDocGia/" + date.Substring(0, 4) + date.Substring(5, 2) + date.Substring(8, 2) + ".txt"))
                             {
                                 string json = r.ReadToEnd();
-                                List<DocGia> items = JsonConvert.DeserializeObject<List<DocGia>>(json);
+                                List<DocGia_DTO> items = JsonConvert.DeserializeObject<List<DocGia_DTO>>(json);
                                 if (items != null)
                                 {
                                     slDocGia += items.Count;
@@ -159,7 +159,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.ThongKe
                             using (StreamReader r = new StreamReader(@"LichSuDocGia/" + date.Substring(0, 4) + date.Substring(5, 2) + date.Substring(8, 2) + ".txt"))
                             {
                                 string json = r.ReadToEnd();
-                                List<DocGia> items = JsonConvert.DeserializeObject<List<DocGia>>(json);
+                                List<DocGia_DTO> items = JsonConvert.DeserializeObject<List<DocGia_DTO>>(json);
                                 if (items != null)
                                 {
                                     slDocGia = items.Count;
@@ -197,7 +197,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.ThongKe
                                 using (StreamReader r = new StreamReader(@"LichSuDocGia/" + date.Substring(0, 4) + date.Substring(5, 2) + date.Substring(8, 2) + ".txt"))
                                 {
                                     string json = r.ReadToEnd();
-                                    List<DocGia> items = JsonConvert.DeserializeObject<List<DocGia>>(json);
+                                    List<DocGia_DTO> items = JsonConvert.DeserializeObject<List<DocGia_DTO>>(json);
                                     if (items != null)
                                     {
                                         slDocGia += items.Count;

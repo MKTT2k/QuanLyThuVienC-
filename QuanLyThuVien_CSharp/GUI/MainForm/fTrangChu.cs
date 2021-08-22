@@ -177,6 +177,11 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             DisableButton();
         }
 
+        private void fTrangChu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
             fDangNhap f = new fDangNhap();

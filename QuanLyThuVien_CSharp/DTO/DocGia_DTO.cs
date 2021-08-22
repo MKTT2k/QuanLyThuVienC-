@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyThuVien_CSharp.DTO
 {
-    class DocGia
+    class DocGia_DTO
     {
         public string hoTen { get; set; }
         public string maSV { get; set; }

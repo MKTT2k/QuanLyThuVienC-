@@ -76,7 +76,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value />
+                    <Value>Thư Viện Trường Đại Học Công Nghiệp Hà Nội</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -85,9 +85,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>0.23in</Top>
-            <Left>2.79667in</Left>
+            <Left>2.03834in</Left>
             <Height>0.25in</Height>
-            <Width>1in</Width>
+            <Width>3.00833in</Width>
             <Style>
               <Border>
                 <Style>None</Style>

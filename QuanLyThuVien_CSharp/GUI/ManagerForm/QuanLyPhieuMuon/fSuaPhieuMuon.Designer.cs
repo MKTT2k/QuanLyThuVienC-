@@ -295,7 +295,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "fEditPhieuMuon";
-            this.Text = "fEditPhieuMuon";
+            this.Text = "fSuaPhieuMuon";
             this.Load += new System.EventHandler(this.fEditPhieuMuon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSachMuon)).EndInit();
             this.ResumeLayout(false);
