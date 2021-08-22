@@ -429,5 +429,15 @@ namespace QuanLyThuVien_CSharp.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap truong_dai_hoc_cong_nghiep_ha_noi_tuyen_sinh_nam_2020 {
+            get {
+                object obj = ResourceManager.GetObject("truong-dai-hoc-cong-nghiep-ha-noi-tuyen-sinh-nam-2020", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

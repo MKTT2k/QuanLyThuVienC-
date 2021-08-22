@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace QuanLyThuVien_CSharp.GUI.MainForm
 {
-    public partial class fTrangChuAdmin : Form
+    public partial class fTrangChu : Form
     {
         private Button currentBtn;
         private Form currentChildForm;
         bool userMenu = false;
         string userName, tenND;
         int accountType;
-        public fTrangChuAdmin()
+        public fTrangChu()
         {
             InitializeComponent();
             LoadData();
         }
-        public fTrangChuAdmin(string userName, string tenND, int accountType)
+        public fTrangChu(string userName, string tenND, int accountType)
         {
             InitializeComponent();
             this.userName = userName;
@@ -51,6 +51,9 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
                 btnThongKe.Visible = false;
                 btnXemSach.Visible = true;
             }
+            OpenChildForm(new Welcome());
+            lblTieuDe.Text = "Trang chủ";
+            lblIcon.Image = QuanLyThuVien_CSharp.Properties.Resources.home;
         }
 
         private void ActivateButton(object senderBtn, Color color)

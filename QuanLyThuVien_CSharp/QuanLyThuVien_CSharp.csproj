@@ -119,11 +119,17 @@
     <Compile Include="GUI\MainForm\fDangNhap.Designer.cs">
       <DependentUpon>fDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\MainForm\fTrangChuAdmin.cs">
+    <Compile Include="GUI\MainForm\fTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\MainForm\fTrangChuAdmin.Designer.cs">
-      <DependentUpon>fTrangChuAdmin.cs</DependentUpon>
+    <Compile Include="GUI\MainForm\fTrangChu.Designer.cs">
+      <DependentUpon>fTrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainForm\Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MainForm\Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\ManagerForm\QLDocGia\fDeleteEntry.cs">
       <SubType>Form</SubType>
@@ -226,8 +232,11 @@
     <EmbeddedResource Include="GUI\MainForm\fDangNhap.resx">
       <DependentUpon>fDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\MainForm\fTrangChuAdmin.resx">
-      <DependentUpon>fTrangChuAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\MainForm\fTrangChu.resx">
+      <DependentUpon>fTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainForm\Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ManagerForm\QLDocGia\fDeleteEntry.resx">
       <DependentUpon>fDeleteEntry.cs</DependentUpon>
@@ -378,6 +387,7 @@
     <None Include="Resources\delete-user.png" />
     <None Include="Resources\modify-user.png" />
     <None Include="Resources\logout.png" />
+    <None Include="Resources\truong-dai-hoc-cong-nghiep-ha-noi-tuyen-sinh-nam-2020.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
