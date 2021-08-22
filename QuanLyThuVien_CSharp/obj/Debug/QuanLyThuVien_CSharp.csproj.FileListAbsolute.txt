@@ -359,3 +359,5 @@ C:\Users\ADMIN\OneDrive\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSha
 C:\Users\ADMIN\OneDrive\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.GUI.ManagerForm.XemSach.fXemSach.resources
 C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.GUI.MainForm.fTrangChu.resources
 C:\Users\ADMIN\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.GUI.MainForm.Welcome.resources
+C:\Users\Administrator\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.GUI.MainForm.fTrangChu.resources
+C:\Users\Administrator\Documents\GitHub\QuanLyThuVien_CSharp\QuanLyThuVien_CSharp\obj\Debug\QuanLyThuVien_CSharp.GUI.MainForm.Welcome.resources

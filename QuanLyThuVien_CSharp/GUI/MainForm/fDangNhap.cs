@@ -19,6 +19,7 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
         public fDangNhap()
         {
             InitializeComponent();
+            txtPassword.Clear();
         }
 
 
@@ -66,7 +67,7 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
         private void btnExit_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn thoát chương trình không?", "Confirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                this.Close();
+                Application.Exit();
         }
 
     }
