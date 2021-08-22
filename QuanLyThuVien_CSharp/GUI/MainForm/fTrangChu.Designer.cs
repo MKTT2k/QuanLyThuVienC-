@@ -202,7 +202,7 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(298, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1542, 143);
+            this.panel4.Size = new System.Drawing.Size(1378, 143);
             this.panel4.TabIndex = 1;
             // 
             // btnDoiMatKhau
@@ -213,7 +213,7 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             this.btnDoiMatKhau.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnDoiMatKhau.Image = global::QuanLyThuVien_CSharp.Properties.Resources.replace;
             this.btnDoiMatKhau.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDoiMatKhau.Location = new System.Drawing.Point(1317, 4);
+            this.btnDoiMatKhau.Location = new System.Drawing.Point(1153, 4);
             this.btnDoiMatKhau.Name = "btnDoiMatKhau";
             this.btnDoiMatKhau.Size = new System.Drawing.Size(215, 54);
             this.btnDoiMatKhau.TabIndex = 2;
@@ -227,7 +227,7 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             this.btnUser.BackColor = System.Drawing.Color.LimeGreen;
             this.btnUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUser.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnUser.Location = new System.Drawing.Point(1134, 3);
+            this.btnUser.Location = new System.Drawing.Point(970, 3);
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(185, 54);
             this.btnUser.TabIndex = 1;
@@ -243,7 +243,7 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             this.btnDangXuat.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnDangXuat.Image = global::QuanLyThuVien_CSharp.Properties.Resources.logout;
             this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangXuat.Location = new System.Drawing.Point(1317, 56);
+            this.btnDangXuat.Location = new System.Drawing.Point(1153, 56);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Size = new System.Drawing.Size(215, 54);
             this.btnDangXuat.TabIndex = 3;
@@ -278,14 +278,14 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             this.pnlHienThi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlHienThi.Location = new System.Drawing.Point(298, 143);
             this.pnlHienThi.Name = "pnlHienThi";
-            this.pnlHienThi.Size = new System.Drawing.Size(1542, 671);
+            this.pnlHienThi.Size = new System.Drawing.Size(1378, 671);
             this.pnlHienThi.TabIndex = 2;
             // 
             // fTrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1840, 814);
+            this.ClientSize = new System.Drawing.Size(1676, 814);
             this.Controls.Add(this.pnlHienThi);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);

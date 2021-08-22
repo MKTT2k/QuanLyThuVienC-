@@ -85,7 +85,6 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             // 
             // txtSearch
             // 
-            this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSearch.Location = new System.Drawing.Point(973, 68);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(194, 27);
@@ -93,7 +92,6 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             // 
             // cbbDate
             // 
-            this.cbbDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbbDate.FormattingEnabled = true;
             this.cbbDate.Location = new System.Drawing.Point(441, 36);
             this.cbbDate.Name = "cbbDate";
@@ -103,7 +101,6 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             // 
             // cbbSearch
             // 
-            this.cbbSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbbSearch.FormattingEnabled = true;
             this.cbbSearch.Location = new System.Drawing.Point(829, 68);
             this.cbbSearch.Name = "cbbSearch";
@@ -112,7 +109,6 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             // 
             // btnEdit
             // 
-            this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnEdit.BackColor = System.Drawing.Color.MistyRose;
             this.btnEdit.ForeColor = System.Drawing.Color.Blue;
             this.btnEdit.Image = global::QuanLyThuVien_CSharp.Properties.Resources.edit;
@@ -127,7 +123,6 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             // 
             // btnSearch
             // 
-            this.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSearch.BackColor = System.Drawing.Color.MistyRose;
             this.btnSearch.ForeColor = System.Drawing.Color.Blue;
             this.btnSearch.Image = global::QuanLyThuVien_CSharp.Properties.Resources.search;
@@ -142,7 +137,6 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             // 
             // btnExport
             // 
-            this.btnExport.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnExport.BackColor = System.Drawing.Color.MistyRose;
             this.btnExport.ForeColor = System.Drawing.Color.Blue;
             this.btnExport.Image = global::QuanLyThuVien_CSharp.Properties.Resources.export_to_excel;
@@ -157,7 +151,6 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             // 
             // btnDeleteHistory
             // 
-            this.btnDeleteHistory.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnDeleteHistory.BackColor = System.Drawing.Color.MistyRose;
             this.btnDeleteHistory.ForeColor = System.Drawing.Color.Blue;
             this.btnDeleteHistory.Image = global::QuanLyThuVien_CSharp.Properties.Resources.delete_history;
@@ -172,7 +165,6 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             // 
             // btnDelete
             // 
-            this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnDelete.BackColor = System.Drawing.Color.MistyRose;
             this.btnDelete.ForeColor = System.Drawing.Color.Blue;
             this.btnDelete.Image = global::QuanLyThuVien_CSharp.Properties.Resources.delete;
@@ -187,7 +179,6 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             // 
             // btnAdd
             // 
-            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAdd.BackColor = System.Drawing.Color.MistyRose;
             this.btnAdd.ForeColor = System.Drawing.Color.Blue;
             this.btnAdd.Image = global::QuanLyThuVien_CSharp.Properties.Resources.add_reader;
@@ -202,7 +193,6 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             // 
             // txtStudentCode
             // 
-            this.txtStudentCode.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtStudentCode.Location = new System.Drawing.Point(184, 69);
             this.txtStudentCode.Name = "txtStudentCode";
             this.txtStudentCode.Size = new System.Drawing.Size(229, 27);
@@ -210,7 +200,6 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             // 
             // txtStudentName
             // 
-            this.txtStudentName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtStudentName.Location = new System.Drawing.Point(184, 30);
             this.txtStudentName.Name = "txtStudentName";
             this.txtStudentName.Size = new System.Drawing.Size(229, 27);
@@ -218,7 +207,6 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             // 
             // lblTime
             // 
-            this.lblTime.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTime.AutoSize = true;
             this.lblTime.Location = new System.Drawing.Point(631, 39);
             this.lblTime.Name = "lblTime";
@@ -228,7 +216,6 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(48, 72);
             this.label2.Name = "label2";
@@ -238,7 +225,6 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(48, 35);
             this.label1.Name = "label1";
