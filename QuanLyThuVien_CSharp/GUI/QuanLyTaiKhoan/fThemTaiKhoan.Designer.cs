@@ -56,7 +56,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(359, 9);
+            this.label1.Location = new System.Drawing.Point(346, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(310, 38);
             this.label1.TabIndex = 5;
@@ -65,25 +65,33 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
             // btnChooseImg
             // 
             this.btnChooseImg.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnChooseImg.BackColor = System.Drawing.Color.MistyRose;
             this.btnChooseImg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChooseImg.Location = new System.Drawing.Point(66, 213);
+            this.btnChooseImg.ForeColor = System.Drawing.Color.Blue;
+            this.btnChooseImg.Image = global::QuanLyThuVien_CSharp.Properties.Resources.replace;
+            this.btnChooseImg.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChooseImg.Location = new System.Drawing.Point(27, 205);
             this.btnChooseImg.Name = "btnChooseImg";
-            this.btnChooseImg.Size = new System.Drawing.Size(97, 40);
+            this.btnChooseImg.Size = new System.Drawing.Size(185, 54);
             this.btnChooseImg.TabIndex = 0;
             this.btnChooseImg.Text = "Chọn ảnh";
-            this.btnChooseImg.UseVisualStyleBackColor = true;
+            this.btnChooseImg.UseVisualStyleBackColor = false;
             this.btnChooseImg.Click += new System.EventHandler(this.btnChooseImg_Click);
             // 
             // btnAdd
             // 
             this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAdd.BackColor = System.Drawing.Color.MistyRose;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(761, 313);
+            this.btnAdd.ForeColor = System.Drawing.Color.Blue;
+            this.btnAdd.Image = global::QuanLyThuVien_CSharp.Properties.Resources.save;
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(748, 306);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(97, 40);
+            this.btnAdd.Size = new System.Drawing.Size(185, 54);
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "Thêm";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // openImg
@@ -95,7 +103,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
             this.pnl_Image.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pnl_Image.Controls.Add(this.lbl_image);
             this.pnl_Image.Controls.Add(this.btnChooseImg);
-            this.pnl_Image.Location = new System.Drawing.Point(65, 80);
+            this.pnl_Image.Location = new System.Drawing.Point(52, 80);
             this.pnl_Image.Name = "pnl_Image";
             this.pnl_Image.Size = new System.Drawing.Size(237, 280);
             this.pnl_Image.TabIndex = 6;
@@ -127,7 +135,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
             this.panel3.Controls.Add(this.rdDisabled);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.rdbEnabled);
-            this.panel3.Location = new System.Drawing.Point(385, 318);
+            this.panel3.Location = new System.Drawing.Point(372, 318);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(308, 94);
             this.panel3.TabIndex = 8;
@@ -177,7 +185,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
             this.panel2.Controls.Add(this.txtUsername);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.txtName);
-            this.panel2.Location = new System.Drawing.Point(385, 80);
+            this.panel2.Location = new System.Drawing.Point(372, 80);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(598, 182);
             this.panel2.TabIndex = 7;
@@ -206,13 +214,17 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
             // btnCancel
             // 
             this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnCancel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(761, 370);
+            this.btnCancel.ForeColor = System.Drawing.Color.Red;
+            this.btnCancel.Image = global::QuanLyThuVien_CSharp.Properties.Resources.cancel;
+            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancel.Location = new System.Drawing.Point(748, 373);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(97, 40);
+            this.btnCancel.Size = new System.Drawing.Size(185, 54);
             this.btnCancel.TabIndex = 10;
             this.btnCancel.Text = "Hủy";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lbl_image
@@ -233,7 +245,8 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
             this.AcceptButton = this.btnAdd;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1047, 480);
+            this.BackColor = System.Drawing.Color.LightCyan;
+            this.ClientSize = new System.Drawing.Size(1020, 492);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.pnl_Image);

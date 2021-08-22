@@ -66,6 +66,8 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.XemSach
             // btnSearch
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearch.BackColor = System.Drawing.Color.MistyRose;
+            this.btnSearch.ForeColor = System.Drawing.Color.Blue;
             this.btnSearch.Image = global::QuanLyThuVien_CSharp.Properties.Resources.search;
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSearch.Location = new System.Drawing.Point(1000, 22);
@@ -73,7 +75,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.XemSach
             this.btnSearch.Size = new System.Drawing.Size(179, 54);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Tìm kiếm";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
@@ -106,11 +108,12 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.XemSach
             this.dgvSach.AllowUserToDeleteRows = false;
             this.dgvSach.AllowUserToResizeColumns = false;
             this.dgvSach.AllowUserToResizeRows = false;
+            this.dgvSach.BackgroundColor = System.Drawing.Color.Linen;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.RoyalBlue;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RoyalBlue;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -127,11 +130,11 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.XemSach
             this.SoLuong,
             this.GiaMuon});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightGoldenrodYellow;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Red;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvSach.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSach.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -160,7 +163,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.XemSach
             this.AnhSach.Name = "AnhSach";
             this.AnhSach.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.AnhSach.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.AnhSach.Width = 125;
+            this.AnhSach.Width = 150;
             // 
             // MaSach
             // 
@@ -168,7 +171,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.XemSach
             this.MaSach.HeaderText = "Mã sách";
             this.MaSach.MinimumWidth = 6;
             this.MaSach.Name = "MaSach";
-            this.MaSach.Width = 60;
+            this.MaSach.Width = 125;
             // 
             // TenDanhMuc
             // 
@@ -176,7 +179,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.XemSach
             this.TenDanhMuc.HeaderText = "Tên danh mục";
             this.TenDanhMuc.MinimumWidth = 6;
             this.TenDanhMuc.Name = "TenDanhMuc";
-            this.TenDanhMuc.Width = 125;
+            this.TenDanhMuc.Width = 170;
             // 
             // TenSach
             // 
@@ -184,7 +187,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.XemSach
             this.TenSach.HeaderText = "Tên sách";
             this.TenSach.MinimumWidth = 6;
             this.TenSach.Name = "TenSach";
-            this.TenSach.Width = 125;
+            this.TenSach.Width = 200;
             // 
             // TacGia
             // 
@@ -192,7 +195,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.XemSach
             this.TacGia.HeaderText = "Tác giả";
             this.TacGia.MinimumWidth = 6;
             this.TacGia.Name = "TacGia";
-            this.TacGia.Width = 125;
+            this.TacGia.Width = 200;
             // 
             // TenNXB
             // 
@@ -200,7 +203,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.XemSach
             this.TenNXB.HeaderText = "Nhà xuất bản";
             this.TenNXB.MinimumWidth = 6;
             this.TenNXB.Name = "TenNXB";
-            this.TenNXB.Width = 125;
+            this.TenNXB.Width = 200;
             // 
             // NamXB
             // 
@@ -208,7 +211,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.XemSach
             this.NamXB.HeaderText = "Năm xuất bản";
             this.NamXB.MinimumWidth = 6;
             this.NamXB.Name = "NamXB";
-            this.NamXB.Width = 125;
+            this.NamXB.Width = 150;
             // 
             // LanXB
             // 
@@ -216,7 +219,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.XemSach
             this.LanXB.HeaderText = "Lần xuất bản";
             this.LanXB.MinimumWidth = 6;
             this.LanXB.Name = "LanXB";
-            this.LanXB.Width = 60;
+            this.LanXB.Width = 120;
             // 
             // SoLuong
             // 
@@ -224,7 +227,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.XemSach
             this.SoLuong.HeaderText = "Số lượng";
             this.SoLuong.MinimumWidth = 6;
             this.SoLuong.Name = "SoLuong";
-            this.SoLuong.Width = 60;
+            this.SoLuong.Width = 125;
             // 
             // GiaMuon
             // 

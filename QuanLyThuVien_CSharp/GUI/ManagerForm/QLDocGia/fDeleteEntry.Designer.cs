@@ -49,7 +49,9 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             // btnDeleteAndSave
             // 
             this.btnDeleteAndSave.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnDeleteAndSave.BackColor = System.Drawing.Color.MistyRose;
             this.btnDeleteAndSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteAndSave.ForeColor = System.Drawing.Color.Blue;
             this.btnDeleteAndSave.Image = global::QuanLyThuVien_CSharp.Properties.Resources.save;
             this.btnDeleteAndSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeleteAndSave.Location = new System.Drawing.Point(56, 110);
@@ -57,13 +59,15 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             this.btnDeleteAndSave.Size = new System.Drawing.Size(185, 54);
             this.btnDeleteAndSave.TabIndex = 1;
             this.btnDeleteAndSave.Text = "Lưu";
-            this.btnDeleteAndSave.UseVisualStyleBackColor = true;
+            this.btnDeleteAndSave.UseVisualStyleBackColor = false;
             this.btnDeleteAndSave.Click += new System.EventHandler(this.btnDeleteAndSave_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnCancel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.Red;
             this.btnCancel.Image = global::QuanLyThuVien_CSharp.Properties.Resources.cancel;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancel.Location = new System.Drawing.Point(273, 110);
@@ -71,7 +75,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             this.btnCancel.Size = new System.Drawing.Size(185, 54);
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "Hủy";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             // 
             // cbbChooseDate
             // 
@@ -92,6 +96,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(518, 200);
             this.Controls.Add(this.cbbChooseDate);
             this.Controls.Add(this.btnCancel);

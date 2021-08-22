@@ -108,6 +108,7 @@ namespace QuanLyThuVien_CSharp.GUI.QuanLyTaiKhoan
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LightCyan;
             this.panel2.Controls.Add(this.btnCancel);
             this.panel2.Controls.Add(this.btnChangePassword);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -120,8 +121,10 @@ namespace QuanLyThuVien_CSharp.GUI.QuanLyTaiKhoan
             // btnCancel
             // 
             this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnCancel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.Red;
             this.btnCancel.Image = global::QuanLyThuVien_CSharp.Properties.Resources.cancel;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancel.Location = new System.Drawing.Point(270, 18);
@@ -129,12 +132,14 @@ namespace QuanLyThuVien_CSharp.GUI.QuanLyTaiKhoan
             this.btnCancel.Size = new System.Drawing.Size(185, 54);
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Hủy";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnChangePassword
             // 
             this.btnChangePassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnChangePassword.BackColor = System.Drawing.Color.MistyRose;
+            this.btnChangePassword.ForeColor = System.Drawing.Color.Blue;
             this.btnChangePassword.Image = global::QuanLyThuVien_CSharp.Properties.Resources.replace;
             this.btnChangePassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnChangePassword.Location = new System.Drawing.Point(40, 18);
@@ -142,11 +147,12 @@ namespace QuanLyThuVien_CSharp.GUI.QuanLyTaiKhoan
             this.btnChangePassword.Size = new System.Drawing.Size(211, 54);
             this.btnChangePassword.TabIndex = 0;
             this.btnChangePassword.Text = "Đổi mật khẩu";
-            this.btnChangePassword.UseVisualStyleBackColor = true;
+            this.btnChangePassword.UseVisualStyleBackColor = false;
             this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.LightCyan;
             this.panel1.Controls.Add(this.txtConfirmPassword);
             this.panel1.Controls.Add(this.txtOldPassword);
             this.panel1.Controls.Add(this.label3);
@@ -167,6 +173,7 @@ namespace QuanLyThuVien_CSharp.GUI.QuanLyTaiKhoan
             this.ClientSize = new System.Drawing.Size(522, 298);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "fDoiMatKhau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Đổi mật khẩu";
