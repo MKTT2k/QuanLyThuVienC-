@@ -194,11 +194,11 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.LimeGreen;
+            this.panel4.Controls.Add(this.btnDoiMatKhau);
+            this.panel4.Controls.Add(this.btnUser);
             this.panel4.Controls.Add(this.btnDangXuat);
             this.panel4.Controls.Add(this.lblIcon);
-            this.panel4.Controls.Add(this.btnDoiMatKhau);
             this.panel4.Controls.Add(this.lblTieuDe);
-            this.panel4.Controls.Add(this.btnUser);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(298, 0);
             this.panel4.Name = "panel4";
@@ -213,9 +213,9 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             this.btnDangXuat.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnDangXuat.Image = global::QuanLyThuVien_CSharp.Properties.Resources.logout;
             this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangXuat.Location = new System.Drawing.Point(694, 63);
+            this.btnDangXuat.Location = new System.Drawing.Point(872, 56);
             this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(185, 54);
+            this.btnDangXuat.Size = new System.Drawing.Size(215, 54);
             this.btnDangXuat.TabIndex = 3;
             this.btnDangXuat.Text = "Đăng xuất";
             this.btnDangXuat.UseVisualStyleBackColor = false;
@@ -240,9 +240,9 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             this.btnDoiMatKhau.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnDoiMatKhau.Image = global::QuanLyThuVien_CSharp.Properties.Resources.replace;
             this.btnDoiMatKhau.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDoiMatKhau.Location = new System.Drawing.Point(694, 12);
+            this.btnDoiMatKhau.Location = new System.Drawing.Point(872, 4);
             this.btnDoiMatKhau.Name = "btnDoiMatKhau";
-            this.btnDoiMatKhau.Size = new System.Drawing.Size(185, 54);
+            this.btnDoiMatKhau.Size = new System.Drawing.Size(215, 54);
             this.btnDoiMatKhau.TabIndex = 2;
             this.btnDoiMatKhau.Text = "Đổi mật khẩu";
             this.btnDoiMatKhau.UseVisualStyleBackColor = false;
@@ -265,7 +265,7 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             this.btnUser.BackColor = System.Drawing.Color.LimeGreen;
             this.btnUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUser.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnUser.Location = new System.Drawing.Point(876, 4);
+            this.btnUser.Location = new System.Drawing.Point(689, 3);
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(185, 54);
             this.btnUser.TabIndex = 1;
@@ -276,9 +276,9 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             // pnlHienThi
             // 
             this.pnlHienThi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlHienThi.Location = new System.Drawing.Point(298, 143);
+            this.pnlHienThi.Location = new System.Drawing.Point(0, 0);
             this.pnlHienThi.Name = "pnlHienThi";
-            this.pnlHienThi.Size = new System.Drawing.Size(1097, 536);
+            this.pnlHienThi.Size = new System.Drawing.Size(1395, 679);
             this.pnlHienThi.TabIndex = 2;
             // 
             // fTrangChuAdmin
@@ -286,9 +286,10 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1395, 679);
-            this.Controls.Add(this.pnlHienThi);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlHienThi);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fTrangChuAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fTrangChuAdmin";

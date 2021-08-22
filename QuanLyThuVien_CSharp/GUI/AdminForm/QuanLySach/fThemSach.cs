@@ -228,16 +228,5 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             danhMucForm.ShowDialog();
         }
 
-        private void fThemSach_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (textChange == true)
-            {
-                if (MessageBox.Show("Bạn có muốn lưu thông tin sách không?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
-                {
-                    btnLuu_Click(sender, e);
-                }
-            }
-            this.Dispose();
-        }
     }
 }

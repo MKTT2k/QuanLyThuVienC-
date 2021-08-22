@@ -374,6 +374,10 @@
     <None Include="Resources\ticket.png" />
     <None Include="Resources\manage-book.png" />
     <None Include="Resources\logo-login.png" />
+    <None Include="Resources\add-user.png" />
+    <None Include="Resources\delete-user.png" />
+    <None Include="Resources\modify-user.png" />
+    <None Include="Resources\logout.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

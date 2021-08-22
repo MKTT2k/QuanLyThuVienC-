@@ -396,7 +396,6 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLySach
             this.Name = "fThemSach";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm thông tin sách mới";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fThemSach_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLanXuatBan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAnhSach)).EndInit();
