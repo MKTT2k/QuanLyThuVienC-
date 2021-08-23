@@ -388,6 +388,10 @@
     <None Include="Resources\modify-user.png" />
     <None Include="Resources\logout.png" />
     <None Include="Resources\truong-dai-hoc-cong-nghiep-ha-noi-tuyen-sinh-nam-2020.jpg" />
+    <None Include="Resources\close-program.png" />
+    <None Include="Resources\minimize.png" />
+    <None Include="Resources\maximize-program.png" />
+    <None Include="Resources\minimize-program.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

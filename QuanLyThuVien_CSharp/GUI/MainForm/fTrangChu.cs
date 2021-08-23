@@ -177,9 +177,30 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             DisableButton();
         }
 
-        private void fTrangChu_FormClosing(object sender, FormClosingEventArgs e)
+
+        private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if(MessageBox.Show("Bạn có muốn thoát khỏi hệ thống không?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void btnMaximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)

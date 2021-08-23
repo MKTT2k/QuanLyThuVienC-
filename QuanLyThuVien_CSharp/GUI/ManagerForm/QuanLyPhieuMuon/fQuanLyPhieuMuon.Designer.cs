@@ -60,7 +60,6 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             // 
             // txtSearch
             // 
-            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearch.Location = new System.Drawing.Point(657, 38);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(229, 27);
@@ -68,7 +67,6 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             // 
             // cbbSearch
             // 
-            this.cbbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbbSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSearch.FormattingEnabled = true;
             this.cbbSearch.Items.AddRange(new object[] {
@@ -82,7 +80,6 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             // 
             // btnSearch
             // 
-            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.BackColor = System.Drawing.Color.MistyRose;
             this.btnSearch.ForeColor = System.Drawing.Color.Blue;
             this.btnSearch.Image = global::QuanLyThuVien_CSharp.Properties.Resources.search;
@@ -97,7 +94,6 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             // 
             // btnAdd
             // 
-            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAdd.BackColor = System.Drawing.Color.MistyRose;
             this.btnAdd.ForeColor = System.Drawing.Color.Blue;
             this.btnAdd.Image = global::QuanLyThuVien_CSharp.Properties.Resources.add_category;
