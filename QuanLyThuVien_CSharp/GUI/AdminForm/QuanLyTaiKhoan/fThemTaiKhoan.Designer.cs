@@ -34,6 +34,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
             this.btnAdd = new System.Windows.Forms.Button();
             this.openImg = new System.Windows.Forms.OpenFileDialog();
             this.pnl_Image = new System.Windows.Forms.Panel();
+            this.lbl_image = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -44,11 +45,10 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
             this.label5 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.lbl_image = new System.Windows.Forms.PictureBox();
             this.pnl_Image.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_image)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_image)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -107,6 +107,20 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
             this.pnl_Image.Name = "pnl_Image";
             this.pnl_Image.Size = new System.Drawing.Size(237, 280);
             this.pnl_Image.TabIndex = 6;
+            // 
+            // lbl_image
+            // 
+            this.lbl_image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.lbl_image.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbl_image.Image = global::QuanLyThuVien_CSharp.Properties.Resources.Male;
+            this.lbl_image.InitialImage = global::QuanLyThuVien_CSharp.Properties.Resources.Male;
+            this.lbl_image.Location = new System.Drawing.Point(0, 0);
+            this.lbl_image.Margin = new System.Windows.Forms.Padding(4);
+            this.lbl_image.Name = "lbl_image";
+            this.lbl_image.Size = new System.Drawing.Size(237, 185);
+            this.lbl_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.lbl_image.TabIndex = 14;
+            this.lbl_image.TabStop = false;
             // 
             // label3
             // 
@@ -227,19 +241,6 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // lbl_image
-            // 
-            this.lbl_image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.lbl_image.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbl_image.InitialImage = global::QuanLyThuVien_CSharp.Properties.Resources.Male;
-            this.lbl_image.Location = new System.Drawing.Point(0, 0);
-            this.lbl_image.Margin = new System.Windows.Forms.Padding(4);
-            this.lbl_image.Name = "lbl_image";
-            this.lbl_image.Size = new System.Drawing.Size(237, 185);
-            this.lbl_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.lbl_image.TabIndex = 14;
-            this.lbl_image.TabStop = false;
-            // 
             // fThemTaiKhoan
             // 
             this.AcceptButton = this.btnAdd;
@@ -257,11 +258,11 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.QuanLyTaiKhoan
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm tài khoản";
             this.pnl_Image.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_image)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_image)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

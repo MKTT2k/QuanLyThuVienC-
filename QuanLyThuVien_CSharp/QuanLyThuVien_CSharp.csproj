@@ -392,6 +392,7 @@
     <None Include="Resources\minimize.png" />
     <None Include="Resources\maximize-program.png" />
     <None Include="Resources\minimize-program.png" />
+    <None Include="Resources\copyright.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
