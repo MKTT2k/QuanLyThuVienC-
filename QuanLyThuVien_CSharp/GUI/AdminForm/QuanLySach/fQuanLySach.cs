@@ -285,8 +285,16 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm
                 if(MessageBox.Show("Bạn có muốn xem file vừa lưu không?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     //OpenFileDialog openFileDialog = new OpenFileDialog();
-                    FileInfo fi = new FileInfo(fileOpen);
-                    System.Diagnostics.Process.Start(fileOpen);   
+                    if (File.Exists(fileOpen))
+                    {
+                        FileInfo fi = new FileInfo(fileOpen);
+                        System.Diagnostics.Process.Start(fileOpen);
+                    }
+                    else
+                    {
+                        MessageBox.Show("File không tồn tại", "File not found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
                 }
             }
         }

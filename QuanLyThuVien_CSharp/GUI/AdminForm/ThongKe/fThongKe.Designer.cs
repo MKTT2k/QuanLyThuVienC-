@@ -68,7 +68,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.ThongKe
             this.btnXuatExcel.ForeColor = System.Drawing.Color.Blue;
             this.btnXuatExcel.Image = global::QuanLyThuVien_CSharp.Properties.Resources.export_to_excel;
             this.btnXuatExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXuatExcel.Location = new System.Drawing.Point(923, 73);
+            this.btnXuatExcel.Location = new System.Drawing.Point(923, 55);
             this.btnXuatExcel.Name = "btnXuatExcel";
             this.btnXuatExcel.Size = new System.Drawing.Size(205, 54);
             this.btnXuatExcel.TabIndex = 4;
@@ -84,7 +84,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.ThongKe
             this.btnThongKe.ForeColor = System.Drawing.Color.Blue;
             this.btnThongKe.Image = global::QuanLyThuVien_CSharp.Properties.Resources.statistic;
             this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.Location = new System.Drawing.Point(602, 73);
+            this.btnThongKe.Location = new System.Drawing.Point(602, 55);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(179, 54);
             this.btnThongKe.TabIndex = 3;
@@ -97,7 +97,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.ThongKe
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(392, 94);
+            this.label2.Location = new System.Drawing.Point(392, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 20);
             this.label2.TabIndex = 0;
@@ -108,7 +108,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.ThongKe
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(140, 95);
+            this.label1.Location = new System.Drawing.Point(140, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 20);
             this.label1.TabIndex = 0;
@@ -120,7 +120,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.ThongKe
             this.cbbNam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbNam.FormattingEnabled = true;
-            this.cbbNam.Location = new System.Drawing.Point(442, 86);
+            this.cbbNam.Location = new System.Drawing.Point(442, 68);
             this.cbbNam.Name = "cbbNam";
             this.cbbNam.Size = new System.Drawing.Size(121, 28);
             this.cbbNam.TabIndex = 2;
@@ -131,7 +131,7 @@ namespace QuanLyThuVien_CSharp.GUI.AdminForm.ThongKe
             this.cbbThang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbThang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbThang.FormattingEnabled = true;
-            this.cbbThang.Location = new System.Drawing.Point(207, 87);
+            this.cbbThang.Location = new System.Drawing.Point(207, 69);
             this.cbbThang.Name = "cbbThang";
             this.cbbThang.Size = new System.Drawing.Size(167, 28);
             this.cbbThang.TabIndex = 1;
