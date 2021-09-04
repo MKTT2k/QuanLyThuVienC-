@@ -112,7 +112,6 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(245, 27);
             this.txtPassword.TabIndex = 6;
-            this.txtPassword.Text = "admin";
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // label3
@@ -134,7 +133,6 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(245, 27);
             this.txtUsername.TabIndex = 4;
-            this.txtUsername.Text = "admin01";
             // 
             // label2
             // 
