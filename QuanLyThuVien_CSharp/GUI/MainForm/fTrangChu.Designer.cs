@@ -224,7 +224,7 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(298, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1378, 117);
+            this.panel4.Size = new System.Drawing.Size(1494, 117);
             this.panel4.TabIndex = 1;
             // 
             // btnDangXuat
@@ -276,7 +276,7 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             // 
             this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMaximize.Image = global::QuanLyThuVien_CSharp.Properties.Resources.maximize_program;
-            this.btnMaximize.Location = new System.Drawing.Point(1276, 3);
+            this.btnMaximize.Location = new System.Drawing.Point(1392, 3);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(50, 41);
             this.btnMaximize.TabIndex = 6;
@@ -287,7 +287,7 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.Image = global::QuanLyThuVien_CSharp.Properties.Resources.close_program;
-            this.btnExit.Location = new System.Drawing.Point(1325, 3);
+            this.btnExit.Location = new System.Drawing.Point(1441, 3);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(50, 41);
             this.btnExit.TabIndex = 5;
@@ -298,7 +298,7 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             // 
             this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimize.Image = global::QuanLyThuVien_CSharp.Properties.Resources.minimize_program;
-            this.btnMinimize.Location = new System.Drawing.Point(1227, 3);
+            this.btnMinimize.Location = new System.Drawing.Point(1343, 3);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(50, 41);
             this.btnMinimize.TabIndex = 4;
@@ -311,7 +311,7 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             this.lblIcon.AutoSize = true;
             this.lblIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIcon.Image = global::QuanLyThuVien_CSharp.Properties.Resources.home;
-            this.lblIcon.Location = new System.Drawing.Point(556, 76);
+            this.lblIcon.Location = new System.Drawing.Point(614, 76);
             this.lblIcon.Name = "lblIcon";
             this.lblIcon.Size = new System.Drawing.Size(57, 32);
             this.lblIcon.TabIndex = 3;
@@ -323,7 +323,7 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             this.lblTieuDe.AutoSize = true;
             this.lblTieuDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTieuDe.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTieuDe.Location = new System.Drawing.Point(619, 76);
+            this.lblTieuDe.Location = new System.Drawing.Point(677, 76);
             this.lblTieuDe.Name = "lblTieuDe";
             this.lblTieuDe.Size = new System.Drawing.Size(142, 32);
             this.lblTieuDe.TabIndex = 2;
@@ -334,14 +334,14 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             this.pnlHienThi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlHienThi.Location = new System.Drawing.Point(298, 117);
             this.pnlHienThi.Name = "pnlHienThi";
-            this.pnlHienThi.Size = new System.Drawing.Size(1378, 697);
+            this.pnlHienThi.Size = new System.Drawing.Size(1494, 697);
             this.pnlHienThi.TabIndex = 2;
             // 
             // fTrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1676, 814);
+            this.ClientSize = new System.Drawing.Size(1792, 814);
             this.Controls.Add(this.pnlHienThi);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
