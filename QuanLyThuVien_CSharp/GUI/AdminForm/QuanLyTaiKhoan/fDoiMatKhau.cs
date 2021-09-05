@@ -62,12 +62,5 @@ namespace QuanLyThuVien_CSharp.GUI.QuanLyTaiKhoan
             this.Dispose();
         }
 
-        private void fDoiMatKhau_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("Bạn có muốn thoát chương trình?", "Xác nhận", MessageBoxButtons.YesNo) != DialogResult.Yes)
-            {
-                e.Cancel = true;
-            }
-        }
     }
 }

@@ -77,17 +77,22 @@
                 <TextRuns>
                   <TextRun>
                     <Value>Thư Viện Trường Đại Học Công Nghiệp Hà Nội</Value>
-                    <Style />
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.23in</Top>
-            <Left>2.03834in</Left>
+            <Top>0.25in</Top>
+            <Left>1.58834in</Left>
             <Height>0.25in</Height>
-            <Width>3.00833in</Width>
+            <Width>3.9in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -105,22 +110,26 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Ngày lâp: </Value>
-                    <Style />
+                    <Value>Ngày lập: </Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
                   </TextRun>
                   <TextRun>
                     <Value>=Parameters!NgayLapPhieu.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.655in</Top>
+            <Top>0.755in</Top>
             <Left>3.98in</Left>
             <Height>0.25in</Height>
-            <Width>2.25833in</Width>
+            <Width>2.375in</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -140,25 +149,31 @@
                 <TextRuns>
                   <TextRun>
                     <Value>Tổng tiền: </Value>
-                    <Style />
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
                   </TextRun>
                   <TextRun>
                     <Value>=Parameters!TongTien.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
                   </TextRun>
                   <TextRun>
                     <Value> VNĐ</Value>
-                    <Style />
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>1.02167in</Top>
+            <Top>1.13in</Top>
             <Left>3.98in</Left>
             <Height>0.25in</Height>
-            <Width>2.25833in</Width>
+            <Width>2.375in</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -178,21 +193,25 @@
                 <TextRuns>
                   <TextRun>
                     <Value>Số phiếu mượn: </Value>
-                    <Style />
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
                   </TextRun>
                   <TextRun>
                     <Value>=Parameters!SoPhieuMuon.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.655in</Top>
+            <Top>0.755in</Top>
             <Left>0.62917in</Left>
             <Height>0.25in</Height>
-            <Width>2.25833in</Width>
+            <Width>2.60833in</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -212,21 +231,25 @@
                 <TextRuns>
                   <TextRun>
                     <Value>Mã sinh viên: </Value>
-                    <Style />
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
                   </TextRun>
                   <TextRun>
                     <Value>=Parameters!MaSinhVien.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>1.02167in</Top>
+            <Top>1.13in</Top>
             <Left>0.62917in</Left>
             <Height>0.25in</Height>
-            <Width>2.25833in</Width>
+            <Width>2.60833in</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -242,10 +265,10 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.86972in</Width>
+                  <Width>1.69472in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.86972in</Width>
+                  <Width>2.16139in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.86972in</Width>
@@ -258,17 +281,20 @@
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox6">
-                          <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Ma Sach</Value>
-                                  <Style />
+                                  <Value>Mã sách</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox6</rd:DefaultName>
@@ -294,11 +320,15 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Ten Sach</Value>
-                                  <Style />
+                                  <Value>Tên sách</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox8</rd:DefaultName>
@@ -324,11 +354,15 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Gia Muon</Value>
-                                  <Style />
+                                  <Value>Giá mượn</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox10</rd:DefaultName>
@@ -465,7 +499,7 @@
             <Top>1.59667in</Top>
             <Left>0.62917in</Left>
             <Height>0.5in</Height>
-            <Width>5.60916in</Width>
+            <Width>5.72583in</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
@@ -481,11 +515,15 @@
                 <TextRuns>
                   <TextRun>
                     <Value>Người lập phiếu: </Value>
-                    <Style />
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
                   </TextRun>
                   <TextRun>
                     <Value>=Parameters!TaiKhoanLap.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -493,9 +531,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox12</rd:DefaultName>
             <Top>2.47167in</Top>
-            <Left>3.98in</Left>
+            <Left>3.83833in</Left>
             <Height>0.25in</Height>
-            <Width>2.25833in</Width>
+            <Width>2.51666in</Width>
             <ZIndex>6</ZIndex>
             <Style>
               <Border>

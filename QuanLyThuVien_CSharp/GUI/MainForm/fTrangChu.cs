@@ -29,12 +29,12 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             this.tenND = tenND;
             this.accountType = accountType;
             LoadData();
-            
         }
         public void LoadData()
         {
             btnDoiMatKhau.Visible = false;
             btnDangXuat.Visible = false;
+            btnUser.Text = tenND;
             if(currentChildForm!=null)
                 currentChildForm.Close();
             if(accountType == 0)
@@ -142,7 +142,7 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
         {
             ActivateButton(sender, RGBColors.color1);
             lblIcon.Image = QuanLyThuVien_CSharp.Properties.Resources.ticket;
-            OpenChildForm(new ManagerForm.QLPhieuMuon.fQLPhieuMuon());
+            OpenChildForm(new ManagerForm.QLPhieuMuon.fQLPhieuMuon(tenND));
         }
 
         private void btnQuanLyDocGia_Click(object sender, EventArgs e)

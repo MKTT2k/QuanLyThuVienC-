@@ -55,7 +55,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1190, 90);
+            this.panel1.Size = new System.Drawing.Size(1142, 90);
             this.panel1.TabIndex = 0;
             // 
             // txtSearch
@@ -104,7 +104,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // dgvPhieuMuon
             // 
@@ -152,7 +152,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.dgvPhieuMuon.RowHeadersWidth = 51;
             this.dgvPhieuMuon.RowTemplate.Height = 24;
             this.dgvPhieuMuon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPhieuMuon.Size = new System.Drawing.Size(1190, 575);
+            this.dgvPhieuMuon.Size = new System.Drawing.Size(1142, 575);
             this.dgvPhieuMuon.TabIndex = 1;
             this.dgvPhieuMuon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuMuon_CellClick);
             this.dgvPhieuMuon.DoubleClick += new System.EventHandler(this.dgvPhieuMuon_DoubleClick);
@@ -188,10 +188,11 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1190, 665);
+            this.ClientSize = new System.Drawing.Size(1142, 665);
             this.Controls.Add(this.dgvPhieuMuon);
             this.Controls.Add(this.panel1);
             this.Name = "fQLPhieuMuon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fQuanLyPhieuMuon";
             this.Load += new System.EventHandler(this.fQLPhieuMuon_Load);
             this.panel1.ResumeLayout(false);

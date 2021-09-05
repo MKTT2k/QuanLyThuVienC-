@@ -35,7 +35,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
         {
 
             reportViewer.ProcessingMode = ProcessingMode.Local;
-            reportViewer.LocalReport.ReportEmbeddedResource = "QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon.PhieuMuon.rdlc";
+            reportViewer.LocalReport.ReportEmbeddedResource = "QuanLyThuVien_CSharp.GUI.ManagerForm.QuanLyPhieuMuon.PhieuMuon.rdlc";
 
             ReportParameter rpmMaSinhVien = new ReportParameter("MaSinhVien");
             rpmMaSinhVien.Values.Add(MaSinhVien);

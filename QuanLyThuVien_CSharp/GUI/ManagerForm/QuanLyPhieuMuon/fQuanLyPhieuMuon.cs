@@ -16,9 +16,11 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
     {
         QuanLyThuVien_CSharpDataContext db = new QuanLyThuVien_CSharpDataContext();
         int index = -1;
-        public fQLPhieuMuon()
+        String tenDN;
+        public fQLPhieuMuon(String TenDangNhap)
         {
             InitializeComponent();
+            this.tenDN = TenDangNhap;
         }
         private void fQLPhieuMuon_Load(object sender, EventArgs e)
         {
@@ -31,9 +33,10 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             dgvPhieuMuon.DataSource = s.ToList();
         }
 
-        private void btnAdd_Click_1(object sender, EventArgs e)
+
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            fAddPhieuMuon f = new fAddPhieuMuon(this);
+            fAddPhieuMuon f = new fAddPhieuMuon(this, tenDN);
             f.ShowDialog();
         }
         private void dgvPhieuMuon_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -82,5 +85,6 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
                 MessageBox.Show(ex.Message, "Lỗi");
             }
         }
+
     }
 }

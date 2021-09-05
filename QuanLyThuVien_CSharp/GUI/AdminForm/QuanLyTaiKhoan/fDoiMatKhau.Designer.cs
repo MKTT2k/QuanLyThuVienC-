@@ -177,7 +177,6 @@ namespace QuanLyThuVien_CSharp.GUI.QuanLyTaiKhoan
             this.Name = "fDoiMatKhau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Đổi mật khẩu";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fDoiMatKhau_FormClosing);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

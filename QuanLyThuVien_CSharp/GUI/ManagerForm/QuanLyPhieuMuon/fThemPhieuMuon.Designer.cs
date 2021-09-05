@@ -118,11 +118,12 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.txtNguoiMuon.Location = new System.Drawing.Point(88, 114);
             this.txtNguoiMuon.Name = "txtNguoiMuon";
             this.txtNguoiMuon.Size = new System.Drawing.Size(231, 27);
-            this.txtNguoiMuon.TabIndex = 5;
+            this.txtNguoiMuon.TabIndex = 1;
             // 
             // txtTongTien
             // 
             this.txtTongTien.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtTongTien.Enabled = false;
             this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTongTien.Location = new System.Drawing.Point(476, 114);
             this.txtTongTien.Name = "txtTongTien";
@@ -149,7 +150,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.cbbSach.Location = new System.Drawing.Point(232, 197);
             this.cbbSach.Name = "cbbSach";
             this.cbbSach.Size = new System.Drawing.Size(177, 28);
-            this.cbbSach.TabIndex = 6;
+            this.cbbSach.TabIndex = 3;
             // 
             // nudSoLuong
             // 
@@ -158,7 +159,12 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.nudSoLuong.Location = new System.Drawing.Point(87, 197);
             this.nudSoLuong.Name = "nudSoLuong";
             this.nudSoLuong.Size = new System.Drawing.Size(84, 27);
-            this.nudSoLuong.TabIndex = 7;
+            this.nudSoLuong.TabIndex = 2;
+            this.nudSoLuong.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // dgvCTPhieu
             // 
@@ -171,7 +177,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.dgvCTPhieu.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RoyalBlue;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -184,7 +190,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.GiaMuon});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightGoldenrodYellow;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Red;
@@ -247,7 +253,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.btnPrint.Location = new System.Drawing.Point(369, 499);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(179, 54);
-            this.btnPrint.TabIndex = 9;
+            this.btnPrint.TabIndex = 6;
             this.btnPrint.Text = "In phiếu";
             this.btnPrint.UseVisualStyleBackColor = false;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
@@ -263,7 +269,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.btnSave.Location = new System.Drawing.Point(589, 499);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(179, 54);
-            this.btnSave.TabIndex = 10;
+            this.btnSave.TabIndex = 7;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -279,7 +285,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.btnCancel.Location = new System.Drawing.Point(809, 498);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(179, 54);
-            this.btnCancel.TabIndex = 11;
+            this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -295,7 +301,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.btnAdd.Location = new System.Drawing.Point(512, 180);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(179, 54);
-            this.btnAdd.TabIndex = 9;
+            this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -311,7 +317,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.btnDelete.Location = new System.Drawing.Point(730, 180);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(179, 54);
-            this.btnDelete.TabIndex = 9;
+            this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -351,6 +357,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "fAddPhieuMuon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fThemPhieuMuon";
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTPhieu)).EndInit();

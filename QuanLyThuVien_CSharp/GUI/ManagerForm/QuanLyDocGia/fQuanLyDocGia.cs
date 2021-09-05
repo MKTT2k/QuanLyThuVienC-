@@ -428,7 +428,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             saveFileDialog.Title = "Chọn chỗ lưu";
             saveFileDialog.DefaultExt = "xlsx";
             saveFileDialog.Filter = "Excel files (*.xlsx) | *.xlsx";
-            saveFileDialog.FileName = "LichSuDocGia";
+            saveFileDialog.FileName = "LichSuDocGia" +cbbDate.Text;
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 String chooseDate = cbbDate.SelectedItem.ToString();

@@ -80,12 +80,12 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1393, 190);
+            this.panel1.Size = new System.Drawing.Size(1251, 190);
             this.panel1.TabIndex = 0;
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(973, 68);
+            this.txtSearch.Location = new System.Drawing.Point(881, 68);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(194, 27);
             this.txtSearch.TabIndex = 7;
@@ -93,7 +93,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             // cbbDate
             // 
             this.cbbDate.FormattingEnabled = true;
-            this.cbbDate.Location = new System.Drawing.Point(441, 36);
+            this.cbbDate.Location = new System.Drawing.Point(418, 29);
             this.cbbDate.Name = "cbbDate";
             this.cbbDate.Size = new System.Drawing.Size(165, 28);
             this.cbbDate.TabIndex = 6;
@@ -102,7 +102,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             // cbbSearch
             // 
             this.cbbSearch.FormattingEnabled = true;
-            this.cbbSearch.Location = new System.Drawing.Point(829, 68);
+            this.cbbSearch.Location = new System.Drawing.Point(737, 68);
             this.cbbSearch.Name = "cbbSearch";
             this.cbbSearch.Size = new System.Drawing.Size(129, 28);
             this.cbbSearch.TabIndex = 5;
@@ -113,7 +113,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             this.btnEdit.ForeColor = System.Drawing.Color.Blue;
             this.btnEdit.Image = global::QuanLyThuVien_CSharp.Properties.Resources.edit;
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(259, 119);
+            this.btnEdit.Location = new System.Drawing.Point(240, 119);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(179, 54);
             this.btnEdit.TabIndex = 4;
@@ -127,9 +127,9 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             this.btnSearch.ForeColor = System.Drawing.Color.Blue;
             this.btnSearch.Image = global::QuanLyThuVien_CSharp.Properties.Resources.search;
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(1188, 42);
+            this.btnSearch.Location = new System.Drawing.Point(1096, 42);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(179, 54);
+            this.btnSearch.Size = new System.Drawing.Size(148, 54);
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -141,7 +141,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             this.btnExport.ForeColor = System.Drawing.Color.Blue;
             this.btnExport.Image = global::QuanLyThuVien_CSharp.Properties.Resources.export_to_excel;
             this.btnExport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExport.Location = new System.Drawing.Point(1061, 119);
+            this.btnExport.Location = new System.Drawing.Point(969, 119);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(179, 54);
             this.btnExport.TabIndex = 4;
@@ -155,7 +155,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             this.btnDeleteHistory.ForeColor = System.Drawing.Color.Blue;
             this.btnDeleteHistory.Image = global::QuanLyThuVien_CSharp.Properties.Resources.delete_history;
             this.btnDeleteHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteHistory.Location = new System.Drawing.Point(829, 119);
+            this.btnDeleteHistory.Location = new System.Drawing.Point(737, 119);
             this.btnDeleteHistory.Name = "btnDeleteHistory";
             this.btnDeleteHistory.Size = new System.Drawing.Size(204, 54);
             this.btnDeleteHistory.TabIndex = 4;
@@ -169,7 +169,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             this.btnDelete.ForeColor = System.Drawing.Color.Blue;
             this.btnDelete.Image = global::QuanLyThuVien_CSharp.Properties.Resources.delete;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(466, 119);
+            this.btnDelete.Location = new System.Drawing.Point(447, 119);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(179, 54);
             this.btnDelete.TabIndex = 4;
@@ -183,7 +183,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             this.btnAdd.ForeColor = System.Drawing.Color.Blue;
             this.btnAdd.Image = global::QuanLyThuVien_CSharp.Properties.Resources.add_reader;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(52, 119);
+            this.btnAdd.Location = new System.Drawing.Point(33, 119);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(179, 54);
             this.btnAdd.TabIndex = 4;
@@ -193,14 +193,14 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             // 
             // txtStudentCode
             // 
-            this.txtStudentCode.Location = new System.Drawing.Point(184, 69);
+            this.txtStudentCode.Location = new System.Drawing.Point(165, 69);
             this.txtStudentCode.Name = "txtStudentCode";
             this.txtStudentCode.Size = new System.Drawing.Size(229, 27);
             this.txtStudentCode.TabIndex = 3;
             // 
             // txtStudentName
             // 
-            this.txtStudentName.Location = new System.Drawing.Point(184, 30);
+            this.txtStudentName.Location = new System.Drawing.Point(165, 30);
             this.txtStudentName.Name = "txtStudentName";
             this.txtStudentName.Size = new System.Drawing.Size(229, 27);
             this.txtStudentName.TabIndex = 3;
@@ -208,7 +208,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             // lblTime
             // 
             this.lblTime.AutoSize = true;
-            this.lblTime.Location = new System.Drawing.Point(631, 39);
+            this.lblTime.Location = new System.Drawing.Point(607, 35);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(93, 20);
             this.lblTime.TabIndex = 2;
@@ -217,7 +217,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 72);
+            this.label2.Location = new System.Drawing.Point(29, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 20);
             this.label2.TabIndex = 1;
@@ -226,7 +226,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 35);
+            this.label1.Location = new System.Drawing.Point(29, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 20);
             this.label1.TabIndex = 0;
@@ -278,7 +278,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             this.dgvList.RowHeadersWidth = 51;
             this.dgvList.RowTemplate.Height = 50;
             this.dgvList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvList.Size = new System.Drawing.Size(1393, 460);
+            this.dgvList.Size = new System.Drawing.Size(1251, 460);
             this.dgvList.TabIndex = 1;
             this.dgvList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvList_CellClick_1);
             // 
@@ -317,10 +317,11 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1393, 650);
+            this.ClientSize = new System.Drawing.Size(1251, 650);
             this.Controls.Add(this.dgvList);
             this.Controls.Add(this.panel1);
             this.Name = "fQLDocGia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fQLDocGia";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

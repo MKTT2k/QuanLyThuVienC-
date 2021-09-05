@@ -38,16 +38,17 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             this.reportViewer.Location = new System.Drawing.Point(0, 0);
             this.reportViewer.Name = "reportViewer";
             this.reportViewer.ServerReport.BearerToken = null;
-            this.reportViewer.Size = new System.Drawing.Size(860, 503);
+            this.reportViewer.Size = new System.Drawing.Size(1112, 690);
             this.reportViewer.TabIndex = 0;
             // 
-            // fBillViewer
+            // fBillView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 503);
+            this.ClientSize = new System.Drawing.Size(1112, 690);
             this.Controls.Add(this.reportViewer);
-            this.Name = "fBillViewer";
+            this.Name = "fBillView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fBillViewer";
             this.Load += new System.EventHandler(this.fBillViewer_Load);
             this.ResumeLayout(false);

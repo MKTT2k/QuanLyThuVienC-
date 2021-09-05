@@ -16,11 +16,12 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
         QuanLyThuVien_CSharpDataContext db = new QuanLyThuVien_CSharpDataContext();
         fQLPhieuMuon QLPhieuMuon;
         int index = -1;
-        String tenDangNhap = "hola";
-        public fAddPhieuMuon(fQLPhieuMuon f)
+        String tenDangNhap;
+        public fAddPhieuMuon(fQLPhieuMuon f, String tenDN)
         {
             InitializeComponent();
             QLPhieuMuon = f;
+            this.tenDangNhap = tenDN;
             loadForm();
         }
         public void loadForm()
@@ -44,8 +45,8 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
                 if (cbbSach.Text.Contains("-"))
                 {
                     var s = (from p in db.SACHes
@@ -67,7 +68,6 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
                     for (int i = 0; i < Int32.Parse(nudSoLuong.Text); i++)
                     {
                         dgvCTPhieu.Rows.Add(s.MaSach, s.TenSach, s.GiaMuon);
-                        ////txtTongTien.Text = (Int32.Parse(txtTongTien.Text) + s.GiaMuon).ToString();
                         txtTongTien.Text = (Int32.Parse(txtTongTien.Text) + s.GiaMuon).ToString();
                     }
                 }
@@ -109,11 +109,11 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
                         txtTongTien.Text = (Int32.Parse(txtTongTien.Text) + s.GiaMuon).ToString();
                     }
                 }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message, "Lỗi");
-            //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi");
+            }
         }
 
         private void dgvCTPhieu_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -207,7 +207,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
             string ngay = currentDate.Substring(0, 2);
             string thang = currentDate.Substring(3, 2);
             string nam = currentDate.Substring(6);
-            String ngayMuon = thang + "/" + ngay + "/" + nam;
+            String ngayMuon =ngay + "/" + thang + "/" + nam;
             DataSet ds = new DataSet();
             DataTable table = new DataTable();
             table.Columns.Add("AnhSach");
@@ -229,7 +229,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLPhieuMuon
                 table.Rows.Add(dr);
             }
             ds.Tables.Add(table);
-            fBillView f = new fBillView(ds, txtNguoiMuon.Text,
+            fBillView f = new fBillView(ds, txtNguoiMuon.Text, 
                 lblChiTietPhieu.Text, txtTongTien.Text, ngayMuon, tenDangNhap);
             f.ShowDialog();
         }

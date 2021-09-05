@@ -104,7 +104,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "fDeleteEntry";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fDeleteEntry";
             this.ResumeLayout(false);
             this.PerformLayout();
