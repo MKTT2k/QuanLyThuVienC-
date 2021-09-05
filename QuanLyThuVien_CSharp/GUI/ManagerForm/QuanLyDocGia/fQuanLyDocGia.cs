@@ -258,8 +258,9 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
 
                 //write string to file
                 File.WriteAllText(@"LichSuDocGia/" + nam + thang + ngay + ".txt", jsOut);
-
             }
+            txtStudentName.Clear();
+            txtStudentCode.Clear();
             loadList();
         }
 

@@ -42,8 +42,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.XemSach
             {
                 if (txtSearch.Text.Equals(""))
                 {
-                    MessageBox.Show("Nếu muốn tìm kiếm thì nhập nội dung nhé!", "Empty", MessageBoxButtons.OK);
-                    return;
+                    loadForm();
                 }
                 else
                 {

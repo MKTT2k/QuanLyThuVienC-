@@ -97,9 +97,9 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.XemSach
             "Nhà xuất bản",
             "Lần xuất bản",
             "Tên danh mục"});
-            this.cbbSearch.Location = new System.Drawing.Point(593, 35);
+            this.cbbSearch.Location = new System.Drawing.Point(478, 35);
             this.cbbSearch.Name = "cbbSearch";
-            this.cbbSearch.Size = new System.Drawing.Size(121, 28);
+            this.cbbSearch.Size = new System.Drawing.Size(236, 28);
             this.cbbSearch.TabIndex = 0;
             // 
             // dgvSach
