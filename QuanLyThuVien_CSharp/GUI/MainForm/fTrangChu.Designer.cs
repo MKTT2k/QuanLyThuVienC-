@@ -31,30 +31,30 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.btnQuanLyTaiKhoan = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnQuanLyDocGia = new System.Windows.Forms.Button();
             this.btnQuanLyMuonTra = new System.Windows.Forms.Button();
             this.btnQuanLySach = new System.Windows.Forms.Button();
             this.btnXemSach = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnUser = new System.Windows.Forms.Button();
-            this.lblTieuDe = new System.Windows.Forms.Label();
-            this.pnlHienThi = new System.Windows.Forms.Panel();
             this.btnDangXuat = new System.Windows.Forms.Button();
+            this.btnUser = new System.Windows.Forms.Button();
             this.btnDoiMatKhau = new System.Windows.Forms.Button();
             this.btnMaximize = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.lblIcon = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTieuDe = new System.Windows.Forms.Label();
+            this.pnlHienThi = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -84,6 +84,18 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(298, 814);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.LightSalmon;
+            this.pictureBox1.Image = global::QuanLyThuVien_CSharp.Properties.Resources.logoHaui;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(292, 163);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel3
             // 
@@ -128,6 +140,19 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             this.btnQuanLyTaiKhoan.Text = "Quản lý tài khoản";
             this.btnQuanLyTaiKhoan.UseVisualStyleBackColor = false;
             this.btnQuanLyTaiKhoan.Click += new System.EventHandler(this.btnQuanLyTaiKhoan_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Image = global::QuanLyThuVien_CSharp.Properties.Resources.copyright;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(3, 542);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(206, 22);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "      Group8-CNTT2-K13";
             // 
             // btnQuanLyDocGia
             // 
@@ -202,39 +227,6 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             this.panel4.Size = new System.Drawing.Size(1378, 117);
             this.panel4.TabIndex = 1;
             // 
-            // btnUser
-            // 
-            this.btnUser.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUser.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnUser.Location = new System.Drawing.Point(2, 3);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(185, 54);
-            this.btnUser.TabIndex = 1;
-            this.btnUser.Text = "Hà Thanh Hoàng";
-            this.btnUser.UseVisualStyleBackColor = false;
-            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
-            // 
-            // lblTieuDe
-            // 
-            this.lblTieuDe.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblTieuDe.AutoSize = true;
-            this.lblTieuDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTieuDe.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTieuDe.Location = new System.Drawing.Point(619, 76);
-            this.lblTieuDe.Name = "lblTieuDe";
-            this.lblTieuDe.Size = new System.Drawing.Size(142, 32);
-            this.lblTieuDe.TabIndex = 2;
-            this.lblTieuDe.Text = "Trang chủ";
-            // 
-            // pnlHienThi
-            // 
-            this.pnlHienThi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlHienThi.Location = new System.Drawing.Point(298, 117);
-            this.pnlHienThi.Name = "pnlHienThi";
-            this.pnlHienThi.Size = new System.Drawing.Size(1378, 697);
-            this.pnlHienThi.TabIndex = 2;
-            // 
             // btnDangXuat
             // 
             this.btnDangXuat.BackColor = System.Drawing.Color.LimeGreen;
@@ -250,6 +242,19 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             this.btnDangXuat.Text = "Đăng xuất";
             this.btnDangXuat.UseVisualStyleBackColor = false;
             this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
+            // 
+            // btnUser
+            // 
+            this.btnUser.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUser.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnUser.Location = new System.Drawing.Point(2, 3);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(185, 54);
+            this.btnUser.TabIndex = 1;
+            this.btnUser.Text = "Hà Thanh Hoàng";
+            this.btnUser.UseVisualStyleBackColor = false;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // btnDoiMatKhau
             // 
@@ -312,29 +317,25 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             this.lblIcon.TabIndex = 3;
             this.lblIcon.Text = "      ";
             // 
-            // pictureBox1
+            // lblTieuDe
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.LightSalmon;
-            this.pictureBox1.Image = global::QuanLyThuVien_CSharp.Properties.Resources.logoHaui;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(292, 163);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.lblTieuDe.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTieuDe.AutoSize = true;
+            this.lblTieuDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTieuDe.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTieuDe.Location = new System.Drawing.Point(619, 76);
+            this.lblTieuDe.Name = "lblTieuDe";
+            this.lblTieuDe.Size = new System.Drawing.Size(142, 32);
+            this.lblTieuDe.TabIndex = 2;
+            this.lblTieuDe.Text = "Trang chủ";
             // 
-            // label1
+            // pnlHienThi
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Image = global::QuanLyThuVien_CSharp.Properties.Resources.copyright;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(3, 542);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 22);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "      Group8-CNTT2-K13";
+            this.pnlHienThi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlHienThi.Location = new System.Drawing.Point(298, 117);
+            this.pnlHienThi.Name = "pnlHienThi";
+            this.pnlHienThi.Size = new System.Drawing.Size(1378, 697);
+            this.pnlHienThi.TabIndex = 2;
             // 
             // fTrangChu
             // 
@@ -350,11 +351,11 @@ namespace QuanLyThuVien_CSharp.GUI.MainForm
             this.Text = "fTrangChuAdmin";
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
