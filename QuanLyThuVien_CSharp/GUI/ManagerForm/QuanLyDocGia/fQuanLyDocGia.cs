@@ -62,11 +62,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
         public void loadList()
         {
             i = 0;
-            String currentchooseDate = cbbDate.SelectedItem.ToString();
-            String ngay = currentchooseDate.Substring(0, 2);
-            String thang = currentchooseDate.Substring(3, 2);
-            String nam = currentchooseDate.Substring(6);
-            using (StreamReader r = new StreamReader(@"LichSuDocGia/" + nam + thang + ngay + ".txt"))
+            using (StreamReader r = new StreamReader(@"LichSuDocGia/" + ChooseDate() + ".txt"))
             {
                 String js = r.ReadToEnd();
                 items = JsonConvert.DeserializeObject<List<DocGia_DTO>>(js);
@@ -87,11 +83,8 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
         public void searchStudentName()
         {
             i = 1;
-            String chooseDate = cbbDate.SelectedItem.ToString();
-            String ngay = chooseDate.Substring(0, 2);
-            String thang = chooseDate.Substring(3, 2);
-            String nam = chooseDate.Substring(6);
-            using (StreamReader reader = new StreamReader(@"LichSuDocGia" + "/" + nam + thang + ngay + ".txt"))
+            
+            using (StreamReader reader = new StreamReader(@"LichSuDocGia" + "/" + ChooseDate() + ".txt"))
             {
                 String js = reader.ReadToEnd();
                 items = JsonConvert.DeserializeObject<List<DocGia_DTO>>(js);
@@ -113,14 +106,19 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             }
         }
 
-        public void searchStudentCode()
+        private string ChooseDate()
         {
-            i = 2;
             String chooseDate = cbbDate.SelectedItem.ToString();
             String ngay = chooseDate.Substring(0, 2);
             String thang = chooseDate.Substring(3, 2);
             String nam = chooseDate.Substring(6);
-            using (StreamReader reader = new StreamReader(@"LichSuDocGia" + "/" + nam + thang + ngay + ".txt"))
+            return nam + thang + ngay;
+        }
+
+        public void searchStudentCode()
+        {
+            i = 2;
+            using (StreamReader reader = new StreamReader(@"LichSuDocGia" + "/" + ChooseDate() + ".txt"))
             {
                 String js = reader.ReadToEnd();
                 items = JsonConvert.DeserializeObject<List<DocGia_DTO>>(js);
@@ -144,10 +142,6 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
 
         public void addReader(String TenDocGia, String MaSV, String NgayNhap)
         {
-            String chooseDate = cbbDate.SelectedItem.ToString();
-            String ngay = chooseDate.Substring(0, 2);
-            String thang = chooseDate.Substring(3, 2);
-            String nam = chooseDate.Substring(6);
             items.Add(new DocGia_DTO()
             {
                 hoTen = TenDocGia,
@@ -180,11 +174,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
                     MessageBox.Show("Mã sinh viên không được để trống");
                     return;
                 }
-                String chooseDate = cbbDate.SelectedItem.ToString();
-                String ngay = chooseDate.Substring(0, 2);
-                String thang = chooseDate.Substring(3, 2);
-                String nam = chooseDate.Substring(6);
-                addReader(txtStudentName.Text, txtStudentCode.Text, nam + thang + ngay);
+                addReader(txtStudentName.Text, txtStudentCode.Text, ChooseDate());
                 loadList();
             }
             catch (Exception ex)
@@ -217,10 +207,6 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
                 MessageBox.Show("Vui lòng chọn đối tượng cần sửa");
             else
             {
-                String chooseDate = cbbDate.SelectedItem.ToString();
-                String ngay = chooseDate.Substring(0, 2);
-                String thang = chooseDate.Substring(3, 2);
-                String nam = chooseDate.Substring(6);
                 if (i == 0)
                 {
                     items[index].hoTen = txtStudentName.Text;
@@ -257,7 +243,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
                 String jsOut = JsonConvert.SerializeObject(items.ToArray(), Formatting.Indented);
 
                 //write string to file
-                File.WriteAllText(@"LichSuDocGia/" + nam + thang + ngay + ".txt", jsOut);
+                File.WriteAllText(@"LichSuDocGia/" + ChooseDate() + ".txt", jsOut);
             }
             txtStudentName.Clear();
             txtStudentCode.Clear();
@@ -276,10 +262,6 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
                     if (MessageBox.Show("Bạn có chắc chắc muốn xóa không?", "Thông báo", MessageBoxButtons.OKCancel,
                         MessageBoxIcon.Question) == DialogResult.OK)
                     {
-                        String chooseDate = cbbDate.SelectedItem.ToString();
-                        String ngay = chooseDate.Substring(0, 2);
-                        String thang = chooseDate.Substring(3, 2);
-                        String nam = chooseDate.Substring(6);
                         if (i == 0)
                             items.RemoveAt(index);
                         else if (i == 1)
@@ -311,7 +293,7 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
                         String jsOut = JsonConvert.SerializeObject(items.ToArray(), Formatting.Indented);
 
                         //write string to file
-                        File.WriteAllText(@"LichSuDocGia/" + nam + thang + ngay + ".txt", jsOut);
+                        File.WriteAllText(@"LichSuDocGia/" + ChooseDate() + ".txt", jsOut);
                         index = -1;
                     }
                 }
@@ -429,14 +411,10 @@ namespace QuanLyThuVien_CSharp.GUI.ManagerForm.QLDocGia
             saveFileDialog.Title = "Chọn chỗ lưu";
             saveFileDialog.DefaultExt = "xlsx";
             saveFileDialog.Filter = "Excel files (*.xlsx) | *.xlsx";
-            saveFileDialog.FileName = "LichSuDocGia" +cbbDate.Text;
+            saveFileDialog.FileName = "LichSuDocGia" + ChooseDate();
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                String chooseDate = cbbDate.SelectedItem.ToString();
-                String ngay = chooseDate.Substring(0, 2);
-                String thang = chooseDate.Substring(3, 2);
-                String nam = chooseDate.Substring(6);
-                using (StreamReader reader = new StreamReader(@"LichSuDocGia/" + nam + thang + ngay + ".txt"))
+                using (StreamReader reader = new StreamReader(@"LichSuDocGia/" + ChooseDate() + ".txt"))
                 {
                     String js = reader.ReadToEnd();
                     items = JsonConvert.DeserializeObject<List<DocGia_DTO>>(js);
